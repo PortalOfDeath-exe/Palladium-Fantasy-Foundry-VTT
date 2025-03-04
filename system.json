@@ -9,7 +9,7 @@
     },
     "authors": [
       {
-        "name": "Your Name",
+        "name": "PotalOfDeath",
         "discord": "YourDiscord#1234"
       }
     ],
@@ -18,5 +18,5 @@
     "packs": [],
   "url": "https://github.com/PortalOfDeath-exe/Palladium-Fantasy-Foundry-VTT",
   "manifest": "https://github.com/PortalOfDeath-exe/Palladium-Fantasy-Foundry-VTT/blob/main/system.json",
-  "download": "https://github.com/yourusername/my-rpg-system/archive/refs/heads/main.zip"
+  "download": "https://github.com/PortalOfDeath-exe/Palladium-Fantasy-Foundry-VTT/archive/refs/heads/main.zip"
 }

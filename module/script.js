@@ -1,1 +1,1 @@
-console.log("Palladium Fantasy loaded!");
+console.log("Palladium-Fantasy-Foundry-VTT loaded!");

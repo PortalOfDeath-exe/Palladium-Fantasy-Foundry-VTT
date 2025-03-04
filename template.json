@@ -13,31 +13,62 @@
         "spd": 0
       },
       "health": {
-        "hp": {
-          "value": 0,
-          "max": 0
-        },
-        "sdc": {
-          "value": 0,
-          "max": 0
-        }
+        "hp": { "value": 0, "max": 0 },
+        "sdc": { "value": 0, "max": 0 }
       },
       "skills": {
-        "climbing": 0,
-        "swimming": 0,
-        "literacy": 0
-        // Add more skills as needed
+        "communication": {
+          "bartering": 0,
+          "language_human": 0,
+          "literacy_human": 0,
+          "public_speaking": 0
+        },
+        "domestic": {
+          "cooking": 0,
+          "sewing": 0,
+          "sing": 0
+        },
+        "espionage": {
+          "detect_ambush": 0,
+          "pick_locks": 0,
+          "prowl": 0
+        },
+        "medical": {
+          "first_aid": 0,
+          "holistic_medicine": 0
+        },
+        "military": {
+          "camouflage": 0,
+          "recognize_weapon_quality": 0
+        },
+        "physical": {
+          "climbing": 0,
+          "swimming": 0,
+          "running": 0
+        },
+        "rogue": {
+          "pick_pockets": 0,
+          "streetwise": 0
+        },
+        "science": {
+          "astronomy_navigation": 0,
+          "mathematics_basic": 0
+        },
+        "technical": {
+          "lore_demons_monsters": 0,
+          "lore_magic": 0,
+          "masonry": 0
+        },
+        "weapon_proficiencies": {
+          "wp_sword": 0,
+          "wp_archery": 0
+        },
+        "wilderness": {
+          "hunting": 0,
+          "land_navigation": 0,
+          "wilderness_survival": 0
+        }
       }
-    }
-  },
-  "Item": {
-    "types": ["weapon", "armor"],
-    "weapon": {
-      "damage": "1d6",
-      "bonus": 0
-    },
-    "armor": {
-      "sdc": 0
     }
   }
 }

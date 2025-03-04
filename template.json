@@ -1,0 +1,15 @@
+{
+  "Actor": {
+    "types": ["character"],
+    "character": {
+      "health": 10,
+      "skills": {}
+    }
+  },
+  "Item": {
+    "types": ["weapon"],
+    "weapon": {
+      "damage": "1d6"
+    }
+  }
+}

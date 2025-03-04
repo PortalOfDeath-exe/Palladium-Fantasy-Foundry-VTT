@@ -1,23 +1,22 @@
 {
-  "id": "PalladiumFantasyUnofficial",
-  "title": "Palladium Fantasy",
-  "description": "unofficial system for Palladium Fantasy RPG",
-  "version": "0.1.0",
-  "compatibility": {
-    "minimum": "11",
-    "verified": "11"
-  },
-  "authors": [
-    {
-      "name": "PortalOfDeath-exe",
-      "discord": "none",
-      "url": "none"
-    }
-  ],
-  "esmodules": ["module/script.js"],
-  "styles": ["styles/styles.css"],
-  "packs": [],
-  "url": "https://github.com/yourusername/my-rpg-system",
-  "manifest": "https://raw.githubusercontent.com/yourusername/my-rpg-system/main/system.json",
+    "id": "Palladium-Fantasy-Foundry-VTT",
+    "title": "Palladium-Fantasy-Foundry-VTT",
+    "description": "An unofficial system for Palladium Fantasy RPG in Foundry VTT",
+    "version": "0.1.0",
+    "compatibility": {
+      "minimum": "11",
+      "verified": "11"
+    },
+    "authors": [
+      {
+        "name": "Your Name",
+        "discord": "YourDiscord#1234"
+      }
+    ],
+    "esmodules": ["module/script.js"],
+    "styles": ["styles/styles.css"],
+    "packs": [],
+  "url": "https://github.com/PortalOfDeath-exe/Palladium-Fantasy-Foundry-VTT",
+  "manifest": "https://github.com/PortalOfDeath-exe/Palladium-Fantasy-Foundry-VTT/blob/main/system.json",
   "download": "https://github.com/yourusername/my-rpg-system/archive/refs/heads/main.zip"
 }

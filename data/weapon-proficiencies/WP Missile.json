@@ -1,0 +1,21 @@
+{
+    "name": "W.P. Missile",
+    "type": "wp",
+    "system": {
+      "level": 1,
+      "description": "Training with javelins, shurikens, and slings. Bonuses: +1 to strike at level 1. Rate of Fire: As Hand to Hand attacks.",
+      "bonuses": {
+        "strike": [
+          {"level": 1, "value": 1},
+          {"level": 3, "value": 1},
+          {"level": 5, "value": 1},
+          {"level": 7, "value": 1},
+          {"level": 10, "value": 1},
+          {"level": 13, "value": 1}
+        ],
+        "rate_of_fire": [
+          {"level": 1, "value": "HtH"}
+        ]
+      }
+    }
+  }

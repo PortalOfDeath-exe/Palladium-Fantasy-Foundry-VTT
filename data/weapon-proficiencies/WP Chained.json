@@ -1,0 +1,23 @@
+{
+    "name": "W.P. Chain",
+    "type": "wp",
+    "system": {
+        "level": 1,
+        "description": "Training with all types of chain weapons, including ordinary lengths of chain, the flail, ball or mace and chain.",
+        "bonuses": {
+            "damage": [],
+            "strike": [
+                {"level": 1, "value": 1},
+                {"level": 3, "value": 1},
+                {"level": 7, "value": 1},
+                {"level": 10, "value": 1},
+                {"level": 13, "value": 1}
+            ],
+            "strike_thrown_or_parry": [
+                {"level": 4, "value": 1},
+                {"level": 8, "value": 1},
+                {"level": 12, "value": 1}
+            ]
+        }
+    }
+}

@@ -1,0 +1,506 @@
+<form class="{{cssClass}}" autocomplete="off">
+    <input type="hidden" name="img" value="{{actor.img}}">
+
+    <!-- Character Header -->
+    <header class="sheet-header">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="{{actor.name}}"/>
+        <div class="header-fields">
+            <h1 class="charname"><input name="name" type="text" value="{{actor.name}}" placeholder="Name"/></h1>
+            <div class="grid grid-3col">
+                <div class="resource">
+                    <label>Alignment</label>
+                    <input type="text" name="system.alignment" value="{{system.alignment}}" placeholder="Alignment"/>
+                </div>
+                <div class="resource">
+                    <label>Homeland</label>
+                    <input type="text" name="system.homeland" value="{{system.homeland}}" placeholder="Homeland"/>
+                </div>
+                <div class="resource">
+                    <label>Religion</label>
+                    <input type="text" name="system.religion" value="{{system.religion}}" placeholder="Religion"/>
+                </div>
+                <div class="resource">
+                    <label>Race</label>
+                    <input type="text" name="system.race" value="{{system.race}}" placeholder="Race"/>
+                </div>
+                <div class="resource">
+                    <label>OCC</label>
+                    <input type="text" name="system.occ" value="{{system.occ}}" placeholder="OCC"/>
+                </div>
+                <div class="resource">
+                    <label>Level</label>
+                    <select name="system.level">
+                        {{#each levelRange as |level|}}
+                            <option value="{{level}}" {{#if (eq ../system.level level)}}selected{{/if}}>{{level}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="resource">
+                    <label>XP</label>
+                    <input type="number" name="system.xp" value="{{system.xp}}" placeholder="0"/>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Tabs Navigation -->
+    <nav class="sheet-tabs tabs" data-group="primary">
+        <a class="item" data-tab="attributes">Attributes</a>
+        <a class="item" data-tab="skills">Skills</a>
+        <a class="item" data-tab="combat">Combat</a>
+        <a class="item" data-tab="equipment">Equipment</a>
+        <a class="item" data-tab="magic">Magic</a>
+        <a class="item" data-tab="psionics">Psionics</a>
+        <a class="item" data-tab="notes">Notes</a>
+    </nav>
+
+    <!-- Sheet Body -->
+    <section class="sheet-body">
+        <!-- Attributes Tab -->
+        <div class="tab attributes" data-group="primary" data-tab="attributes">
+            <div class="grid grid-4col">
+                {{#each system.attributes as |value key|}}
+                    <div class="resource">
+                        <label>{{key}}</label>
+                        <input type="number" name="system.attributes.{{key}}" value="{{value}}"/>
+                    </div>
+                {{/each}}
+            </div>
+            <div class="occ-drop-zone drop-zone" style="border: 1px dashed #ccc; padding: 10px; margin-top: 20px;">
+                <p>Drop OCC Item Here</p>
+            </div>
+            {{#each occItems as |occ|}}
+                <div class="occ-abilities" style="margin-top: 20px;">
+                    <h3>{{occ.name}}</h3>
+                    {{#each occ.abilities as |ability|}}
+                        <div class="ability">
+                            <p><strong>{{ability.title}}:</strong></p>
+                            <ul>
+                                {{#each (splitLines ability.description) as |line|}}
+                                    <li class="ability-line {{#if (match line '^[IVX]+\\\.')}}tenet{{/if}}">{{line}}</li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    {{/each}}
+                    <button type="button" class="remove-occ" data-item-id="{{occ._id}}">Remove</button>
+                </div>
+            {{/each}}
+        </div>
+
+        <!-- Skills Tab -->
+        <div class="tab skills" data-group="primary" data-tab="skills">
+            <h3>Occupational Skills</h3>
+            <button type="button" class="add-skill" data-skill-type="occ">Add Skill</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Base</th>
+                        <th>Per Level</th>
+                        <th>Level</th>
+                        <th>Misc</th>
+                        <th>Current Value</th>
+                        <th>Roll</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each system.skills_occ as |skill index|}}
+                        <tr>
+                            <td><input type="text" name="system.skills_occ.{{index}}.name" value="{{skill.name}}"/></td>
+                            <td><input type="number" name="system.skills_occ.{{index}}.base" value="{{skill.base}}"/></td>
+                            <td><input type="number" name="system.skills_occ.{{index}}.per_level" value="{{skill.per_level}}"/></td>
+                            <td><input type="number" name="system.skills_occ.{{index}}.level" value="{{skill.level}}"/></td>
+                            <td><input type="number" name="system.skills_occ.{{index}}.misc_adjustment" value="{{skill.misc_adjustment}}"/></td>
+                            <td>{{skill.current_value}}</td>
+                            <td><button type="button" class="skill-roll" data-skill-type="occ" data-skill-index="{{index}}">Roll</button></td>
+                            <td><button type="button" class="remove-skill" data-skill-type="occ" data-skill-index="{{index}}">Remove</button></td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            <h3>Related Skills</h3>
+            <button type="button" class="add-skill" data-skill-type="related">Add Skill</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Base</th>
+                        <th>Per Level</th>
+                        <th>Level</th>
+                        <th>Misc</th>
+                        <th>Current Value</th>
+                        <th>Roll</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each system.skills_related as |skill index|}}
+                        <tr>
+                            <td><input type="text" name="system.skills_related.{{index}}.name" value="{{skill.name}}"/></td>
+                            <td><input type="number" name="system.skills_related.{{index}}.base" value="{{skill.base}}"/></td>
+                            <td><input type="number" name="system.skills_related.{{index}}.per_level" value="{{skill.per_level}}"/></td>
+                            <td><input type="number" name="system.skills_related.{{index}}.level" value="{{skill.level}}"/></td>
+                            <td><input type="number" name="system.skills_related.{{index}}.misc_adjustment" value="{{skill.misc_adjustment}}"/></td>
+                            <td>{{skill.current_value}}</td>
+                            <td><button type="button" class="skill-roll" data-skill-type="related" data-skill-index="{{index}}">Roll</button></td>
+                            <td><button type="button" class="remove-skill" data-skill-type="related" data-skill-index="{{index}}">Remove</button></td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+            <h3>Secondary Skills</h3>
+            <button type="button" class="add-skill" data-skill-type="secondary">Add Skill</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Base</th>
+                        <th>Per Level</th>
+                        <th>Level</th>
+                        <th>Misc</th>
+                        <th>Current Value</th>
+                        <th>Roll</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each system.skills_secondary as |skill index|}}
+                        <tr>
+                            <td><input type="text" name="system.skills_secondary.{{index}}.name" value="{{skill.name}}"/></td>
+                            <td><input type="number" name="system.skills_secondary.{{index}}.base" value="{{skill.base}}"/></td>
+                            <td><input type="number" name="system.skills_secondary.{{index}}.per_level" value="{{skill.per_level}}"/></td>
+                            <td><input type="number" name="system.skills_secondary.{{index}}.level" value="{{skill.level}}"/></td>
+                            <td><input type="number" name="system.skills_secondary.{{index}}.misc_adjustment" value="{{skill.misc_adjustment}}"/></td>
+                            <td>{{skill.current_value}}</td>
+                            <td><button type="button" class="skill-roll" data-skill-type="secondary" data-skill-index="{{index}}">Roll</button></td>
+                            <td><button type="button" class="remove-skill" data-skill-type="secondary" data-skill-index="{{index}}">Remove</button></td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Combat Tab -->
+<div class="tab combat" data-group="primary" data-tab="combat">
+    <h3>Health Stats</h3>
+    <div class="grid grid-3col">
+        <div class="resource">
+            <label>HP</label>
+            <input type="number" name="system.health.hp.value" value="{{system.health.hp.value}}" style="width: 40px;" /> / 
+            <input type="number" name="system.health.hp.max" value="{{system.health.hp.max}}" style="width: 40px;" />
+        </div>
+        <div class="resource">
+            <label>SDC</label>
+            <input type="number" name="system.health.sdc.value" value="{{system.health.sdc.value}}" style="width: 40px;" /> / 
+            <input type="number" name="system.health.sdc.max" value="{{system.health.sdc.max}}" style="width: 40px;" />
+        </div>
+        <div class="resource">
+            <label>Armor SDC</label>
+            <input type="number" name="system.health.armor_sdc.value" value="{{system.health.armor_sdc.value}}" style="width: 40px;" /> / 
+            <input type="number" name="system.health.armor_sdc.max" value="{{system.health.armor_sdc.max}}" style="width: 40px;" />
+        </div>
+    </div>
+
+    <h3>Combat Stats</h3>
+    <div class="grid grid-3col">
+        <div class="resource">
+            <label>Attacks per Melee</label>
+            <input type="number" name="system.combat.attacks_per_melee" value="{{system.combat.attacks_per_melee}}" />
+        </div>
+        <div class="resource">
+            <label>Initiative</label>
+            <input type="number" name="system.combat.initiative" value="{{system.combat.initiative}}" />
+        </div>
+        <div class="resource">
+            <label>Strike</label>
+            <input type="number" name="system.combat.strike" value="{{system.combat.strike}}" />
+        </div>
+        <div class="resource">
+            <label>Parry</label>
+            <input type="number" name="system.combat.parry" value="{{system.combat.parry}}" />
+        </div>
+        <div class="resource">
+            <label>Dodge</label>
+            <input type="number" name="system.combat.dodge" value="{{system.combat.dodge}}" />
+            <button type="button" class="dodge-roll">Dodge</button>
+        </div>
+        <div class="resource">
+            <label>Damage Bonus</label>
+            <input type="number" name="system.combat.damage_bonus" value="{{system.combat.damage_bonus}}" />
+        </div>
+        <div class="resource">
+            <label>Armor Rating</label>
+            <input type="number" name="system.health.ar" value="{{system.health.ar}}" />
+        </div>
+    </div>
+
+    <h3>Saving Throws</h3>
+    <button type="button" class="saving-throw-roll">Saving Throw</button>
+
+    <h3>Equipped Weapons</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Strike</th>
+            <th>Parry</th> <!-- Added Parry column -->
+        </tr>
+    </thead>
+    <tbody>
+        {{#each system.equipment.weapons as |weapon index|}}
+            {{#if weapon.equipped}}
+                <tr>
+                    <td>{{weapon.name}}</td>
+                    <td><button type="button" class="strike-roll" data-index="{{index}}">Strike</button></td>
+                    <td><button type="button" class="parry-roll" data-index="{{index}}">Parry</button></td> <!-- Added Parry button -->
+                </tr>
+            {{/if}}
+        {{/each}}
+    </tbody>
+</table>
+
+<h3>Hand-to-Hand Items</h3>
+<div class="hth-drop-zone drop-zone" style="border: 1px dashed #ccc; padding: 10px; margin-bottom: 10px;">
+    <p>Drop Hand-to-Hand Items Here</p>
+</div>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Level</th>
+            <th>Description</th>
+            <th>Remove</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each handToHandStyles as |hth|}}
+            <tr>
+                <td>{{hth.name}}</td>
+                <td>
+                    <select class="hth-level" data-item-id="{{hth._id}}">
+                        {{#each ../levelRange as |level|}}
+                            <option value="{{level}}" {{#if (eq hth.system.level level)}}selected{{/if}}>{{level}}</option>
+                        {{/each}}
+                    </select>
+                </td>
+                <td>{{hth.system.description}}</td>
+                <td><button type="button" class="remove-hth" data-item-id="{{hth._id}}">Remove</button></td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+    <h3>Weapon Proficiencies</h3>
+    <div class="wp-drop-zone drop-zone" style="border: 1px dashed #ccc; padding: 10px; margin-bottom: 10px;">
+        <p>Drop Weapon Proficiencies Here</p>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Level</th>
+                <th>Description</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each weaponProficiencies as |wp|}}
+                <tr>
+                    <td>{{wp.name}}</td>
+                    <td>
+                        <select class="wp-level" data-item-id="{{wp._id}}">
+                            {{#each ../levelRange as |level|}}
+                                <option value="{{level}}" {{#if (eq wp.system.level level)}}selected{{/if}}>{{level}}</option>
+                            {{/each}}
+                        </select>
+                    </td>
+                    <td>{{wp.system.description}}</td>
+                    <td><button type="button" class="remove-wp" data-item-id="{{wp._id}}">Remove</button></td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
+
+        <!-- Equipment Tab -->
+        <div class="tab equipment" data-group="primary" data-tab="equipment">
+            <h3>Weapons</h3>
+            <button type="button" class="add-item" data-item-type="weapons">Add Weapon</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Equipped</th>
+                        <th>Damage</th>
+                        <th>2H</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each system.equipment.weapons as |weapon index|}}
+                        <tr>
+                            <td><input type="text" name="system.equipment.weapons.{{index}}.name" value="{{weapon.name}}" /></td>
+                            <td><input type="checkbox" name="system.equipment.weapons.{{index}}.equipped" {{#if weapon.equipped}}checked{{/if}} /></td>
+                            <td><input type="text" name="system.equipment.weapons.{{index}}.damage" value="{{weapon.damage}}" /></td>
+                            <td><input type="checkbox" name="system.equipment.weapons.{{index}}.twoHanded" {{#if weapon.twoHanded}}checked{{/if}} /></td>
+                            <td><button type="button" class="remove-item" data-item-type="weapons" data-index="{{index}}">Remove</button></td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        
+            <h3>Armor</h3>
+            <button type="button" class="add-item" data-item-type="armor">Add Armor</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Equipped</th>
+                        <th>Armor Rating</th>
+                        <th>SDC</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each system.equipment.armor as |armor index|}}
+                        <tr>
+                            <td><input type="text" name="system.equipment.armor.{{index}}.name" value="{{armor.name}}" /></td>
+                            <td><input type="checkbox" name="system.equipment.armor.{{index}}.equipped" {{#if armor.equipped}}checked{{/if}} /></td>
+                            <td><input type="text" name="system.equipment.armor.{{index}}.armorRating" value="{{armor.armorRating}}" /></td>
+                            <td>
+                                <input type="number" name="system.equipment.armor.{{index}}.sdc.value" value="{{armor.sdc.value}}" style="width: 40px;" /> / 
+                                <input type="number" name="system.equipment.armor.{{index}}.sdc.max" value="{{armor.sdc.max}}" style="width: 40px;" />
+                            </td>
+                            <td><button type="button" class="remove-item" data-item-type="armor" data-index="{{index}}">Remove</button></td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        
+            <h3>Gear</h3>
+            <button type="button" class="add-item" data-item-type="gear">Add Gear</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Equipped</th>
+                        <th>Description</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each system.equipment.gear as |gear index|}}
+                        <tr>
+                            <td><input type="text" name="system.equipment.gear.{{index}}.name" value="{{gear.name}}" /></td>
+                            <td><input type="checkbox" name="system.equipment.gear.{{index}}.equipped" {{#if gear.equipped}}checked{{/if}} /></td>
+                            <td><textarea name="system.equipment.gear.{{index}}.description">{{gear.description}}</textarea></td>
+                            <td><button type="button" class="remove-item" data-item-type="gear" data-index="{{index}}">Remove</button></td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        
+            <h3>Money</h3>
+            <input type="number" name="system.equipment.money" value="{{system.equipment.money}}" />
+        </div>
+        
+<!-- Magic Tab -->
+<div class="tab magic" data-group="primary" data-tab="magic">
+    <h3>Power Points of Energy (PPE)</h3>
+    <div class="resource">
+        <label>Current PPE</label>
+        <input type="number" name="system.magic.ppe.value" value="{{system.magic.ppe.value}}" data-dtype="Number" style="width: 40px;" /> / 
+        <input type="number" name="system.magic.ppe.max" value="{{system.magic.ppe.max}}" data-dtype="Number" style="width: 40px;" />
+    </div>
+
+    <!-- Magic Categories -->
+    {{#each magicCategories as |category|}}
+    <h3>{{category.label}}</h3>
+    <button type="button" class="add-magic" data-magic-type="{{category.type}}">Add {{category.addLabel}}</button>
+    {{#if (hasItems category.spells)}}
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>PPE Cost</th>
+                    <th>Range</th>
+                    <th>Duration</th>
+                    <th>Saving Throw</th>
+                    <th>Description</th>
+                    <th>Cast</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each category.spells as |spell index|}}
+                    <tr>
+                        <td>{{spell.name}}</td>
+                        <td>{{spell.ppe_cost}}</td>
+                        <td>{{spell.range}}</td>
+                        <td>{{spell.duration}}</td>
+                        <td>{{spell.saving_throw}}</td>
+                        <td>{{spell.description}}</td>
+                        <td><button type="button" class="cast-spell" data-magic-type="{{category.type}}" data-index="{{index}}">Cast</button></td>
+                        <td><button type="button" class="remove-magic" data-magic-type="{{category.type}}" data-index="{{index}}">Remove</button></td>
+                    </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    {{/if}}
+{{/each}}
+</div>
+
+<!-- Psionics Tab -->
+<div class="tab psionics" data-group="primary" data-tab="psionics">
+    <h3>Inner Strength Points (ISP)</h3>
+    <div class="resource">
+        <label>Current ISP</label>
+        <input type="number" name="system.psionics.isp.value" value="{{system.psionics.isp.value}}" data-dtype="Number" style="width: 40px;" /> / 
+        <input type="number" name="system.psionics.isp.max" value="{{system.psionics.isp.max}}" data-dtype="Number" style="width: 40px;" />
+    </div>
+    {{#each system.psionics as |abilities psionicType|}}
+    {{#unless (eq psionicType "isp")}}
+        <h3>{{#if (eq psionicType "healing")}}Healing{{else if (eq psionicType "physical")}}Physical{{else if (eq psionicType "sensitive")}}Sensitive{{else}}Super{{/if}} Psionics</h3>
+        <button type="button" class="add-psionic" data-psionic-type="{{psionicType}}">Add {{#if (eq psionicType "healing")}}Healing{{else if (eq psionicType "physical")}}Physical{{else if (eq psionicType "sensitive")}}Sensitive{{else}}Super{{/if}} Psionic</button>
+        {{#if abilities.length}}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>ISP Cost</th>
+                        <th>Range</th>
+                        <th>Duration</th>
+                        <th>Description</th>
+                        <th>Use</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each abilities as |ability index|}}
+                        <tr>
+                            <td>{{ability.name}}</td>
+                            <td>{{ability.isp_cost}}</td>
+                            <td>{{ability.range}}</td>
+                            <td>{{ability.duration}}</td>
+                            <td>{{ability.description}}</td>
+                            <td><button type="button" class="use-psionic" data-psionic-type="{{psionicType}}" data-index="{{index}}">Use</button></td>
+                            <td><button type="button" class="remove-psionic" data-psionic-type="{{psionicType}}" data-index="{{index}}">Remove</button></td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        {{/if}}
+    {{/unless}}
+{{/each}}
+</div>
+        <!-- Notes Tab -->
+<div class="tab notes" data-group="primary" data-tab="notes">
+    <h3>Notes</h3>
+    <textarea name="system.notes">{{system.notes}}</textarea>
+    <h3>Background</h3>
+    <textarea name="system.background">{{system.background}}</textarea>
+</div>
+</form>

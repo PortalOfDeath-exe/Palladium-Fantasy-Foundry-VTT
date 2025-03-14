@@ -1,0 +1,31 @@
+{
+    "name": "W.P. Pole Arm",
+    "type": "wp",
+    "system": {
+        "level": 1,
+        "description": "Training with all types of large, bladed spear-like weapons.",
+        "bonuses": {
+            "damage": [
+                {"level": 2, "value": "2"},
+                {"level": 8, "value": "2"}
+            ],
+            "strike": [
+                {"level": 1, "value": 1},
+                {"level": 3, "value": 1},
+                {"level": 6, "value": 1},
+                {"level": 9, "value": 1},
+                {"level": 12, "value": 1}
+            ],
+            "strike_thrown_or_parry": [
+                {"level": 1, "value": 1},
+                {"level": 3, "value": 1},
+                {"level": 3, "value": 1},
+                {"level": 6, "value": 1},
+                {"level": 7, "value": 1},
+                {"level": 9, "value": 1},
+                {"level": 12, "value": 1},
+                {"level": 12, "value": 1}
+            ]
+        }
+    }
+}

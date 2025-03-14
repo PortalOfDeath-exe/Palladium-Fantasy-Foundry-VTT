@@ -1,3 +1,52 @@
-.Palladium Fantasy .window-content {
-  background: #f0f0f0;
+/* General sheet styling */
+.palladium-sheet {
+    background-color: #404653; /* Dark blue-gray from PFRPG book */
+    color: white;
+    font-family: "Arial", sans-serif;
+    padding: 10px;
+}
+
+/* Header */
+.palladium-sheet h1 {
+    color: #CBBBA0; /* Light yellowish tone */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Sections (e.g., attributes, skills) */
+.palladium-sheet section {
+    background-color: #2A2E38; /* Darker shade for contrast */
+    border: 1px solid #CBBBA0;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+/* Labels and inputs */
+.palladium-sheet label {
+    color: #CBBBA0;
+    margin-right: 5px;
+}
+
+.palladium-sheet input[type="number"],
+.palladium-sheet input[type="text"] {
+    background-color: #CBBBA0;
+    color: black;
+    border: 1px solid #2A2E38;
+    padding: 2px;
+    width: 50px;
+}
+
+/* Skill list */
+.palladium-sheet .skill-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .palladium-sheet input[type="number"],
+    .palladium-sheet input[type="text"] {
+        width: 40px;
+    }
 }

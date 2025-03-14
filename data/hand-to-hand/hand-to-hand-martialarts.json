@@ -1,0 +1,44 @@
+{
+  "name": "Hand to Hand: Martial Arts",
+  "type": "hand_to_hand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Advanced combat training with a focus on versatility and agility.",
+    "level": 1,
+    "levelDescriptions": {
+      "1": "2 attacks per melee round. +3 to roll with punch/fall/impact, and +3 to pull punch.",
+      "2": "+3 to parry and dodge, +2 to strike, and disarm.",
+      "3": "Kick attacks: Karate style kick (does 2D4 damage) and any four of choice, except jump kicks.",
+      "4": "+1 attack per melee round.",
+      "5": "Jump kicks (all).",
+      "6": "Critical strike on an unmodified roll of 18, 19 or 20.",
+      "7": "Paired weapons.",
+      "8": "Leap attack (critical strike).",
+      "9": "+1 attack per melee.",
+      "10": "Body throw/flip and +1 on initiative.",
+      "11": "+4 to damage.",
+      "12": "+2 to parry and dodge.",
+      "13": "Knockout/stun on an unmodified roll of 18, 19, or 20.",
+      "14": "+1 attack per melee round.",
+      "15": "Death Blow on a roll of a natural 20 (if desired)."
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "exportSource": {
+      "world": "palladium-fantasy",
+      "system": "Palladium-Fantasy-Foundry-VTT",
+      "coreVersion": "12.331",
+      "systemVersion": "0.1"
+    }
+  },
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "Palladium-Fantasy-Foundry-VTT",
+    "systemVersion": "0.1",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

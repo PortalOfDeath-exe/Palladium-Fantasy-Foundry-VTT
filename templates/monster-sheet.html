@@ -1,0 +1,143 @@
+<form class="{{cssClass}} palladium-sheet monster-sheet" autocomplete="off">
+    <header class="sheet-header">
+        <img class="profile-img" src="{{actor.img}}" data-edit="img" title="Change Image"/>
+        <!-- Using actor.name directly as requested -->
+        <h1><input name="name" type="text" value="{{actor.name}}" placeholder="Monster Name"/></h1>
+    </header>
+
+    <section class="sheet-body">
+        <div class="monster-details">
+            <!-- New Combat Attributes at the Top -->
+            <div class="monster-field combat-attributes">
+                <div class="attribute-row">
+                    <label>Strike:</label>
+                    <input type="number" name="system.combat_attributes.strike" value="{{system.combat_attributes.strike}}" placeholder="0"/>
+                    <button type="button" class="roll-strike">Roll Strike</button>
+                </div>
+                <div class="attribute-row">
+                    <label>Dodge:</label>
+                    <input type="number" name="system.combat_attributes.dodge" value="{{system.combat_attributes.dodge}}" placeholder="0"/>
+                    <button type="button" class="roll-dodge">Roll Dodge</button>
+                </div>
+                <div class="attribute-row">
+                    <label>Parry:</label>
+                    <input type="number" name="system.combat_attributes.parry" value="{{system.combat_attributes.parry}}" placeholder="0"/>
+                    <button type="button" class="roll-parry">Roll Parry</button>
+                </div>
+            </div>
+
+            <!-- Existing Fields -->
+            <div class="monster-field">
+                <label>Alignment:</label>
+                <input type="text" name="system.alignment" value="{{system.alignment}}" />
+            </div>
+            <div class="monster-field">
+                <label>Attributes:</label>
+                <textarea name="system.attributes">{{system.attributes}}</textarea>
+                <button type="button" class="roll-attribute">Roll Attributes</button>
+            </div>
+            <div class="monster-field">
+                <label>Size:</label>
+                <input type="text" name="system.size" value="{{system.size}}" />
+            </div>
+            <div class="monster-field">
+                <label>Natural A.R.:</label>
+                <input type="number" name="system.natural_ar" value="{{system.natural_ar}}" />
+            </div>
+            <div class="monster-field">
+                <label>Hit Points:</label>
+                <input type="text" name="system.hit_points" value="{{system.hit_points}}" />
+                <button type="button" class="roll-hp">Roll HP</button>
+            </div>
+            <div class="monster-field">
+                <label>S.D.C.:</label>
+                <input type="text" name="system.sdc" value="{{system.sdc}}" />
+                <button type="button" class="roll-sdc">Roll S.D.C.</button>
+            </div>
+            <div class="monster-field">
+                <label>Average P.P.E.:</label>
+                <input type="text" name="system.average_ppe" value="{{system.average_ppe}}" />
+                <button type="button" class="roll-ppe">Roll P.P.E.</button>
+            </div>
+            <div class="monster-field">
+                <label>Horror Factor:</label>
+                <input type="number" name="system.horror_factor" value="{{system.horror_factor}}" />
+            </div>
+            <div class="monster-field">
+                <label>Equivalent O.C.C.:</label>
+                <input type="text" name="system.equivalent_occ" value="{{system.equivalent_occ}}" />
+            </div>
+            <div class="monster-field">
+                <label>Average Level of Experience:</label>
+                <input type="text" name="system.average_level" value="{{system.average_level}}" />
+                <button type="button" class="roll-level">Roll Level</button>
+            </div>
+            <div class="monster-field">
+                <label>Combat:</label>
+                <textarea name="system.combat">{{system.combat}}</textarea>
+            </div>
+
+            <!-- Weapon Proficiencies Dropzone -->
+            <div class="monster-field">
+                <h3>Weapon Proficiencies</h3>
+                <div class="wp-drop-zone drop-zone" style="border: 1px dashed #ccc; padding: 10px; margin-bottom: 10px;">
+                    <p>Drop Weapon Proficiencies Here</p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Level</th>
+                            <th>Description</th>
+                            <th>Remove</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each weaponProficiencies as |wp|}}
+                            <tr>
+                                <td>{{wp.name}}</td>
+                                <td>
+                                    <select class="wp-level" data-item-id="{{wp._id}}">
+                                        {{#each ../levelRange as |level|}}
+                                            <option value="{{level}}" {{#if (eq wp.system.level level)}}selected{{/if}}>{{level}}</option>
+                                        {{/each}}
+                                    </select>
+                                </td>
+                                <td>{{wp.system.description}}</td>
+                                <td><button type="button" class="remove-wp" data-item-id="{{wp._id}}">Remove</button></td>
+                            </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="monster-field">
+                <label>Bonuses (in addition to attribute bonuses):</label>
+                <textarea name="system.bonuses">{{system.bonuses}}</textarea>
+            </div>
+            <div class="monster-field">
+                <label>Damage:</label>
+                <textarea name="system.damage">{{system.damage}}</textarea>
+            </div>
+            <div class="monster-field">
+                <label>Natural Abilities:</label>
+                <textarea name="system.natural_abilities">{{system.natural_abilities}}</textarea>
+            </div>
+            <div class="monster-field">
+                <label>Psionics:</label>
+                <textarea name="system.psionics">{{system.psionics}}</textarea>
+            </div>
+            <div class="monster-field">
+                <label>Magic Abilities:</label>
+                <textarea name="system.magic_abilities">{{system.magic_abilities}}</textarea>
+            </div>
+            <div class="monster-field">
+                <label>Notes:</label>
+                <textarea name="system.notes">{{system.notes}}</textarea>
+            </div>
+            <div class="monster-field">
+                <button type="button" class="import-monster">Import Monster Data</button>
+            </div>
+        </div>
+    </section>
+</form>

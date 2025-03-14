@@ -1,0 +1,44 @@
+{
+  "name": "Hand to Hand: Basic",
+  "type": "hand_to_hand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Basic combat training for general self-defense.",
+    "level": 1,
+    "levelDescriptions": {
+      "1": "2 attacks per melee round. +2 to roll with punch/fall/impact, +2 to pull punch.",
+      "2": "+2 to parry and dodge.",
+      "3": "Kick attacks: Karate style kick does 2D4 damage or Snap Kick 1D6 damage.",
+      "4": "+1 attack per melee.",
+      "5": "+1 to strike.",
+      "6": "Critical Strike on natural 19 or 20 (double damage).",
+      "7": "+2 to damage.",
+      "8": "Body Throw/Flip.",
+      "9": "+1 attack per melee.",
+      "10": "+2 to pull punch and roll with impact.",
+      "11": "+1 to parry and dodge.",
+      "12": "+1 to strike.",
+      "13": "Critical strike or knockout from behind.",
+      "14": "+2 to damage.",
+      "15": "+1 attack per melee."
+    }
+  },
+  "effects": [],
+  "folder": "5yF3JoStTn78YW15",
+  "flags": {
+    "exportSource": {
+      "world": "palladium-fantasy",
+      "system": "Palladium-Fantasy-Foundry-VTT",
+      "coreVersion": "12.331",
+      "systemVersion": "0.1"
+    }
+  },
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "Palladium-Fantasy-Foundry-VTT",
+    "systemVersion": "0.1",
+    "createdTime": 1741650675571,
+    "modifiedTime": 1741650697545,
+    "lastModifiedBy": "jVntlmQLI3YVYuYO"
+  }
+}

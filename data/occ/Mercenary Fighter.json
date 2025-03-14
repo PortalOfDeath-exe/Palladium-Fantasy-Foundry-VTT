@@ -1,0 +1,20 @@
+{
+    "name": "Mercenary Fighter",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Mercenaries & Armor",
+                "description": "Most mercenaries prefer the medium and heavy types of armor that provide maximum physical protection when in combat. These include full suits of chain, splint or plate armor, but any type of armor can be used. Typically, the type of armor worn will reflect the character's personal taste and needs.\nMany meres will have more than one suit of armor. For example, studded leather may be used when stealth and maximum maneuverability is desired, while double mail, scale, splint or plate may be used for heavy combat.\nCharacters are -15% to prowl and -20% to climb/scale walls in full splint or plate armor. -10% to prowl or climb in chain, scale mail, or half suits that might include chain and plate or splint, leather and plate or splint, or half suit of plate armor."
+            },
+            {
+                "title": "Mercenary Employment",
+                "description": "The type of work and payment for mercenary services will vary from place to place, and from employer to employer. Some may pay great amounts, while others pay a handful of gold or a share of the booty.\nAs a rule of thumb, the more dangerous the mission the higher the pay, but this will always depend on the wealth and generosity of the employer and the circumstances involved.\nA single mission might pay 1D6x100 gold per person or 1D6x1000. Many employers prefer to pay nothing or very little, but allow the mercenary group to keep some percentage, to all the booty they can carry, provided they accomplish the mission they were hired to do.\nMany employers will include basic room and board as part of the payment. Game Masters, use your discretion and common sense."
+            },
+            {
+                "title": "Other O.C.C. Bonuses",
+                "description": "+2 to pull punch, and +1 to save vs horror factor at levels 1, 3, 6, 9, and 12."
+            }
+        ]
+    }
+}

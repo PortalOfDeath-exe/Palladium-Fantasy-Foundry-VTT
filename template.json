@@ -1,15 +1,202 @@
 {
   "Actor": {
-    "types": ["character"],
+    "types": ["character", "monster"],
     "character": {
-      "health": 10,
-      "skills": {}
+      "system": {
+        "name": {"type": "String", "default": "New Character"},
+        "alignment": {"type": "String", "default": ""},
+        "homeland": {"type": "String", "default": ""},
+        "religion": {"type": "String", "default": ""},
+        "race": {"type": "String", "default": ""},
+        "occ": {"type": "String", "default": ""},
+        "level": {"type": "Number", "default": 1},
+        "xp": {"type": "Number", "default": 0},
+        "attributes": {
+          "type": "Object",
+          "default": {
+            "iq": {"type": "Number", "default": 10},
+            "me": {"type": "Number", "default": 10},
+            "ma": {"type": "Number", "default": 10},
+            "ps": {"type": "Number", "default": 10},
+            "pp": {"type": "Number", "default": 10},
+            "pe": {"type": "Number", "default": 10},
+            "pb": {"type": "Number", "default": 10},
+            "spd": {"type": "Number", "default": 10}
+          }
+        },
+        "health": {
+          "type": "Object",
+          "default": {
+            "hp": {
+              "type": "Object",
+              "default": {
+                "value": {"type": "Number", "default": 10},
+                "max": {"type": "Number", "default": 10}
+              }
+            },
+            "sdc": {
+              "type": "Object",
+              "default": {
+                "value": {"type": "Number", "default": 20},
+                "max": {"type": "Number", "default": 20}
+              }
+            },
+            "armor_sdc": {
+              "type": "Object",
+              "default": {
+                "value": {"type": "Number", "default": 0},
+                "max": {"type": "Number", "default": 0}
+              }
+            },
+            "ar": {"type": "Number", "default": 0}
+          }
+        },
+        "combat": {
+          "type": "Object",
+          "default": {
+            "attacks_per_melee": {"type": "Number", "default": 2},
+            "initiative": {"type": "Number", "default": 0},
+            "strike": {"type": "Number", "default": 0},
+            "parry": {"type": "Number", "default": 0},
+            "dodge": {"type": "Number", "default": 0},
+            "damage_bonus": {"type": "Number", "default": 0},
+            "weapon_proficiencies": {"type": "Array", "default": []}
+          }
+        },
+        "skills_occ": {"type": "Array", "default": []},
+        "skills_related": {"type": "Array", "default": []},
+        "skills_secondary": {"type": "Array", "default": []},
+        "equipment": {
+          "type": "Object",
+          "default": {
+            "weapons": {"type": "Array", "default": []},
+            "armor": {"type": "Array", "default": []},
+            "gear": {"type": "Array", "default": []},
+            "money": {"type": "Number", "default": 0}
+          }
+        },
+        "saves": {
+          "type": "Object",
+          "default": {
+            "magic": {"type": "Number", "default": 0},
+            "poison": {"type": "Number", "default": 0},
+            "psionics": {"type": "Number", "default": 0},
+            "horror": {"type": "Number", "default": 0}
+          }
+        },
+        "perception": {"type": "Number", "default": 0},
+        "weight_carried": {"type": "Number", "default": 0},
+        "background": {"type": "String", "default": ""},
+        "notes": {"type": "String", "default": ""},
+        "magic": {
+          "type": "Object",
+          "default": {
+            "ppe": {
+              "type": "Object",
+              "default": {
+                "value": {"type": "Number", "default": 0},
+                "max": {"type": "Number", "default": 0}
+              }
+            },
+            "wizardSpells": {"type": "Array", "default": []},
+            "warlockSpells": {"type": "Array", "default": []},
+            "witchGifts": {"type": "Array", "default": []},
+            "summonerCircles": {"type": "Array", "default": []},
+            "diabolistWards": {"type": "Array", "default": []}
+          }
+        },
+        "psionics": {
+          "type": "Object",
+          "default": {
+            "isp": {
+              "type": "Object",
+              "default": {
+                "value": {"type": "Number", "default": 0},
+                "max": {"type": "Number", "default": 0}
+              }
+            },
+            "healing": {"type": "Array", "default": []},
+            "physical": {"type": "Array", "default": []},
+            "sensitive": {"type": "Array", "default": []},
+            "super": {"type": "Array", "default": []}
+          }
+        }
+      }
+    },
+    "monster": {
+    "system": {
+        "name": {"type": "String", "default": "New Monster"},
+        "alignment": {"type": "String", "default": ""},
+        "attributes": {"type": "String", "default": ""},
+        "size": {"type": "String", "default": ""},
+        "natural_ar": {"type": "Number", "default": 0},
+        "hit_points": {"type": "String", "default": ""},
+        "sdc": {"type": "String", "default": ""},
+        "average_ppe": {"type": "String", "default": ""},
+        "horror_factor": {"type": "Number", "default": 0},
+        "equivalent_occ": {"type": "String", "default": ""},
+        "average_level": {"type": "String", "default": ""},
+        "combat": {"type": "String", "default": ""},
+        "combat_attributes": {
+            "type": "Object",
+            "default": {
+                "strike": {"type": "Number", "default": 0},
+                "dodge": {"type": "Number", "default": 0},
+                "parry": {"type": "Number", "default": 0}
+            }
+        },
+        "bonuses": {"type": "String", "default": ""},
+        "damage": {"type": "String", "default": ""},
+        "natural_abilities": {"type": "String", "default": ""},
+        "psionics": {"type": "String", "default": ""},
+        "magic_abilities": {"type": "String", "default": ""},
+        "notes": {"type": "String", "default": ""}
     }
+}
   },
   "Item": {
-    "types": ["weapon"],
-    "weapon": {
-      "damage": "1d6"
+    "types": ["occ", "wp", "spell", "hand_to_hand"],
+    "templates": [],
+    "hand_to_hand": {
+      "description": {"type": "String", "default": ""},
+      "level": {"type": "Number", "default": 1},
+      "levelDescriptions": {
+        "type": "Object",
+        "default": {}
+      }
+    },
+    "occ": {
+      "description": {"type": "String", "default": ""},
+      "attacks_per_melee": {"type": "Number", "default": 2},
+      "sdc_bonus": {"type": "Number", "default": 0},
+      "hp_bonus": {"type": "String", "default": "0"},
+      "skills": {"type": "Array", "default": []},
+      "related_skill_count": {"type": "Number", "default": 0},
+      "secondary_skill_count": {"type": "Number", "default": 0},
+      "weapon_proficiencies": {"type": "Array", "default": []},
+      "notes": {"type": "String", "default": ""}
+    },
+    "wp": {
+      "description": {"type": "String", "default": ""},
+      "level": {"type": "Number", "default": 1},
+      "bonuses": {
+        "type": "Object",
+        "default": {
+          "strike": {"type": "Number", "default": 0},
+          "parry": {"type": "Number", "default": 0},
+          "damage": {"type": "String", "default": "0"},
+          "charge_damage": {"type": "String", "default": "0"},
+          "thrown_strike": {"type": "Number", "default": 0}
+        }
+      }
+    },
+    "spell": {
+      "description": {"type": "String", "default": ""},
+      "level": {"type": "Number", "default": 1},
+      "range": {"type": "String", "default": ""},
+      "duration": {"type": "String", "default": ""},
+      "saving_throw": {"type": "String", "default": ""},
+      "ppe_cost": {"type": "Number", "default": 0}
     }
   }
 }

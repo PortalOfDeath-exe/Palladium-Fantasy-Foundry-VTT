@@ -1,0 +1,16 @@
+{
+    "name": "Dwarf",
+    "type": "race",
+    "system": {
+        "description": "Stout and sturdy folk.",
+        "attribute_bonuses": {
+            "ps": "1d6",
+            "pe": 2,
+            "pb": -2
+        },
+        "sdc_bonus": 10,
+        "skills": [
+            {"name": "Masonry", "base": 40}
+        ]
+    }
+}

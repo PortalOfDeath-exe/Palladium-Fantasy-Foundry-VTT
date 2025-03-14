@@ -1,0 +1,24 @@
+{
+    "name": "W.P. Whip",
+    "type": "wp",
+    "system": {
+        "level": 1,
+        "description": "Skill at 'whipping' or snapping with long, flexible, light weapons.",
+        "bonuses": {
+            "damage": [
+                {"level": 2, "value": "1"},
+                {"level": 4, "value": "1"},
+                {"level": 8, "value": "1"},
+                {"level": 12, "value": "1"}
+            ],
+            "strike": [
+                {"level": 2, "value": 1},
+                {"level": 4, "value": 1},
+                {"level": 7, "value": 1},
+                {"level": 10, "value": 1},
+                {"level": 13, "value": 1}
+            ],
+            "strike_thrown_or_parry": []
+        }
+    }
+}

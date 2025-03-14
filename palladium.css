@@ -1,0 +1,471 @@
+.palladium-sheet {
+    font-family: Arial, sans-serif;
+    background: #e0e0e0;
+    border: 1px solid #333;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    color: #000000;
+}
+.palladium-sheet header {
+    margin-bottom: 10px;
+}
+.palladium-sheet h1 {
+    font-size: 1.5em;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.palladium-sheet h1 input {
+    width: 80%;
+    font-size: 1.2em;
+    text-align: center;
+}
+.palladium-sheet h2 {
+    font-size: 1.2em;
+    color: #34495e;
+    border-bottom: 1px solid #34495e;
+    margin: 10px 0;
+}
+.palladium-sheet h3 {
+    font-size: 1em;
+    color: #7f8c8d;
+    margin: 5px 0;
+}
+.palladium-sheet .tabs {
+    display: flex;
+    justify-content: space-around;
+    background: #ecf0f1;
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+.palladium-sheet .tabs .item {
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #2c3e50;
+}
+.palladium-sheet .tabs .item.active {
+    background: #34495e;
+    color: #ffffff;
+    border-radius: 3px;
+}
+.palladium-sheet .content > .content {
+    display: none;
+}
+.palladium-sheet .content > .content.active {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+.palladium-sheet div {
+    margin: 5px 0;
+    color: #000000;
+}
+.palladium-sheet label {
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+.palladium-sheet input[type="number"],
+.palladium-sheet input[type="text"] {
+    width: 60px;
+    padding: 2px;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    background: #ffffff;
+    color: #000000;
+}
+.palladium-sheet .skill-name {
+    width: 300px;
+}
+.palladium-sheet .skill-value {
+    width: 60px;
+}
+.palladium-sheet .skill-misc {
+    width: 40px;
+}
+.palladium-sheet .drop-zone {
+    border: 2px dashed #7f8c8d;
+    padding: 10px;
+    text-align: center;
+    background: #ecf0f1;
+    color: #2c3e50;
+    margin: 5px 0;
+}
+.palladium-sheet .drop-zone:hover {
+    background: #bdc3c7;
+}
+.palladium-sheet .skill-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.palladium-sheet textarea[name="system.notes"],
+.palladium-sheet textarea[name="system.background"] {
+    background-color: white;
+    width: 100%;
+    height: 150px;
+    padding: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+}
+.palladium-sheet .skill-roll {
+    padding: 2px 4px;
+    width: 60px;
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.palladium-sheet .skill-roll:hover {
+    background: #2980b9;
+}
+.palladium-sheet .notes-content {
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    min-height: 100px;
+    color: #000000;
+}
+
+/* Weapon Proficiencies */
+.palladium-sheet .wp-list {
+    margin-top: 10px;
+}
+.palladium-sheet .wp-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+.palladium-sheet .wp-name {
+    font-weight: bold;
+    color: #2c3e50;
+    min-width: 150px;
+}
+.palladium-sheet .wp-item select,
+.palladium-sheet .wp-item input[type="number"] {
+    width: 60px;
+    padding: 2px;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    background: #ffffff;
+    color: #000000;
+}
+.palladium-sheet .wp-description {
+    flex-grow: 1;
+    color: #7f8c8d;
+}
+.palladium-sheet .remove-wp,
+.palladium-sheet .remove-occ {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    padding: 0;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.palladium-sheet .remove-wp:hover,
+.palladium-sheet .remove-occ:hover {
+    background-color: #c0392b;
+}
+.palladium-sheet .remove-skill {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    width: 8px;
+    height: 8px;
+    line-height: 8px;
+    padding: 0;
+    font-size: 8px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+.palladium-sheet .remove-skill:hover {
+    background-color: #c0392b;
+}
+
+/* OCC Abilities */
+.palladium-sheet .occ-abilities p {
+    margin: 5px 0;
+}
+.palladium-sheet .occ-abilities strong {
+    color: #2c3e50;
+}
+.palladium-sheet .occ-abilities ul {
+    margin: 5px 0 10px 20px; /* Indent the list */
+    padding-left: 0;
+}
+.palladium-sheet .occ-abilities .ability-line {
+    list-style-type: disc; /* Bullets for all lines */
+    margin-bottom: 5px;
+}
+.palladium-sheet .occ-abilities .tenet {
+    margin-left: 10px; /* Extra indent for tenets */
+    font-style: italic; /* Distinguish tenets visually */
+}
+
+/* Item Sheet */
+.palladium-item textarea {
+    width: 100%;
+    height: 100px;
+    padding: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+}
+.palladium-item .add-ability {
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.palladium-item .add-ability:hover {
+    background: #2980b9;
+}
+.palladium-item .remove-ability {
+    background: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 2px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.palladium-item .remove-ability:hover {
+    background: #c0392b;
+}
+.palladium-sheet table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.palladium-sheet th, .palladium-sheet td {
+    border: 1px solid #bdc3c7;
+    padding: 5px;
+    text-align: left;
+}
+
+.palladium-sheet th {
+    background: #34495e;
+    color: #ffffff;
+}
+
+.palladium-sheet .add-item {
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.palladium-sheet .add-item:hover {
+    background: #2980b9;
+}
+
+.palladium-sheet .remove-item {
+    background: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 2px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.palladium-sheet .remove-item:hover {
+    background: #c0392b;
+}
+
+.palladium-sheet textarea[name^="system.equipment.gear"] {
+    width: 100%;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+}
+.palladium-sheet .dodge-roll,
+.palladium-sheet .saving-throw-roll {
+    padding: 2px 4px;
+    width: 60px;
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.palladium-sheet .dodge-roll:hover,
+.palladium-sheet .saving-throw-roll:hover {
+    background: #2980b9;
+}
+.palladium-sheet .strike-roll {
+    padding: 2px 4px;
+    width: 60px;
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.palladium-sheet .strike-roll:hover {
+    background: #2980b9;
+}
+.palladium-sheet .parry-roll {
+    padding: 2px 4px;
+    width: 60px;
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.palladium-sheet .parry-roll:hover {
+    background: #2980b9;
+}
+.palladium-sheet .hth-level {
+    width: 60px;
+    padding: 2px;
+    border: 1px solid #bdc3c7;
+    border-radius: 3px;
+    background: #ffffff;
+    color: #000000;
+}
+
+.palladium-sheet .remove-hth {
+    background-color: #e74c3c;
+    color: #ffffff;
+    border: none;
+    border-radius: 2px;
+    width: 12px;
+    height: 12px;
+    line-height: 12px;
+    padding: 0;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.palladium-sheet .remove-hth:hover {
+    background-color: #c0392b;
+}
+.palladium-sheet .cast-spell,
+.palladium-sheet .use-psionic {
+    padding: 2px 4px;
+    width: 60px;
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.palladium-sheet .cast-spell:hover,
+.palladium-sheet .use-psionic:hover {
+    background: #2980b9;
+}
+.palladium-sheet .add-magic,
+.palladium-sheet .add-psionic {
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.palladium-sheet .add-magic:hover,
+.palladium-sheet .add-psionic:hover {
+    background: #2980b9;
+}
+.palladium-sheet .remove-magic,
+.palladium-sheet .remove-psionic {
+    background: #e74c3c;
+    color: #ffffff;
+    border: none;
+    padding: 2px 5px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.palladium-sheet .remove-magic:hover,
+.palladium-sheet .remove-psionic:hover {
+    background: #c0392b;
+}
+.palladium-sheet table td, .palladium-sheet table th {
+    min-width: 80px; /* Adjust as needed */
+    padding: 5px;
+    text-align: center;
+}
+.palladium-sheet table td, .palladium-sheet table th {
+    min-width: 80px;
+    padding: 5px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.palladium-sheet table th {
+    background: #34495e;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.palladium-sheet table td {
+    background: #ffffff;
+    color: #000000;
+}
+
+.palladium-sheet table tbody tr:nth-child(odd) {
+    background: #f9f9f9;
+}
+.palladium-sheet .combat-attributes {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #34495e;
+    padding-bottom: 10px;
+}
+
+.palladium-sheet .attribute-row {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.palladium-sheet .attribute-row label {
+    width: 80px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.palladium-sheet .attribute-row input[type="number"] {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.palladium-sheet .attribute-row button {
+    padding: 2px 4px;
+    width: 60px;
+    background: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.palladium-sheet .attribute-row button:hover {
+    background: #2980b9;
+}

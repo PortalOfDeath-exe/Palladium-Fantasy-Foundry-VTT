@@ -1,0 +1,29 @@
+{
+    "name": "W.P. Forked Weapons/Trident",
+    "type": "wp",
+    "system": {
+        "level": 1,
+        "description": "Training with forked weapons including the trident, military forks, the sai, tiger fork, and other weapons with tines.",
+        "bonuses": {
+            "damage": [],
+            "strike": [
+                {"level": 1, "value": 1},
+                {"level": 3, "value": 1},
+                {"level": 5, "value": 1},
+                {"level": 8, "value": 1},
+                {"level": 11, "value": 1},
+                {"level": 13, "value": 1}
+            ],
+            "strike_thrown_or_parry": [
+                {"level": 1, "value": 1},
+                {"level": 3, "value": 1},
+                {"level": 4, "value": 1},
+                {"level": 6, "value": 1},
+                {"level": 10, "value": 1},
+                {"level": 10, "value": 1},
+                {"level": 13, "value": 1},
+                {"level": 15, "value": 1}
+            ]
+        }
+    }
+}

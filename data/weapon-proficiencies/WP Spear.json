@@ -1,0 +1,31 @@
+{
+    "name": "W.P. Spear",
+    "type": "wp",
+    "system": {
+        "level": 1,
+        "description": "Combat skill with large and small spears.",
+        "bonuses": {
+            "damage": [],
+            "strike": [
+                {"level": 1, "value": 1},
+                {"level": 3, "value": 1},
+                {"level": 5, "value": 1},
+                {"level": 8, "value": 1},
+                {"level": 11, "value": 1},
+                {"level": 13, "value": 1}
+            ],
+            "strike_thrown_or_parry": [
+                {"level": 1, "value": 1},
+                {"level": 3, "value": 1},
+                {"level": 3, "value": 1},
+                {"level": 5, "value": 1},
+                {"level": 6, "value": 1},
+                {"level": 8, "value": 1},
+                {"level": 10, "value": 1},
+                {"level": 11, "value": 1},
+                {"level": 13, "value": 1},
+                {"level": 14, "value": 1}
+            ]
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+    "name": "W.P. Archery",
+    "type": "wp",
+    "system": {
+      "level": 1,
+      "description": "An expertise with the bow and arrow. Bonuses: +1 to parry with that weapon at level 1.",
+      "bonuses": {
+        "strike": [
+          {"level": 2, "value": 1},
+          {"level": 4, "value": 1},
+          {"level": 6, "value": 1},
+          {"level": 8, "value": 1},
+          {"level": 11, "value": 1},
+          {"level": 14, "value": 1}
+        ],
+        "strike_thrown_or_parry": [
+          {"level": 1, "value": 1}
+        ],
+        "rate_of_fire": [
+          {"level": 2, "value": 1},
+          {"level": 3, "value": 1},
+          {"level": 5, "value": 1},
+          {"level": 7, "value": 1},
+          {"level": 9, "value": 1},
+          {"level": 12, "value": 1}
+        ]
+      }
+    }
+  }

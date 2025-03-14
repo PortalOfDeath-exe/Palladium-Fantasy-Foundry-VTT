@@ -1,0 +1,58 @@
+<form class="palladium-item" autocomplete="off">
+    <header>
+        <img src="{{item.img}}" data-edit="img" title="{{item.name}}" style="width: 50px; height: 50px;" />
+        <div>
+            <label>Name</label>
+            <input type="text" name="name" value="{{item.name}}" />
+        </div>
+    </header>
+    <section>
+        {{#if (eq item.type "occ")}}
+            <h3>Abilities</h3>
+            <button type="button" class="add-ability">Add Ability</button>
+            {{#each system.abilities as |ability index|}}
+                <div style="margin: 10px 0;">
+                    <label>Title</label>
+                    <input type="text" name="system.abilities.{{index}}.title" value="{{ability.title}}" />
+                    <label>Description</label>
+                    <textarea name="system.abilities.{{index}}.description">{{ability.description}}</textarea>
+                    <button type="button" class="remove-ability" data-index="{{index}}">Remove</button>
+                </div>
+            {{/each}}
+        {{/if}}
+        {{#if (eq item.type "hand_to_hand")}}
+        <div>
+            <label>Level</label>
+            <select name="system.level">
+                {{#each (range 1 15)}}
+                    <option value="{{this}}" {{#if (eq this ../system.level)}}selected{{/if}}>{{this}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div>
+            <label>Description</label>
+            <textarea name="system.description" readonly>{{system.description}}</textarea>
+        </div>
+    {{/if}}
+        {{#if (eq item.type "skill")}}
+            <div>
+                <label>Base Value (%)</label>
+                <input type="number" name="system.base" value="{{system.base}}" />
+            </div>
+        {{/if}}
+        {{#if (eq item.type "wp")}}
+            <div>
+                <label>Level</label>
+                <select name="system.level">
+                    {{#each (range 1 20)}}
+                        <option value="{{this}}" {{#if (eq this ../system.level)}}selected{{/if}}>{{this}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div>
+                <label>Description</label>
+                <textarea name="system.description" readonly>{{system.description}}</textarea>
+            </div>
+        {{/if}}
+    </section>
+</form>

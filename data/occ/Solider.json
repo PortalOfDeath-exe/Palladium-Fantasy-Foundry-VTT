@@ -1,0 +1,24 @@
+{
+    "name": "Soldier",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "The Advantages of Being a Soldier",
+                "description": "In addition to getting basic military training, being outfitted with basic equipment, and food in the belly, the soldier is given a modest salary, job security, opportunity for advancement, respect (in some cases fear), power and glory.\nFurthermore, the character has access to military bases, other resources and, theoretically, the soldier can count on the support of the kingdom and the rest of the military, as well as have the blessings of the Church of the Realm and the respect this all brings with it.\nEnlistment and salaries: Soldiers usually sign up for a minimum two year period of enlistment, but many kingdoms require terms of 4-6 years. Reenlistment is usually for a 2-4 year period.\nConditions for discharge include poor behavior, lack of obedience, and injury (sorry, no V.A. benefits; if you can't fight in the near future, you're discharged and on your own)."
+            },
+            {
+                "title": "Average Salaries",
+                "description": "In addition to basic training, food and supplies:\n- Typical soldier: 100-150 gold a month\n- Border soldier: 160-200 gold a month\n- Special assignment/hazard pay: An additional 300 to 600 gold per special assignment (always dangerous)\n- Cavalry (usually knights, nobles & officers): 300-400 gold a month\n- Long bowman: 300-400 gold a month\n- Officers of low rank: An additional 100 to 300 gold a month\n- Officers of high ranking: An additional 600 to 1000 gold a month\n- Mercenary fighters may also be hired to bolster the number of men in a garrison, or in a battle situation. They are obligated to abide by all military rules, laws, and authority. Room and board is provided under the terms of Mercenary enlistment, with a salary of 150-200 gold a month, plus bonuses for special assignments. Mercenary companies and armies are often given 10% to 20% of the booty as well. The employment of mercenary forces may be from specific job to job, or for a period of 3-6 months. Mercs must provide their own equipment."
+            },
+            {
+                "title": "Soldiers & Armor",
+                "description": "Although any type of armor can be used, soldiers usually lean strongly toward heavy armors. This is because their profession is high profile, requires little need for stealth, and calls for maximum physical protection. Characters are -15% to prowl and -20% to climb/scale walls in full splint or plate armor. -10% to prowl or climb in chain or scale mail, and -5% in studded leather"
+            },
+            {
+                "title": "Other O.C.C. Bonuses",
+                "description": "+1 to pull punch, and +1 to save vs horror factor at levels 1, 3, 7, 10 and 13."
+            }
+            ]
+          }
+        }

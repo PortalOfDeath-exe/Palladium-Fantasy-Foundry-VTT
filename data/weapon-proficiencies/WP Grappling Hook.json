@@ -1,0 +1,18 @@
+{
+    "name": "W.P. Grappling Hook",
+    "type": "wp",
+    "system": {
+        "level": 1,
+        "description": "Trained use of a grappling hook for climbing, scaling walls (adds +5% to that skill), boarding vessels, tripping an opponent (by hooking the foot, ankle or leg; does no damage, but knocks victim to the ground and they lose initiative and one melee attack), and impaling (does 1D6 damage). This weapon cannot be used to parry!",
+        "bonuses": {
+            "damage": [],
+            "strike": [
+                {"level": 3, "value": 1},
+                {"level": 6, "value": 1},
+                {"level": 9, "value": 1},
+                {"level": 12, "value": 1}
+            ],
+            "strike_thrown_or_parry": []
+        }
+    }
+}

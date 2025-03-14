@@ -1,0 +1,16 @@
+{
+    "name": "Ranger",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Rangers & Armor",
+                "description": "Most rangers tend to prefer leather armor because it offers excellent maneuverability, stealth (no jingling or clunking of metal parts) and because it has a natural color or can be dyed in shades of green, brown, grays, and black, all of which are perfect for blending into a wilderness surrounding. Rangers whose adventures lead them into battle more often than others often wear suits of leather and chain mail, chain mail, scale mail and even splint or plate, but with the usual penalties. Characters are -15% to prowl and -20% to climb/scale walls in full splint or plate armor. -10% to prowl or climb in chain or scale mail, and -5% in studded leather."
+            },
+            {
+                "title": "Other O.C.C. Bonuses",
+                "description": "+2 to save vs horror factor"
+            }
+            ]
+          }
+        }

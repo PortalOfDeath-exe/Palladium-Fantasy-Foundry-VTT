@@ -1,0 +1,44 @@
+{
+  "name": "Hand to Hand: Assassin",
+  "type": "hand_to_hand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Specialized training for assassins, focusing on precision and lethal strikes.",
+    "level": 1,
+    "levelDescriptions": {
+      "1": "1 attack per melee round and +2 to strike.",
+      "2": "+1 attack per melee round.",
+      "3": "+3 to roll with punch/fall/impact and +3 to pull punch.",
+      "4": "+4 to damage and disarm.",
+      "5": "+1 attack per melee round.",
+      "6": "+3 to parry and dodge, and body flip/throw.",
+      "7": "Knockout/stun on an unmodified roll of 17-20.",
+      "8": "+1 attack per melee round.",
+      "9": "Kick attacks: Karate style kick (does 2D4 damage) and any two of choice, except jump kicks.",
+      "10": "Critical strike on an unmodified roll of 19 or 20.",
+      "11": "+2 to strike.",
+      "12": "Death Blow on a roll of a natural 20 (if desired).",
+      "13": "+1 attack per melee round.",
+      "14": "+2 to damage.",
+      "15": "+2 to strike."
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "exportSource": {
+      "world": "palladium-fantasy",
+      "system": "Palladium-Fantasy-Foundry-VTT",
+      "coreVersion": "12.331",
+      "systemVersion": "0.1"
+    }
+  },
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "Palladium-Fantasy-Foundry-VTT",
+    "systemVersion": "0.1",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

@@ -1,23 +1,35 @@
 {
-  "id": "PalladiumFantasyUnofficial",
-  "title": "Palladium Fantasy",
-  "description": "unofficial system for Palladium Fantasy RPG",
-  "version": "0.1.0",
+  "name": "Palladium-Fantasy-Foundry-VTT",
+  "title": "Palladium Fantasy Foundry VTT",
+  "description": "A system for Palladium Fantasy 2nd Edition",
+  "version": "0.5",
   "compatibility": {
-    "minimum": "11",
-    "verified": "11"
+    "minimum": "12",
+    "verified": "12"
   },
-  "authors": [
+  "scripts": ["module/script.js"],
+  "styles": ["palladium.css"],
+  "packs": [
     {
-      "name": "PortalOfDeath-exe",
-      "discord": "none",
-      "url": "none"
+      "name": "occ",
+      "label": "Occupational Character Classes",
+      "path": "packs/occ.db",
+      "type": "Item",
+      "system": "Palladium-Fantasy-Foundry-VTT"
+    },
+    {
+      "name": "weapon-proficiencies",
+      "label": "Weapon Proficiencies",
+      "path": "packs/weapon-proficiencies.db",
+      "type": "Item",
+      "system": "Palladium-Fantasy-Foundry-VTT"
+    },
+    {
+      "name": "hand-to-hand",
+      "label": "Hand-to-Hand Styles",
+      "path": "packs/hand-to-hand.db",
+      "type": "Item",
+      "system": "Palladium-Fantasy-Foundry-VTT"
     }
-  ],
-  "esmodules": ["module/script.js"],
-  "styles": ["styles/styles.css"],
-  "packs": [],
-  "url": "https://github.com/yourusername/my-rpg-system",
-  "manifest": "https://raw.githubusercontent.com/yourusername/my-rpg-system/main/system.json",
-  "download": "https://github.com/yourusername/my-rpg-system/archive/refs/heads/main.zip"
+  ]
 }

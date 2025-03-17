@@ -1,0 +1,24 @@
+{
+  "name": "Elf",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Elven Adaptability",
+        "description": "Elves are resourceful and creative, with good intelligence that allows them to adapt to various situations. This provides a +5% bonus to any two skills of the player’s choice, reflecting their versatility."
+      },
+      {
+        "title": "Keen Senses",
+        "description": "The Elf Pathfinder has nightvision 60 ft (18.3 m) and a heightened awareness of their surroundings. This grants a +1 on initiative and a +5% bonus to detect concealment and detect ambush skills."
+      },
+      {
+        "title": "Psychic Potential",
+        "description": "Elves exhibit a reasonably high percentage of psychic ability. Roll to determine psionics as per standard rules (e.g., a roll of 10-12 on 1D12 for minor psionics if using Palladium rules), reflecting their latent mental gifts."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+1 on initiative, +1 to dodge, +2 to save vs horror factor."
+      }
+    ]
+  }
+}

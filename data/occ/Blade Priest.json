@@ -1,0 +1,24 @@
+{
+    "name": "Blade Priest",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Priests, Armor and Combat",
+                "description": "Trained as men at arms, familiar with weapons and armor. Weapon restriction: Must use edged weapons (knife, spear, pole arm, scythe, sickle, sword, axe); no blunt weapons or missile weapons (bows/crossbows), though throwing edged weapons (knives, shurikens) is allowed. Armor: Any type (heavy/light), with encumbrance penalties: -10% prowl, -15% climb/scale walls/swim/acrobatics/gymnastics in full splint/plate; -5% in chain/scale mail; no penalty in studded leather/lighter armor. Metal armor doesn’t hamper priestly abilities; no spellcasting, so no channeling penalties apply."
+            },
+            {
+                "title": "Special Blessings of the Blade",
+                "description": "Blessings show favor from the Blade Pantheon, bestowed only by Blade Priests on believers (non-worshipers ineligible, enemies forbidden; exceptions rare). Take 1 melee round (15 sec), 1 person/object at a time; 8th+ level priests bless 2 persons/objects per level. Duration: 2D4 weeks unless noted. No limit per day, but no multiple blessings on one target.\n- Blessing of a Warrior: +1 to strike, parry, or dodge (priest’s choice); one bonus at a time.\n- Blessing of a Weapon: +2 damage or +1 strike/parry (priest’s choice) to edged weapons.\n- Blessing of Armor: +1 A.R. or +20 S.D.C. (damage taken from bonus S.D.C. first); no repairs/reformation.\n- Blessing of a Battleground: 1 square mile, 24 hr, +1 vs magic, +2 vs horror factor, +1 strike/parry/dodge for believers. Penalties: Blessing enemies triggers deity punishment (e.g., powers stripped, lame arm until penance)."
+            },
+            {
+                "title": "Special Prayers of the Blade",
+                "description": "Rituals with success ratios, limited daily use.\n- Prayer of Strength: +6 vs horror factor, +1 all saves, +10% turn dead, +1 spell strength, +1 parry/dodge; 2 min/level (8 rounds/level), 2x/24 hr. Success: 20%+7%/level (2nd+).\n- Prayer of Communion: Contacts patron deity/pantheon for vision/dream (60% divination/omen of danger/good fortune); 1x/24 hr. Success: 21%+7%/level (2nd+).\n- Prayer of Intervention: 1x/24 hr, grants one power:\n  - Cast 1 spell (any level deity knows) at +3 levels (e.g., 3rd level as 6th), no P.P.E. cost; max deity’s level. Success: 21%+5%/level (2nd+).\n  - Create magic scroll (6th+ level, 1x/24 hr, ≤7th level, often offensive). Success: 9%/level.\n  - Super Healing: 2D4x10 HP/S.D.C., 2 touches/1 person each. Success: 21%+7%/level (2nd+)."
+            },
+            {
+                "title": "Knowledge and Abilities of the Blade Priest",
+                "description": "1. The Healing Touch: Restores 2D4 HP/S.D.C. for cut/puncture/laceration wounds, 1x/every other melee round. Free for worshipers, 5-1D6x100 gold (avg. 25-30 gold) for others.\n2. The Cleaving Touch: 2nd+ level, +2D6 damage to edged weapons, 1x/every other melee round. Ignores armor unless parried (-5 penalty), no effect if missed; applies to all blade sizes.\n3. Remove Curse: Removes magic/deific curses (not rune/magic items/sacred places), 1D4x10 min. Success: 7%/level (+10% for edged weapons, not rune/magic). 1x per curse, multiple priests can try.\n4. Limited Restoration: Reattaches severed limbs (≤2 weeks old, limb present, body alive, not heads). Success: 10%/level, 1x per injury/priest.\n5. Turn Dead: After 30 sec (2 melee rounds) concentration, repels skeletons/corpses/mummies/ghouls; hesitates vampires/ghosts/wraiths (1-2 rounds), no effect on demons/deities. Success: 20%+5%/level (2nd+).\n6. Penance and Self-Sacrifice: Resists thirst 2 days/level, hunger 3 days/level via meditation/fasting/abstinence/silence; body takes damage. Lifelong celibacy required; breaking it causes excommunication/loss of powers."
+            }
+        ]
+    }
+}

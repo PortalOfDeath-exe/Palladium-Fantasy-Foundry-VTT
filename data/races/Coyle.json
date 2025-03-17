@@ -1,0 +1,24 @@
+{
+  "name": "Coyle",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Blood Hunter",
+        "description": "Coyles track blood scent up to 500 ft (152 m). Base Skill: 24% +4% per level of experience. Nightvision 40 ft (12.2 m), excellent day vision (human norm)."
+      },
+      {
+        "title": "Scent Awareness",
+        "description": "Coyles recognize and follow familiar scents up to 50 ft (15 m). Base Skill: 12% +4% per level; +10% for mate/offspring. Roll every 100 ft (30.5 m); failure loses the trail."
+      },
+      {
+        "title": "Keen Hearing",
+        "description": "Coyles have hearing as keen as a dog’s, with the same range, aiding their stalking and combat prowess."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+1 on initiative, +1 to save vs horror factor. Punch/claw 1D6 +P.S. bonus, kick 2D6 +P.S. bonus, bite 1D6 (no P.S. bonus)."
+      }
+    ]
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Changeling",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Shapechanging Mastery",
+        "description": "Changelings can alter their shape and size to mimic any humanoid (3-10 ft/0.9-3 m), growing hair/fur but not extra limbs or objects. Transformation takes one melee (15 seconds). Weight varies ±30 lbs; impersonation may require diet adjustment. Attributes remain constant, clothes don’t change, asexual nature allows male/female/both forms."
+      },
+      {
+        "title": "Mental Resilience",
+        "description": "Changelings have superior mental endurance and affinity, granting +2 to save vs telepathic probes and mind control."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+2 to save vs telepathic probes, mind control, and horror factor, +5% to disguise skill."
+      }
+    ]
+  }
+}

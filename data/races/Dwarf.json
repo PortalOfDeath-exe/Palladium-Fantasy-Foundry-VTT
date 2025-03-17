@@ -1,16 +1,28 @@
 {
-    "name": "Dwarf",
-    "type": "race",
-    "system": {
-        "description": "Stout and sturdy folk.",
-        "attribute_bonuses": {
-            "ps": "1d6",
-            "pe": 2,
-            "pb": -2
-        },
-        "sdc_bonus": 10,
-        "skills": [
-            {"name": "Masonry", "base": 40}
-        ]
-    }
+  "name": "Dwarf",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Master of the Forge",
+        "description": "The Dwarf Forgemaster excels in metalworking and craftsmanship. This ability is equivalent to the Field Armorer skill with a +10% bonus, plus an additional +5% to recognize weapon quality. Dwarves have an innate understanding of blacksmithing techniques, allowing them to craft weapons, armor, and jewelry with exceptional skill."
+      },
+      {
+        "title": "Tunneling Expertise",
+        "description": "Dwarves can dig and build solid, strong tunnels with no fear of cave-ins, performing excavations with amazing speed and dexterity. They can identify whether a tunnel or chamber is natural or dug by dwarves, kobolds, goblins, gnomes, troglodytes, or humans, and determine its age (new, old, ancient). Base Skill: 40% +5% per level of experience."
+      },
+      {
+        "title": "Underground Architect",
+        "description": "The Dwarf Forgemaster is a skilled underground builder, capable of creating small rooms, ornate archways, staircases, great chambers, and labyrinths with traps (pit and cave-in types). They can recognize construction styles of various races and locate/deactivate underground traps when moving cautiously. Base Skill: 30% +5% per level of experience; trap detection/deactivation at half skill level."
+      },
+      {
+        "title": "Subterranean Instincts",
+        "description": "The Dwarf Forgemaster has an innate sense of direction underground, even in total darkness (not applicable on the surface). They can determine direction (north, south, east, west), depth below surface, and slope angles, as well as locate surface structures in familiar areas. Base Direction Skill: 40% +5% per level; Surface Structure Skill: 30% +5% per level (-25% in unfamiliar areas). Nightvision 90 ft (27.4 m)."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+1 to save vs magic, +2 to save vs possession, +2 to save vs horror factor. Add +5% to Military Skills, general repair, recognize weapon quality, masonry, carpentry, rope works, sculpting, locate secret compartments/doors, detect concealment, basic math, and land navigation."
+      }
+    ]
+  }
 }

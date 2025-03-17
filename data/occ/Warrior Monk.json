@@ -1,0 +1,24 @@
+{
+    "name": "Warrior Monk",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Monks, Armor & Combat",
+                "description": "With rare exception, monks are not trained as men of arms or in the use of weapons and armor. Hand to hand combat is not generally part of the monk's teachings, though most travelling monks learn at least basic hand to hand combat. They are not men of magic just because they can cast a few spells; rather, they are theologians, philosophers, healers, men of learning, and liaisons between mortals and the gods.\nWeapons can vary, but most monks prefer staves and blunt weapons.\nMonks tend to favor light armor like padded or leather for maneuverability and comfort. Heavy armor is cumbersome, and metal armor hampers magic energy channeling. If more than 50% of the body is covered in metal (e.g., chain mail, scale, plate), the monk must spend 20% more P.P.E. to cast spells, and roll once on the following table for additional penalties:\n01-20: Reduce spell damage or effects by 1D4x10%.\n21-40: Reduce spell duration by 1D4x10%.\n41-60: Reduce spell range by 1D4x10%.\n61-80: Reduce both range and duration by 20%.\n81-00: No additional problems.\nMonks may wear any armor, but encumbrance penalties apply: -15% to prowl and -20% to climb/scale walls or swim in full splint or plate armor; -10% to prowl, swim, or climb in chain or scale mail; -5% in studded leather."
+            },
+            {
+                "title": "Allegiance to a God",
+                "description": "A monk must choose a god, pantheon, or religion to devote their life to, though affiliation with a formal church isn’t required. The deity(s) must align with the character’s alignment (e.g., a good character won’t worship a dark god unless shifting alignment). A pantheon may include varied alignments, but a good monk won’t serve evil gods within it, using them as cautionary examples.\nMonks typically swear allegiance to one or two gods but know all deities in their pantheon, their allies, enemies, and codes. Adherence to dogma is strict in temples but more relaxed for travelling monks, who may bend rules to help others.\nDisobeying or rebuking a deity brings punishment, often severe but fair. Forsaking a god strips all abilities, skills, and experience tied to the monastic training, forcing the character to start anew with a new O.C.C. Reinstatement by the forsaken deity is rare and, if granted, starts at level one or two."
+            },
+            {
+                "title": "Special Monk Training & Mastery",
+                "description": "1. Stick Fighting: Mastery of staff or spear combat, emphasizing humility with a simple 'stick' or modest spear (no pole arms).\n  - Stick Power Strike: A temple strike (roll 18+ to hit) inflicts +1D6 damage, victim loses initiative, 1 melee action, and 01-50% chance to drop a weapon.\n  - Parry Arrows with Staff or Spear: -2 to parry arrows/darts/thrown objects, -6 vs gunfire, 1 opponent at a time, must see attack.\n  - Bonuses: +1 to parry at levels 4, 8, 12, +1 attack per melee with staff/spear.\n2. Spirit Strike: Mystical attack vs dragons, elementals, demons, supernatural beings, and creatures of magic. Triples normal damage (punch, kick, staff, or spear), costs 2D6 P.P.E.\n3. Permanent P.P.E. Base: P.E. x3 + 1D4/level. Reflects inner spirit, not usable for spells or priestly powers.\n4. Other O.C.C. Bonuses: +20 S.D.C., +1 vs horror factor at levels 2, 4, 7, 9, 11, 13, 15, +1 vs disease, +1 vs illusions/mind control, +4 vs possession."
+            },
+            {
+                "title": "Temple Skills",
+                "description": "Special skills from monastic training:\n- Begging: Chance to collect donations (amount varies by economy). Base Skill: 20%+3%/level.\n- Fasting: Survive 2 weeks without food (with water), 3 days without water. Roll vs skill after 2 weeks to avoid weakness. Base Skill: 40%+3%/level.\n- Deep Meditation: Restores I.S.P./P.P.E. 3x faster, no fatigue, full awareness. Base Skill: 20%+6%/level. Base Time: 1 hour + 1 hour/level.\nNote: 70% of monastic orders require celibacy and gender segregation."
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Diabolist",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Diabolists & Armor",
+                "description": "Heavy armor is uncomfortable: -15% prowl, -20% climb/swim in splint/plate; -10% in chain/scale; -5% in studded leather. No penalties for leather or padded. Unlike wizards, armor doesn’t hamper magic if the Diabolist touches each ward with a bare hand to energize and invoke power words."
+            },
+            {
+                "title": "Diabolist O.C.C. Knowledge & Abilities",
+                "description": "1. Power Words: Knows all known power words; others may exist but are lost.\n2. Literacy: Runes: 88%+1%/level; can identify rune weapons (lesser, greater, greatest).\n3. Mystic Symbology: Knows all ancient/modern magic symbols (mystic, swords, arrows, animals, stones, colors); uses mystic symbols in circles, as warnings, or in secret languages (e.g., hieroglyphics, cryptography). Symbols lack inherent magic (except runes).\n4. Recognize & Understand Magic Circles: Identifies magic circles, their purpose (protection, power, summoning), activity, and use. Base Skill: 22%+4%/level (+10% for protection circles).\n5. Use Magic Circles: Can use active circles if recognized (30%+5%/level, +10% for protection circles); 2 tries only, cannot create/activate circles.\n6. Identify Energized Wards: Senses active wards (25%+5%/level, half for ward sequences); 1 try.\n7. Recognize Enchantment: Identifies mind control, curses, magic effects (not illusions/psionics). 20%+5%/level.\n8. Recognize Magic: Spots magic items (20%+5%/level, +20% with symbols/runes); doesn’t know powers/use.\n9. Magic Bonuses: +1 vs magic at 2, 5, 10, 15; +3 vs horror factor; impervious to own wards. Ward strength: +1 at 5, 10, 15 (starts 14). Wards energized: 1/P.E. at 1st, 2/P.E. at 3rd, 3/P.E. at 9th, 4/P.E. at 15th per 24 hr.\n10. P.P.E.: 2D4x10 + P.E. + 2D6/level; cannot draw from ley lines/nexuses/others, but wards enhance near ley lines. Energizing: 1 P.P.E./ward, 5 P.P.E./power symbol, 20 P.P.E./permanence ward; typical phrase 2-5 wards.\n11. Read Scrolls: Can read most scrolls, cannot learn spell magic."
+            }
+        ]
+    }
+}

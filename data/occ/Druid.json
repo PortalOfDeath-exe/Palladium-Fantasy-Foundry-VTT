@@ -1,0 +1,60 @@
+{
+    "name": "Druid",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "The Five Laws",
+                "description": "All druidic magic follows these principles:\n1. Law of Rebound: Lesser magic rebounds onto the caster when repelled by stronger magic.\n2. Law of Equals: Equal magical forces clash until one prevails, becoming stronger in future encounters.\n3. Law of Appearances: Question everything in magic; avoid obvious solutions.\n4. Law of Summoning: Unexpected results mean insufficient experience for the attempted magic.\n5. Law of Cause and Effect: Magic power equals effort invested; overreaching summons negative magic (bad luck).\nDruids must replenish earth energy via rituals (minutes to hours) and blood sacrifice, nurturing nature by pruning trees, planting seeds, and killing pests. Neglecting this risks spell failure and negative energy: aging twice as fast, bad luck (M.A. halved, -10% skills, -10 S.D.C., -10 P.P.E., -3 initiative), and eventual destruction. Selfish/evil use also incurs negative energy (GM discretion). Repentance restores abilities over time."
+            },
+            {
+                "title": "Druids & Armor",
+                "description": "Druids prefer natural armor (padded leather, wood, bark) over processed metal, which disconnects them from nature and hampers magic. Metal armor is only worn as a disguise, with penalties: -15% to prowl, -20% to climb/swim in full splint/plate; -10% in chain/scale; -5% in studded leather. Soft/studded leather or magic cloth/leather armor is favored."
+            },
+            {
+                "title": "Levels of Experience & Power",
+                "description": "Druid abilities grow with experience, not time. Tests (GM-designed) mark level advancement after apprenticeship under a full druid. Starts at level one.\n- Permanent P.P.E. Base: 1D4x10 + P.E. + 1D6/level. Limited P.P.E. due to non-magic practitioner status; uses rituals and blood sacrifice (animals only, not people) or ley lines/nexuses.\n- Magic Bonuses: +1 vs magic at levels 2, 6, 10, 14; +4 vs horror factor; +2 vs disease.\n- Spell Strength: Starts at 12, +1 at levels 3, 6, 9, 12, 15.\n- Base Magic Control: 35% +5%/level beyond 8th; roll to control natural forces (e.g., fire, storms); failure means no control over unleashed magic."
+            },
+            {
+                "title": "First Level Abilities",
+                "description": "- Secret Writing: Oghrune: Runic alphabet variant with nature symbols. Base Skill: 50%+5%/level. Reads runes at -15%; diabolists read Oghrune at -20%.\n- Exceptional Regional Knowledge: Geography/history of home/practice region (thousands of years). Base Skill: 40%+5%/level.\n- Knowledge of Sacred Sites: Recognize sites and ley lines. Base Skill: 35%+5%/level.\n- See and Use Ley Lines: See ley lines/nexuses, draw P.P.E., enhance spells.\n- Ley Line Drifting: Float along ley lines at Spd 10 (self only, no P.P.E. cost).\n- Ley Line Rejuvenation: Double healing rate on ley lines; instant 2D6 HP/SDC once/24 hr (10 min, no P.P.E.).\n- Recognize Enchantment on Animals: Identify magic on animals (not illusions/psionics). Base Skill: 35%+5%/level (-20% for humanoids).\n- Magic Powers: Globe of Daylight, Repel Animals (as wizard spells)."
+            },
+            {
+                "title": "Second Level Abilities",
+                "description": "- Druid Versification Skill: Folklore via songs/verses, playable on one instrument, bard disguise. Base Skill: 30%+5%/level.\n- Magic Powers: Healing Touch (Animals): 4D6 HP/SDC, 1 melee round, 7 P.P.E. (not ley lines); Chameleon; Faerie Speak (as wizard spells)."
+            },
+            {
+                "title": "Third Level Abilities",
+                "description": "- Philosophy and Teaching: Master rituals, participate actively.\n- Druid Astronomy Skill: Time, direction, omens via stars. Base Skill: 20%+5%/level, +5% to Land Navigation.\n- Weather Identification Skill: Predict weather 4D6+6 hr, spot magic weather (+10%). Base Skill: 20%+5%/level.\n- Magic Powers: Negate Poisons/Toxins; Healing Touch; Control the Beasts; Familiar Link (1 animal, as wizard spells)."
+            },
+            {
+                "title": "Fourth Level Abilities",
+                "description": "- Prophecy (General): Sense omens of danger/evil via nature. Base Skill: 20%+5%/level, 1x/24 hr or major events.\n- Forecast Weather Change: Precise 100-mile forecast, 10 min, bird sacrifice, high location.\n- Magic Powers: None added (use Prophecy)."
+            },
+            {
+                "title": "Fifth Level Abilities",
+                "description": "- Magic Powers:\n  - Extinguish Fire: 1 mile/level, 1D4x10 min underwater (1D6 min for small fires).\n  - Kindle Flame: Controlled fire spread (inches to 10 ft/min), 1000 ft range, needs large fire.\n  - Communication: 1-way telepathy (2-way if target 7th+ level), 1 mile/level, 1-2 min, static position, high location."
+            },
+            {
+                "title": "Sixth Level Abilities",
+                "description": "- Magic Powers:\n  - Metamorphosis: Animal (half P.P.E., double duration vs wizard spell).\n  - Summon and Control Canines (as wizard spell).\n  - Purification (as wizard spell)."
+            },
+            {
+                "title": "Seventh Level Abilities",
+                "description": "- Magic Powers:\n  - Phoenix Healing: Sacrifice animal, convert doubled P.P.E. to HP (max normal HP), +30% vs coma (2D6 HP if successful), cures poison/fever/sickness, 30 min, wilderness (injury) or waterbank (sickness).\n  - Divination: Sense danger/evil via animal sacrifice, 30-60 min, 1000-mile range, wilderness."
+            },
+            {
+                "title": "Eighth Level Abilities",
+                "description": "- Magic Powers:\n  - Protection Charm: +3 vs magic, +1 vs psionics, poison immunity, aura hidden, mind block, normal crit damage (defensive only), 24 hr/2 hr ritual, large animal sacrifice, large fire.\n  - Water to Wine; Witch Bottle (as wizard spells)."
+            },
+            {
+                "title": "Ninth Level: Master Druid",
+                "description": "Master Druids achieve professional mastery, earning respect, white robes, ritual leadership, judgment rights, and prophecy privileges. May teach up to 2 acolytes. Supreme Druid elected annually under oldest oak, requires mastery, wisdom, compassion; serves as yearly leader, calls crisis meetings.\n- Magic Powers:\n  - Weather Control: Alter weather (10 min for light, 60+1D6x10 min for drastic), 10-mile area, 1D4 hr duration, 1x/day, large bird sacrifice, high location.\n  - Spoil; Faerie’s Dance; Monster Insect (as wizard spells)."
+            },
+            {
+                "title": "Tenth Level and Beyond",
+                "description": "Select 2 wizard spells (levels 1-3) per level starting at 10th."
+            }
+        ]
+    }
+}

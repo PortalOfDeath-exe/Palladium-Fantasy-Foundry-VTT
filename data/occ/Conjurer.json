@@ -1,0 +1,40 @@
+{
+    "name": "Conjurer",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "The Art of Conjuring",
+                "description": "A specialized arcanum creating objects/animals from thin air. Conjurer visualizes the item/animal, summons magical energy, and 'POOF,' it appears in hand or beside them (choice)."
+            },
+            {
+                "title": "Conjuring Objects",
+                "description": "Creates items <60 lbs (27.2 kg), simple with few moving parts (e.g., chair, table, cloak, shoes, rope, flute, scissors, pliers, fishing pole, mandolin, wagon, wheelbarrow, quill). Includes simple weapons (knives, swords, axes, spears, clubs, bow/arrow, crossbow; 12 projectiles separately) and armor parts (helmet, gauntlets, chest plate, shoulder plates, shield). Half-suit: 6 parts (chest, neck, knee, elbow, wrist guards, helmet); full-suit: 10 parts (leggings, knee/elbow/shoulder guards, helmet, coif, hauberk, arm guards, gauntlets, surcoat). Missing parts reduce A.R./S.D.C. proportionally; complete suits are -1 A.R., -10% S.D.C. vs. crafted armor. No mechanized items (e.g., wristwatches, firearms) due to familiarity/tech limits; max 3 moving parts (+1 at levels 2, 4, 6, 8, 10, 12, 14)."
+            },
+            {
+                "title": "Limitations of Conjuring Objects",
+                "description": "• Only items known firsthand (no imaginary/modern devices).\n• Max 3 moving parts (increases with level).\n• Max weight 40 lbs (18 kg) +2 lbs/level (80 lbs +4 lbs/level for True Giants).\n• Max 12 small items (e.g., arrows, marbles, nails) or 6 heavier items (e.g., darts, shurikens) per conjuring.\n• Paired items (e.g., shoes, gauntlets) conjured as pairs.\n• Each weapon/armor part counts as one conjuring (e.g., bow + 12 arrows = two conjurings).\n• No high-tech (batteries, radios, explosives) or precious metals/gemstones (iron, copper, cut glass allowed as items).\n• Most conjurings temporary (see Duration)."
+            },
+            {
+                "title": "Conjuring Animals",
+                "description": "Creates animals/insects (housefly to rhino, ≤1,000 lbs/450 kg) known firsthand (via study, diagrams, crystal ball, examination). Average stats/HP/S.D.C., obeys commands, may sacrifice self. No link (not a familiar), no HP/S.D.C. loss if killed."
+            },
+            {
+                "title": "Limitations of Animal Conjuring",
+                "description": "• One animal at a time.\n• Max 1,000 lbs (450 kg), no whales/elephants.\n• Real animals only (no imaginary monsters, but non-magical 'monstrous' animals like Tuskers OK).\n• Must be familiar with the animal.\n• No microscopic insects, germs, viruses, plants, sentient beings, or specific pets.\n• Appears in arms/feet, not mid-air or unsuitable environments (e.g., fish out of water)."
+            },
+            {
+                "title": "The Cost of Conjuring",
+                "description": "P.P.E. cost by type:\n- Weapons: Small/simple (short sword, knives, 6 darts) 10 P.P.E.; Medium/simple (broadsword, 12 arrows) 15 P.P.E.; Large/simple (Claymore, pole arm) 25 P.P.E.\n- Objects: Small/no moving parts (<10 lbs, e.g., ball, sack, gloves) 5 P.P.E.; Small/1-2 parts (scissors, yo-yo) 10 P.P.E.; Medium (<25 lbs, e.g., chair, table) 12 P.P.E.; Medium/1-2 parts (fishing pole, trap) 22 P.P.E.; Large (30+ lbs, e.g., plow, couch) 35 P.P.E.; Large/1-2 parts (wheelbarrow, wagon) 50 P.P.E. (+5 P.P.E./extra part/special component).\n- Animals: ≤10 HP 15 P.P.E.; 11-30 HP 25 P.P.E.; 31-50 HP 40 P.P.E.; >50 HP 75 P.P.E."
+            },
+            {
+                "title": "Duration of Conjured Things",
+                "description": "Temporary: 1 hr/level or until destroyed/dispelled; Conjurer can dismiss at will (requires new conjuring to recall). Dispels if unconscious/asleep/slain. Permanent: 6th+ level, 70 P.P.E. (object) or 100 P.P.E. (animal) +1D6 permanent P.P.E.; lost/destroyed items don’t regain P.P.E."
+            },
+            {
+                "title": "Other Special Conjuring Abilities",
+                "description": "1. See and Use Ley Lines: Identical to Wizard O.C.C. (see Palladium Fantasy p. 107).\n2. Limited Spell Knowledge: Casts Lantern Light, Globe of Daylight, Fool’s Gold, Ignite Fire, Water to Wine, Purification (Food & Water), Spoil (Food & Water); +1 creation spell/level (2nd+, e.g., Armor of Ithan, Create Golem, Phantom Horse, Summon & Control Animals).\n3. Magic Bonuses: +1 vs magic (levels 3, 6, 9, 12), +1 vs horror factor (levels 3, 6, 9, 11, 13, 14), +2 vs possession, +1 vs mind control; recovers 5 P.P.E./hr sleep/rest, 10 P.P.E./hr meditation.\n4. Other O.C.C. Bonuses: +3 initiative, +5 initiative to conjure quickly, +1 strike, +1 pull punch, +1 roll with impact/fall.\n5. P.P.E.: 2D4x10 + P.E. + 2D6/level (1st+); draws from ley lines (not people/rituals)."
+            }
+        ]
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "name": "Were-Shaman",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "O.C.C. Considerations",
+                "description": "Alignments: 70% selfish (unprincipled/anarchist), 30% split between good (principled/scrupulous) and evil (miscreant/aberrant/diabolic). Spell Casting/Magic Combat: Cannot learn spells, convert scrolls, or receive divine spell-like powers (worship nature, not gods). Forces of Nature: Draw power from nature/life (plants, animals, land aura), not elements; cannot speak to Elementals or draw power from them. Worship nature holistically, avoiding imbalance by not focusing on specific gods. Relationship with Faerie Folk: Befriend Faeries after years of mutual trust (e.g., Nymphs, Pixies, Spriggans); Faeries protect Were-Shamans, avenging harm. Sanctity of Nature: Live sustainably, foraging/hunting only what’s needed, replanting when necessary (e.g., trees), avoiding reckless abuse of land/animals."
+            },
+            {
+                "title": "Special Were-Shaman O.C.C. Abilities",
+                "description": "1. Animal Totem: Choose a primary totem at 1st level (Rodent, Fowl, Hoofed, Feline, Canine, Reptile, Fish), reflecting inner nature; cannot change. Secondary totems at 5th, 10th, 15th levels. Bonuses (stack with others, use higher if skill overlaps):\n  - Rodent: 70% Scale/Climb Walls, 57% Prowl, Nightvision 60 ft (18.3 m), +4 dodge, +1 initiative.\n  - Fowl: 180° peripheral vision (+1 initiative), Nightvision 120 ft (36.6 m), 78% Sense of Direction (+10% Land Navigation), +1 parry, +2 dodge.\n  - Hoofed: 2x Speed, 68% Recognize hoofed animal breed/health/quality, +6 damage, +1 dodge.\n  - Feline: 80% Prowl, 76% Scale/Climb Walls, +2 strike, +1 parry/dodge, +2 roll with punch/fall/impact, +5% gymnastics/acrobatics.\n  - Canine: 83% Identify tracks, 79% Track, +4 damage, +2 parry/dodge, +2 pull punch.\n  - Reptile: +4 Speed, +3 dodge, leap 10 ft (3 m) high/12 ft (3.6 m) across, 70% Climb/Scale Walls, 55% Track.\n  - Fish: 86% Swim, +2 dodge, +4 Speed, hold breath 1 min/P.E. point.\n2. Empathic Rapport with Animals: Sense emotions (Empathy), broadcast friendliness (Befriend, auto-pack leader), soothe (Calm), or command (Control, simple commands only). Duration: 2 min/level (8 melees). Affects 2D4 animals/level. Success: 30%+5%/level. Befriended animals friendly only to Were-Shaman.\n3. Summon Totem Animals: Summon totem animals within 3 miles (4.8 km); general (all totem animals) or specific (1-2 types). Closest animals respond first. Auto-controlled (as per Control). Duration: 2 min/level. Summons 4D6 (Rodent/Fish) or 2D6 (others). Takes 2 melee rounds, drains 1 P.E. (recovers 24 hr; ≤4 P.E. risks 01-89% coma chance). Success: 28%+4%/level (general), -10% (specific).\n4. Animal Metamorphosis: Transform into totem animals (full transformation, animal stats except HP/S.D.C./I.Q.). Duration: 1 hr/level. Success: 30%+5%/level. 1x/5 min, takes 1 melee round. Monstrous animals (e.g., Acid Lizards, Pegasus) risk: Temporary Animal I.Q. (70%-4%/level, 3D6 rounds), Temporarily Frozen (56%-4%/level, 1D6 weeks), Permanently Frozen (lose 1 I.Q./week to 4, become animal; rescue: 28%+2%/level by another Were-Shaman, 15%+1%/level by Mind Mage, 3 attempts max).\n5. Familiar Link: At 1st level, links with a totem animal (closest companion). No HP/S.D.C. loss if familiar dies, but waits 1 year for new familiar; low M.E. (<10) risks alcoholism/mental illness (depression/phobia/obsession)."
+            },
+            {
+                "title": "Were-Shamans and Weapons",
+                "description": "Limited weapon proficiency, prefer natural/animal form combat. Seen as fierce warriors in some regions but generally peaceable, fighting only in self-defense or to protect others. Use simple daggers, spears (stone blades), or staves; dislike wrought metal tools."
+            },
+            {
+                "title": "Were-Shamans and Armor",
+                "description": "Wear natural armor (padding, leather, wood, bark); no processed metal (interferes with shapechanging, used only as disguise). Penalties: -15% prowl, -20% climb/scale walls/swim (full splint/plate); -10% (chain/scale); -5% (studded leather). Prefer soft/hard leather or magic cloth/leather armor."
+            }
+        ]
+    }
+}

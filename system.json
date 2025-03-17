@@ -2,7 +2,7 @@
   "name": "Palladium-Fantasy-Foundry-VTT",
   "title": "Palladium Fantasy Foundry VTT",
   "description": "A system for Palladium Fantasy 2nd Edition",
-  "version": "0.5",
+  "version": "1.0",
   "compatibility": {
     "minimum": "12",
     "verified": "12"
@@ -31,5 +31,15 @@
       "type": "Item",
       "system": "Palladium-Fantasy-Foundry-VTT"
     }
-  ]
+  ],
+  "template": {
+    "Actor": {
+      "types": ["character", "monster"],
+      "token": {
+        "bar1": { "attribute": "health.hp" },
+        "bar2": { "attribute": "health.sdc" },
+        "displayBars": 20
+      }
+    }
+  }
 }

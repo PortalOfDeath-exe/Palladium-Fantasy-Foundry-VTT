@@ -1,0 +1,28 @@
+{
+  "name": "Kobold",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Metal Craftsmanship",
+        "description": "Kobolds have a basic understanding of metalworking, equal to Field Armorer skill with a +10% bonus, plus +10% to recognize weapon quality, art (jewelry), and gemology skills, specializing in weapons and jewelry."
+      },
+      {
+        "title": "Tunneling Mastery",
+        "description": "Kobolds dig and build solid tunnels with speed and dexterity, identifying natural vs. constructed tunnels and their age. Base Skill: 40% +5% per level of experience. Nightvision 400 ft (122 m), day vision 40 ft (12 m)."
+      },
+      {
+        "title": "Underground Designer",
+        "description": "Kobolds are excellent underground architects, building rooms, archways, and traps. They recognize construction styles and can locate/deactivate traps. Base Skill: 30% +5% per level of experience; trap detection/deactivation at half skill level."
+      },
+      {
+        "title": "Subterranean Instinct",
+        "description": "Kobolds have an innate sense of direction underground, determining direction, depth, and slope, and judging surface structures in familiar areas. Base Direction Skill: 40% +5% per level; Surface Structure Skill: 30% +5% per level (-25% in unfamiliar areas)."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+1 on initiative, +2 to save vs horror factor."
+      }
+    ]
+  }
+}

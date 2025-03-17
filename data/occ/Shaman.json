@@ -1,0 +1,16 @@
+{
+    "name": "Shaman",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Shaman O.C.C. Powers, Abilities, & Bonuses",
+                "description": "1. Chants: Detailed below.\n2. Sense Mystical Power (P.P.E.): Innately senses P.P.E. (60+ points noticed instantly, may wake from sleep). Focused sensing:\n  - Sense Ley Lines: Detects ley lines/nexuses up to 1-2 miles (1.6-3.2 km); 28%+2%/level.\n  - Sense Mystical Beings: Senses P.P.E. in beings (3 or less: diminished, 4-10: normal, 11-20: full, 21-50: laden, 100+: blinding); range 10 ft +2 ft/level (3 m +0.6 m/level), touch auto-senses; 25%+5%/level.\n  - Sense Confined Mystic Power: Detects P.P.E. in objects (e.g., magic devices, rune artifacts); touch auto-senses, otherwise 10 ft +2 ft/level; 35%+5%/level.\n3. Ceremony of the Shaman: Links participants’ P.P.E. via chanting (1 P.P.E./person) or chant+dance (4 P.P.E./person); high P.P.E. beings can give 70%. Shaman’s P.P.E. auto-included. Disruption halves P.P.E., lost after 15 sec. Ley lines (within 2 miles) boost P.P.E. by 20%. Uses:\n  - Heal Participants: Stops bleeding/disease/poison (20 P.P.E.), heals 1 HP/S.D.C. per round (1 P.P.E./point, free if 100+ P.P.E.); max 1 person/100 P.P.E., up to half Shaman’s level (e.g., 6th level heals 3).\n  - Invest Power: Distributes remaining P.P.E. to participants/objects (up to max), sharing equally if desired; participants feel invigorated.\n  - Ceremonial Chants: Chants during ceremony double range/strength with 2x P.P.E. if 50%+ participants chant (e.g., Exorcism 90 P.P.E., 30 ft range, doubles to 180 P.P.E., 60 ft).\n4. P.P.E.: 3D6+40 + P.E. + 2D6/level (2nd+).\n5. O.C.C. Bonuses: +2 vs possession, +4 vs horror factor (doubled during chants/ceremonies), +2 vs poison/disease."
+            },
+            {
+                "title": "Shamanistic Chants",
+                "description": "Shamans use chants instead of spells, starting with 5 basic chants. Learning new chants requires participation in ceremonies (auto-learn) or overhearing (20%+5%/level to decipher/learn, two rolls). Chants take 2D4 minutes.\n- Chant of Blessing: 20 ft radius, 24 hr/level, 25 P.P.E., +1 vs magic, +2 vs poison/disease, +1 initiative; all participants or 1 target.\n- Chant of Divination: Self, 1D6 rounds, 30 P.P.E., glimpses future (danger, power, good/evil); senses events within 24 hr (general).\n- Chant of Dreaming: Self/touch, 10 min dream, 40 P.P.E., vivid dream with interaction (e.g., ancestor), offers hints/portents; full rest benefits.\n- Chant of Exorcism: Touch/30 ft radius, during chant, 50 P.P.E., repels possessing entities/undead, expels for 6 months if successful.\n- Chant of Healing: Self/touch, 1 round/HP-S.D.C., 40 P.P.E., heals 40 points (1 target).\n- Other Chants: Spells as chants (2x P.P.E., 2D4 min): Death Trance (1 target/2 levels), Animate Object, Astral Projection, Breathe Without Air, Call Lightning, Calm Storms, Circle of Flame, Decipher Magic, Detect Poison, Energy Bolt, Extinguish Fire, Fear (H.F. 16), Fuel Flame, Ignite Fire, Levitation, Mend Cloth, Mystic Portal, Negate Poison/Toxin, Purification, Remove Curse, Repel Animals, Summon & Control Storms, Thunderclap, Tongues, Turn Dead, Water to Wine, Wink-Out. Most learn 3-8 additional chants."
+            }
+        ]
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "name": "Life Force Wizard",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "The Special Magic Powers of the Life Force Wizard O.C.C.",
+                "description": "A lost art known to few Gromek, who rarely share it. Practitioners become energy vampires, feeding on life energy (Hit Points) of others (20 HP/day, ~1 life/day from normal beings). Failure to feed causes starvation: halves bonuses/HP, eventual death. Cannot regenerate P.P.E. naturally; must steal it from others (converts excess HP to P.P.E. after 20 HP/day). P.P.E. depletes 1 point/min if unfed. Cannot absorb ley line energy, P.P.E. from items/talismans, only from living beings (see Palladium Fantasy 2nd Ed., p. 181)."
+            },
+            {
+                "title": "Absorbing Life Force Energy From Others",
+                "description": "Range: 10 ft/level (3 m/level), area effect or targeted. Duration: Instant. Saving Throw: Standard vs magic (success: 1/4 HP loss if targeted, 5 HP if group). P.P.E.: None, automatic, 1x/melee. Drains 1/2 HP from 1 target or 10 HP from up to 10 targets in range. After 20 HP/day feeding, excess HP converts to P.P.E. (1:1, e.g., 10 HP = 10 P.P.E.). Max P.P.E.: 3D4x10+20 + 3D6/level. Victims: -1 strike/parry/dodge, -25% Speed for 1 hr; cannot be drained again until full HP. Cannot drain supernatural/immortal beings (e.g., dragons, Faerie Folk, demons, vampires, Elementals, gods)."
+            },
+            {
+                "title": "Pseudo-Immortality",
+                "description": "At 9th level, ceases aging, immune to disease, gains rapid regeneration. To kill: Reduce to -60 HP, decapitate, burn head/body separately. If not fully executed, regenerates in 24+2D6 hr (can only siphon life energy for 24 hr after, no spells); seeks retribution once at full HP."
+            },
+            {
+                "title": "Hibernation",
+                "description": "At 3rd+ level, enters stasis sleep for 200 yr/level (indefinite at 9th+ level). Can set duration (give/take 1D6x10 decades) or awaken on events (e.g., magic surge, portal opening). Auto-awakens if resting place disturbed or 1000 ft (305 m) radius has many people for 1D4+2 weeks. Many Gromek Life Force Wizards sleep underground, a potential threat awakening en masse."
+            },
+            {
+                "title": "Other Magic Powers",
+                "description": "Learns Wizard spells (not automatic; must be taught/purchased/converted from scrolls). Often shunned, learns spells to debilitate/torture/enslave (e.g., Calling, Domination, Paralysis, Blind, Mute, Sickness). Limited to Wizard spells; cannot learn Wards, Summoning Circles, Necro-Magic, other arcana. Spells cost stolen HP (1:1 P.P.E.), limiting high-level magicks; normal range/power/duration as Wizard spells."
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Assassin",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Assassins & Armor",
+                "description": "Assassins can use any armor, from padded to full plate, owning 2-3 types chosen based on assignment needs. Light armor (e.g., padded, leather) is preferred for stealth, heavier armor (e.g., chain, plate) for combat against well-armed foes. Personal taste also influences choice.\nPenalties: -15% to prowl, -20% to climb/scale walls in full splint/plate; -10% to prowl/climb in chain/scale; -5% to prowl/climb in studded leather. No penalties for hard/soft leather or padded armor."
+            },
+            {
+                "title": "Assassins & Their Services",
+                "description": "Assassins offer hired killing and additional services overlapping with thieves’ guilds, including:\n- Spying/intelligence gathering\n- Strong-arm tactics (threats, beatings, breaking bones)\n- Kidnapping\n- Breaking and entry\n- Stealing\n- Smuggling\n- Assassination\nFees are 25-50% higher than thieves’ guild rates (see Thief O.C.C. for base fees); high-level assassins may charge double or triple.\n- Assassins’ Guilds: Rare guilds exist in large kingdoms (e.g., Western Empire, Eastern Territory), operating like thieves’ or magic guilds with headquarters, libraries, and safe houses. They’re secretive, invitation-only, and less territorial, tolerating freelancers unless they threaten the guild. Some are tied to death cults worshiping vampires or dark gods."
+            }
+        ]
+    }
+}

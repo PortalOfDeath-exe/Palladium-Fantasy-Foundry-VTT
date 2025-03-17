@@ -1,0 +1,24 @@
+{
+  "name": "Orc",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Blood Scent",
+        "description": "Orcs can track the scent of blood up to 1000 ft (305 m) away. Base Skill: 15% +5% per level of experience. Nightvision 40 ft (12.2 m), excellent day vision (human norm)."
+      },
+      {
+        "title": "Scent Recognition",
+        "description": "Orcs recognize and follow familiar scents up to 50 ft (15 m) away. Base Skill: 10% +3% per level of experience; +13% for mate or offspring. Roll every 100 ft (30.5 m); failure loses the trail."
+      },
+      {
+        "title": "Savage Claws",
+        "description": "Orcs’ clawed hands inflict 1D6 damage +P.S. bonus, bite does 1D6 damage (no P.S. bonus), reflecting their brutal nature."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+1 to roll with impact, +3 to save vs horror factor."
+      }
+    ]
+  }
+}

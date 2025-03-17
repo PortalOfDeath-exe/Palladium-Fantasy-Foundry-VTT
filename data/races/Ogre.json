@@ -1,0 +1,16 @@
+{
+  "name": "Ogre Brute",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Brutal Strength",
+        "description": "Ogres wield their great strength in combat. Clawed hands inflict 2D4 damage +P.S. bonus, kick 3D6 +P.S. bonus, bite 2D4 damage (no P.S. bonus). Nightvision 40 ft (12.2 m), excellent day vision (human norm)."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+2 to save vs horror factor."
+      }
+    ]
+  }
+}

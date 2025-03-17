@@ -1,0 +1,12 @@
+{
+    "name": "Entertainer",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Entertainment Guilds",
+                "description": "Guilds in the Western Empire, Timiro, Phi, and Lopan control competition, preserve craft knowledge, and support members.\n- Actors' Guild: A banking institution distributing grants/loans to support unprofitable plays; wealthy actors contribute heavily. Offers training, libraries (ancient/new plays), and factories for props/equipment.\n- Jesters' Guild: Secretive due to jesters’ roles in palaces, gathering sensitive information. Requires membership for court jesters or well-known jesters; non-members risk mutilation (e.g., tongue removal).\n- Guild of Jugglers and Knife Throwers: Least organized, more a social club with welcoming guild halls in the Western Empire and major cities. Impostors risk injury (e.g., catching dangerous objects).\n- Guild of Kleintro: Feared clown guild; all clowns must join or face death by assassins or royal agents. Members wear mismatched gloves (2-9 fingers), some tattoo stitched clown mouths (Phi/Lopan).\n- Guild of the Mime: A recent fad (last 10 years), popular in marketplaces. Mimes wear red with polka-dots, paint faces/hands differently from clowns.\n- Minstrels' Guild: Large, influential, with guild houses in most cities/towns. Houses range from hotels to homes run by retired minstrels; dues are 50% of daily takings. Focuses on elderly support; music/songs passed orally.\n- Prestidigitators, Inc. & Guild of Stage Magicians: Competing Western Empire guilds with a history of violent conflict (e.g., sabotaged props causing deaths). Now in uneasy peace after 15 years of merger talks.\n- United Guild of Acrobats and Tumblers (U.G.A.T.I.): Controls professional acrobats/tumblers, collecting 20% earnings. Membership fee: 125 gold; casual street acts unrestricted, but theater/arena work requires membership.\n- Musical Instrument Makers Guilds: Not entertainment guilds; oversee craftsmen building instruments (see Minstrel O.C.C. for details)."
+            }
+        ]
+    }
+}

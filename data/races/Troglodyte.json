@@ -1,0 +1,24 @@
+{
+  "name": "Troglodyte",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Rock Carver",
+        "description": "Troglodytes can carve through solid rock with primitive tools faster than any subterranean race, despite their crude tunnels. Base Skill: 30% +5% per level of experience. Nightvision 600 ft (183 m), day vision 30 ft (9 m)."
+      },
+      {
+        "title": "Rough Architect",
+        "description": "Troglodytes build sturdy, rough underground dwellings resembling natural formations. They can locate and deactivate traps when cautious, but do not create them. Base Skill: 20% +5% per level of experience; trap detection/deactivation at half skill level."
+      },
+      {
+        "title": "Underground Navigator",
+        "description": "Troglodytes have an incredible sense of direction underground (not on the surface), determining direction, depth, and slope. Proximity to surface structures is less precise. Base Direction Skill: 40% +5% per level; Surface Structure Skill: 15% +5% per level (-20% in unfamiliar areas)."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+1 additional melee action/attack per round, +1 on initiative, +2 to save vs poison and disease, +1 to save vs horror factor. Retractable claws inflict 1D6 damage +P.S. bonus, bite 2D4 damage (no P.S. bonus)."
+      }
+    ]
+  }
+}

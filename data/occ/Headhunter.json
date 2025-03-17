@@ -1,0 +1,12 @@
+{
+    "name": "Headhunter",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Headhunter Special O.C.C. Abilities",
+                "description": "1. Jungle Survival: Proficient in hiding, prowling, and camouflaging using vegetation (green/black/brown paint), adept at climbing trees and traveling treetops in rainforests (especially Yin-Sloth Jungles). Adaptive, resourceful climbers. Bonuses: Not specified numerically in text, assumed high O.C.C. proficiency.\n2. Horror Factor: 12, from reputation and ritual scarring, branding, piercings.\n3. Make Special Weapons: Semi-nomadic hunters/fighters, no metallurgy, covet metal weapons (steal from victims), wear Light Jungle Armor. Use blowguns, knives, short swords, spears, clubs, short bows; arrowheads/spearheads/dart tips barbed, often poisoned. Tactics: Jungle cover, camouflage, ambushes, surprise attacks, traps (dead falls, rope snares, punji sticks), picking off foes individually.\n   - Fire Sand Hand Grenades: Made by adult females, secret to grave. Damage: 3D4, full to armor, 10% to person. 90% chance to knock <9 ft (2.7 m) creatures down, lose initiative/1 attack; frightens animals to flee 1D4x10 min. Range: 60 ft (18.3 m), -3 strike >60 ft, max 100 ft (30.5 m). Drop as bombs (>300 ft with -3 strike penalty), causes confusion, animal flight. Horror Factor: 15. No fires in rainforest.\n   - Use Poison: Coats arrows/darts with poison (see common poisons in book)."
+            }
+        ]
+    }
+}

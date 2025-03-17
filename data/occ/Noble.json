@@ -1,0 +1,16 @@
+{
+    "name": "Noble",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Nobles & Armor",
+                "description": "Nobles can use all types of armor, with preferences varying by individual. Some favor ornate scale or plate armor, others opt for less conspicuous leather or plate-and-chain combinations. Usual penalties apply: -15% to prowl, -20% to climb/scale walls in full splint/plate; -10% to prowl/climb in chain/scale; -5% to prowl/climb in studded leather. No penalties for hard/soft leather or padded armor."
+            },
+            {
+                "title": "Family Background & Family Skills",
+                "description": "Same as the Knight O.C.C.; see that description for details on family background and skills. Make random rolls or selections from the tables found under the Knight O.C.C."
+            }
+        ]
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Witch",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "The Gift of Power",
+                "description": "Power is granted by an alien being, making the witch dependent; it can be revoked anytime. Select 4 abilities (5th possible at 4th+ level if loyal):\n- +1D6x10+40 I.S.P.\n- +2D4x10+20 P.P.E.\n- Impervious to poisons, toxins, drugs, gases, disease.\n- Super Tough: +200 S.D.C., heals 2x faster.\n- +2 vs magic/possession.\n- See invisible, sense magic (automatic).\n- Mental Endurance: +3 vs horror factor, +1 vs psionics/mind control, gains Sixth Sense.\n- Fly at will, Spd 1D6x10+44.\n- Supernatural Strength/Endurance: +10 P.S., rarely fatigues, 2x damage to mortals, normal to demons/magic creatures.\n- Physical Prowess: +10 P.P., +2 initiative.\n- Bio-regeneration: 1D4x10 S.D.C., 4D6 HP/hr (or 1D4x10 M.D.C.).\n5th Gift (4th+ level): Demon familiar."
+            },
+            {
+                "title": "The Gift of Magic",
+                "description": "Instant magic powers via union with evil force:\n- +1D6x10+10 P.P.E.\n- Demon Familiar (at 2nd level for major pact).\n- +100 P.P.E. from familiar (within 300 ft, if loyal).\n- Select 6 level 1, 4 level 2, 2 level 3, 1 level 4 spells (fixed).\n- +1 spell/level (levels 1 to current+1, e.g., 2nd level: 1-5).\n- Bonuses: +1 vs magic, +1 vs horror factor, +1 spell strength at 3, 7, 13."
+            },
+            {
+                "title": "The Gift of Union",
+                "description": "Witch fuses with the creature, sharing the body (not full possession):\n- Alignment shifts to master’s evil alignment; views others as inferior, ruthless.\n- Powers:\n  - Master’s magic at 1/3 strength (e.g., 10th level = 3rd).\n  - Psionics at 1/2 strength.\n  - +3D4x10 I.S.P.\n  - +3D4x10 S.D.C.\n  - +100 P.P.E. (shared pool).\n  - +1 attack/melee.\n  - Supernatural Strength/Endurance: +6 P.S., +6 P.E.\n  - Impervious to possession/mind control, +4 vs horror factor, +4 vs illusions, +2 initiative.\nNote: Creature controls magic/powers, may revoke if expectations unmet."
+            },
+            {
+                "title": "The Pact",
+                "description": "Pacts bind the witch to evil, corrupting their soul:\n- Signed freely, enforces servitude via sacrifice/conditions.\n- Made with demon lords, dark gods, alien intelligences (e.g., Old Ones, Splugorth).\n- Terms are clear, but mortals attempting deceit face possession/torture/death.\n- Minor Pacts:\n  - 40 Years Servitude: Obey master, lose all at end.\n  - Blood Sacrifice: Kill hundreds/thousands.\n  - First Born: Forsake child to demon.\n  - Destroy Foe: Kill master’s enemy (10th+ level).\n- Major Pacts:\n  - Lifelong Servitude: As 40 years, may require cult.\n  - Selling Body/Soul: Total evil dedication, establish cult, destroy foes, bear evil children.\n- Major Pact Bonus (select 1):\n  - Heal Self: 4D6 HP 4x/day.\n  - Summon Lesser Demons: 1D4, 40%, 1x/12 hr via familiar.\n  - Command Dead: Animate/control 2D6 dead.\n  - Command Rats: 2D6/level.\n  - Invulnerable to Fire: All fires.\n  - Invulnerable to Poison: Except magic (+2 save).\n  - Skill Bonus: +5% all skills.\n  - Telekinesis: Super psionic."
+            },
+            {
+                "title": "The Devil's Mark",
+                "description": "A third nipple (not breast), placed on torso, marks the witch as evil, identifies ownership, and feeds the familiar (via blood). All witches bear this mark."
+            },
+            {
+                "title": "Demon Familiar",
+                "description": "At 2nd level (major pact), a greater familiar (metamorphed demon/essence in animal) is granted:\n- Alignment: Evil.\n- Horror Factor: 10.\n- A.R.: 12.\n- HP: 6D6+20.\n- S.D.C.: 1D4x10.\n- I.S.P.: 3D4x10, P.P.E.: 6D6+60.\n- Attributes: I.Q. 10, M.E. 19, M.A. 12, P.S. 18+1D6, P.P. 12+1D6, P.E. 18+1D6, P.B. 10, Spd 6D6+10.\n- Host: Cat, dog, wolf, rat, weasel, snake, hawk, raven.\n- Abilities:\n  - Speaks, acts as animal unless commanded.\n  - Obeys witch unless defying master, then betrays.\n  - Rapport: Shares outlook, sensory link (familiar’s choice).\n  - Bond: +20 HP, +40 S.D.C. to witch; witch loses if slain (+10 HP permanent loss); sense each other’s state.\n  - If slain, no replacement greater familiar; lesser familiar after 1-2 years.\n  - Psionics (6th level, roll %): 1-20: Healer; 21-40: Sensitive; 41-60: Physical; 61-79: Sensitive+Healer; 80-89: Physical+Sensitive; 90-00: 6 Super.\n  - Magic: Knows witch’s spells, uses on command/self-defense.\n  - Attacks: 3 physical/psionic or 1 magic.\n  - Bonuses: +2 vs magic, +4 vs horror factor, +1 strike, +1 parry, +2 dodge."
+            }
+        ]
+    }
+}

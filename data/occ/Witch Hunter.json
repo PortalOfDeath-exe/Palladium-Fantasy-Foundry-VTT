@@ -1,0 +1,12 @@
+{
+    "name": "Witch Hunter",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Witch Hunter Special O.C.C. Abilities",
+                "description": "1. Bonuses: +2 I.Q./M.E./P.E., +20 S.D.C., +3 Perception (Witches/witchcraft/Demon Familiars), +1 other Perception, +3 vs possession/curses, +3 vs Witchcraft (potions/poisons/rituals/spells), impervious to illusions, +2 vs mind control/psionics, +2 vs battles of will, +2 vs Necromancy/dark magic, +2 vs Horror Factor (G.M. Note: vs Witchcraft excludes Changeling/magic/demon spells).\n2. Lore: Witch Expert: Recognizes witchcraft/demonic signs (pacts, rituals, altars, Demon Familiars, etc.), -20% for Necromancers/Summoners/dark magic. Base Skill: 50%+5%/level (2nd+), half for cursed weapons/magic items.\n3. The Witch Hunter’s Attack Animal: Assigned one trained fighter (e.g., canine, gryphon, wolf, bear, cat, hyena, panther, lion, tiger, chimpanzee, orangutan). Rides, works with team, obeys commands (sit, stay, attack, track, etc.), tracks blood (1 mile/1.6 km, 85%), senses magic/supernatural evil (300 ft/91.5 m). Bonuses: Max HP, 2D6+12 S.D.C., +1D6 damage (bite/claw). Additional animal at levels 4, 8, 12 (church-provided, delays possible).\n4. Support Team available on Request: Church-provided team (Priest/Witch Hunter, mage, psychic/healer, 2-4 fighters, Ranger) accepts Witch Hunter as leader. Or hires freelancers (e.g., player group). May join adventurers undercover to investigate or bond.\n5. Spell Casting: Warrior-cleric spells from Pantheon of Light/Dark to fight Witches/demons, lost if betraying cause. P.P.E. Base: 2D4x10 + P.E. +1D6+2/level (2nd+). Recovers with rest/meditation. Spell Strength: 12, fixed. Spells (1st level: Sense Evil 2, Sense Magic 4, Witch Bottle 28, 3 choice): Armor of Ithan (10), Banishment (65), Befuddle (6), Blind (8), Calling (12), Circle of Concealment (15), Circle of Flame (10), Cloud of Smoke (2), Commune with Spirits (25), Concealment (6), Control the Beasts (18), Detect Poison (10), Eyes of Thoth (8), Exorcism (30), Fire Bolt (10), Globe of Daylight (2), Heal Self (20), Heal Wounds (10), Negate Magic (30), Purification (20), Remove Curse (140), See the Invisible (6), Swords to Snakes (50), Tongues (12), Turn Dead (6), Words of Truth (15). +2 spells at levels 3, 4, 5, 7, 8, 10, 12, 14."
+            }
+        ]
+    }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Troll",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Natural Climber",
+        "description": "Trolls are instinctive climbers (75%/65%) and swimmers (60%). Nightvision 60 ft (18.3 m), excellent day vision (human norm)."
+      },
+      {
+        "title": "Ferocious Assault",
+        "description": "Trolls gain +1 additional attack/action per melee round. Clawed hands inflict 2D6 damage +P.S. bonus, kick 3D6 +P.S. bonus, bite 2D4 damage (no P.S. bonus)."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+3 to save vs horror factor."
+      }
+    ]
+  }
+}

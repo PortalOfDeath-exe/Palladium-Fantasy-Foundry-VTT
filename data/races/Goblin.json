@@ -1,0 +1,24 @@
+{
+  "name": "Goblin",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Crude Tunneler",
+        "description": "Goblins dig crude but functional tunnels, identifying natural vs. constructed origins and age. Base Skill: 30% +5% per level of experience. Nightvision 90 ft (27.4 m), good day vision."
+      },
+      {
+        "title": "Simple Architect",
+        "description": "Goblins build basic, crude underground structures and can locate/deactivate traps when cautious. Base Skill: 10% +5% per level of experience; trap detection/deactivation at half skill level."
+      },
+      {
+        "title": "Underground Sense",
+        "description": "Goblins have a less acute sense of direction underground, determining direction, depth, and slope, with poor surface structure judgment. Base Direction Skill: 20% +5% per level; Surface Structure Skill: 10% +5% per level (-20% in unfamiliar areas)."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+1 to save vs faerie magic, +2 to save vs horror factor."
+      }
+    ]
+  }
+}

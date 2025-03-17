@@ -1,471 +1,533 @@
-.palladium-sheet {
-    font-family: Arial, sans-serif;
-    background: #e0e0e0;
-    border: 1px solid #333;
-    padding: 10px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    color: #000000;
-}
-.palladium-sheet header {
-    margin-bottom: 10px;
-}
-.palladium-sheet h1 {
-    font-size: 1.5em;
-    color: #2c3e50;
-    text-align: center;
-    margin-bottom: 10px;
-}
-.palladium-sheet h1 input {
-    width: 80%;
-    font-size: 1.2em;
-    text-align: center;
-}
-.palladium-sheet h2 {
-    font-size: 1.2em;
-    color: #34495e;
-    border-bottom: 1px solid #34495e;
-    margin: 10px 0;
-}
-.palladium-sheet h3 {
-    font-size: 1em;
-    color: #7f8c8d;
-    margin: 5px 0;
-}
-.palladium-sheet .tabs {
-    display: flex;
-    justify-content: space-around;
-    background: #ecf0f1;
-    padding: 5px 0;
-    margin-bottom: 10px;
-}
-.palladium-sheet .tabs .item {
-    padding: 5px 10px;
-    cursor: pointer;
-    color: #2c3e50;
-}
-.palladium-sheet .tabs .item.active {
-    background: #34495e;
-    color: #ffffff;
-    border-radius: 3px;
-}
-.palladium-sheet .content > .content {
-    display: none;
-}
-.palladium-sheet .content > .content.active {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
-}
-.palladium-sheet div {
-    margin: 5px 0;
-    color: #000000;
-}
-.palladium-sheet label {
-    display: inline-block;
-    width: 100px;
-    font-weight: bold;
-    color: #2c3e50;
-}
-.palladium-sheet input[type="number"],
-.palladium-sheet input[type="text"] {
-    width: 60px;
-    padding: 2px;
-    border: 1px solid #bdc3c7;
-    border-radius: 3px;
-    background: #ffffff;
-    color: #000000;
-}
-.palladium-sheet .skill-name {
-    width: 300px;
-}
-.palladium-sheet .skill-value {
-    width: 60px;
-}
-.palladium-sheet .skill-misc {
-    width: 40px;
-}
-.palladium-sheet .drop-zone {
-    border: 2px dashed #7f8c8d;
-    padding: 10px;
-    text-align: center;
-    background: #ecf0f1;
-    color: #2c3e50;
-    margin: 5px 0;
-}
-.palladium-sheet .drop-zone:hover {
-    background: #bdc3c7;
-}
-.palladium-sheet .skill-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-}
-.palladium-sheet textarea[name="system.notes"],
-.palladium-sheet textarea[name="system.background"] {
-    background-color: white;
-    width: 100%;
-    height: 150px;
-    padding: 5px;
-    border: 1px solid #bdc3c7;
-    border-radius: 3px;
-}
-.palladium-sheet .skill-roll {
-    padding: 2px 4px;
-    width: 60px;
-    background: #3498db;
-    color: #ffffff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.palladium-sheet .skill-roll:hover {
-    background: #2980b9;
-}
-.palladium-sheet .notes-content {
-    padding: 10px;
-    background: #ffffff;
-    border: 1px solid #bdc3c7;
-    border-radius: 3px;
-    min-height: 100px;
-    color: #000000;
+/* Base Sheet Styling */
+.palladium-sheet, .monster-sheet {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    color: #333;
 }
 
-/* Weapon Proficiencies */
-.palladium-sheet .wp-list {
-    margin-top: 10px;
-}
-.palladium-sheet .wp-item {
+/* Header */
+.palladium-sheet header, .monster-sheet header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
-    margin-bottom: 5px;
-}
-.palladium-sheet .wp-name {
-    font-weight: bold;
-    color: #2c3e50;
-    min-width: 150px;
-}
-.palladium-sheet .wp-item select,
-.palladium-sheet .wp-item input[type="number"] {
-    width: 60px;
-    padding: 2px;
-    border: 1px solid #bdc3c7;
-    border-radius: 3px;
-    background: #ffffff;
-    color: #000000;
-}
-.palladium-sheet .wp-description {
-    flex-grow: 1;
-    color: #7f8c8d;
-}
-.palladium-sheet .remove-wp,
-.palladium-sheet .remove-occ {
-    background-color: #e74c3c;
-    color: #ffffff;
-    border: none;
-    border-radius: 2px;
-    width: 12px;
-    height: 12px;
-    line-height: 12px;
-    padding: 0;
-    font-size: 10px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-}
-.palladium-sheet .remove-wp:hover,
-.palladium-sheet .remove-occ:hover {
-    background-color: #c0392b;
-}
-.palladium-sheet .remove-skill {
-    background-color: #e74c3c;
-    color: #ffffff;
-    border: none;
-    border-radius: 2px;
-    width: 8px;
-    height: 8px;
-    line-height: 8px;
-    padding: 0;
-    font-size: 8px;
-    font-weight: bold;
-    text-align: center;
-    cursor: pointer;
-}
-.palladium-sheet .remove-skill:hover {
-    background-color: #c0392b;
-}
-
-/* OCC Abilities */
-.palladium-sheet .occ-abilities p {
-    margin: 5px 0;
-}
-.palladium-sheet .occ-abilities strong {
-    color: #2c3e50;
-}
-.palladium-sheet .occ-abilities ul {
-    margin: 5px 0 10px 20px; /* Indent the list */
-    padding-left: 0;
-}
-.palladium-sheet .occ-abilities .ability-line {
-    list-style-type: disc; /* Bullets for all lines */
-    margin-bottom: 5px;
-}
-.palladium-sheet .occ-abilities .tenet {
-    margin-left: 10px; /* Extra indent for tenets */
-    font-style: italic; /* Distinguish tenets visually */
-}
-
-/* Item Sheet */
-.palladium-item textarea {
-    width: 100%;
-    height: 100px;
-    padding: 5px;
-    border: 1px solid #bdc3c7;
-    border-radius: 3px;
-}
-.palladium-item .add-ability {
-    background: #3498db;
-    color: #ffffff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
     margin-bottom: 10px;
-}
-.palladium-item .add-ability:hover {
-    background: #2980b9;
-}
-.palladium-item .remove-ability {
-    background: #e74c3c;
-    color: #ffffff;
-    border: none;
-    padding: 2px 5px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.palladium-item .remove-ability:hover {
-    background: #c0392b;
-}
-.palladium-sheet table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.palladium-sheet th, .palladium-sheet td {
-    border: 1px solid #bdc3c7;
-    padding: 5px;
+.palladium-sheet .profile-img, .monster-sheet .profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ddd;
+    flex-shrink: 0;
+}
+
+.palladium-sheet .header-content, .monster-sheet .header-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.palladium-sheet h1, .monster-sheet h1 {
+    font-size: 1.4em;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.palladium-sheet h1 input, .monster-sheet h1 input {
+    width: 100%;
+    font-size: 1.2em;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
     text-align: left;
 }
 
-.palladium-sheet th {
-    background: #34495e;
-    color: #ffffff;
+.palladium-sheet .header-fields, .monster-sheet .header-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 5px;
 }
 
-.palladium-sheet .add-item {
-    background: #3498db;
-    color: #ffffff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-bottom: 10px;
+.palladium-sheet .header-fields .resource, .monster-sheet .header-fields .resource {
+    display: flex;
+    flex-direction: column;
 }
 
-.palladium-sheet .add-item:hover {
-    background: #2980b9;
+.palladium-sheet .header-fields .resource label, .monster-sheet .header-fields .resource label {
+    font-size: 0.9em;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 2px;
 }
 
-.palladium-sheet .remove-item {
-    background: #e74c3c;
-    color: #ffffff;
-    border: none;
-    padding: 2px 5px;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.palladium-sheet .remove-item:hover {
-    background: #c0392b;
-}
-
-.palladium-sheet textarea[name^="system.equipment.gear"] {
+.palladium-sheet .header-fields .resource input,
+.palladium-sheet .header-fields .resource select,
+.monster-sheet .header-fields .resource input,
+.monster-sheet .header-fields .resource select {
     width: 100%;
-    height: 50px;
-    padding: 5px;
-    border: 1px solid #bdc3c7;
-    border-radius: 3px;
-}
-.palladium-sheet .dodge-roll,
-.palladium-sheet .saving-throw-roll {
-    padding: 2px 4px;
-    width: 60px;
-    background: #3498db;
-    color: #ffffff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-left: 5px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 0.9em;
+    transition: border-color 0.2s;
 }
 
-.palladium-sheet .dodge-roll:hover,
-.palladium-sheet .saving-throw-roll:hover {
-    background: #2980b9;
-}
-.palladium-sheet .strike-roll {
-    padding: 2px 4px;
+.palladium-sheet .header-fields .resource select[name="system.level"],
+.monster-sheet .header-fields .resource select[name="system.level"] {
     width: 60px;
-    background: #3498db;
-    color: #ffffff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.palladium-sheet .strike-roll:hover {
-    background: #2980b9;
-}
-.palladium-sheet .parry-roll {
-    padding: 2px 4px;
-    width: 60px;
-    background: #3498db;
-    color: #ffffff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-}
-
-.palladium-sheet .parry-roll:hover {
-    background: #2980b9;
-}
-.palladium-sheet .hth-level {
-    width: 60px;
-    padding: 2px;
-    border: 1px solid #bdc3c7;
-    border-radius: 3px;
-    background: #ffffff;
-    color: #000000;
-}
-
-.palladium-sheet .remove-hth {
-    background-color: #e74c3c;
-    color: #ffffff;
-    border: none;
-    border-radius: 2px;
-    width: 12px;
-    height: 12px;
-    line-height: 12px;
-    padding: 0;
-    font-size: 10px;
-    font-weight: bold;
+    padding: 4px;
+    font-size: 0.9em;
     text-align: center;
-    cursor: pointer;
 }
 
-.palladium-sheet .remove-hth:hover {
-    background-color: #c0392b;
+.palladium-sheet .header-fields .resource input[name="system.xp"],
+.monster-sheet .header-fields .resource input[name="system.xp"] {
+    width: 80px;
+    padding: 4px;
+    font-size: 0.9em;
+    text-align: center;
 }
-.palladium-sheet .cast-spell,
-.palladium-sheet .use-psionic {
-    padding: 2px 4px;
+
+.palladium-sheet .header-fields .resource input:focus,
+.palladium-sheet .header-fields .resource select:focus,
+.monster-sheet .header-fields .resource input:focus,
+.monster-sheet .header-fields .resource select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.palladium-sheet .header-fields .level-xp-group, .monster-sheet .header-fields .level-xp-group {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+}
+
+.palladium-sheet .header-fields .level-xp-group .resource,
+.monster-sheet .header-fields .level-xp-group .resource {
+    flex: 1;
+}
+
+/* Tabs Navigation */
+.palladium-sheet .tabs, .monster-sheet .tabs {
+    display: flex;
+    gap: 5px;
+    background: #ecf0f1;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.palladium-sheet .tabs .item, .monster-sheet .tabs .item {
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.9em;
+    color: #2c3e50;
+    background: #dfe6e9;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.palladium-sheet .tabs .item.active, .monster-sheet .tabs .item.active {
+    background: #3498db;
+    color: #fff;
+    font-weight: 600;
+}
+
+/* General Typography */
+.palladium-sheet h2, .monster-sheet h2 {
+    font-size: 1.3em;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+    margin: 15px 0 10px;
+}
+
+.palladium-sheet h3, .monster-sheet h3 {
+    font-size: 1.1em;
+    color: #555;
+    margin: 10px 0 5px;
+}
+
+/* Attributes Tab */
+.palladium-sheet .grid-4col, .monster-sheet .grid-4col {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+    gap: 5px;
+    align-items: center;
+}
+
+.palladium-sheet .grid-4col .resource, .monster-sheet .grid-4col .resource {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+
+.palladium-sheet .grid-4col .resource label, .monster-sheet .grid-4col .resource label {
+    font-size: 1em;
+    font-weight: 600;
+    color: #555;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.palladium-sheet .grid-4col .resource input[type="number"],
+.monster-sheet .grid-4col .resource input[type="number"] {
     width: 60px;
-    background: #3498db;
-    color: #ffffff;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    transition: border-color 0.2s;
+    maxlength: 5; /* General 5-digit limit for numerical fields */
 }
-.palladium-sheet .cast-spell:hover,
-.palladium-sheet .use-psionic:hover {
-    background: #2980b9;
+
+.palladium-sheet .grid-4col .resource input[type="number"]:focus,
+.monster-sheet .grid-4col .resource input[type="number"]:focus {
+    border-color: #3498db;
+    outline: none;
 }
-.palladium-sheet .add-magic,
-.palladium-sheet .add-psionic {
-    background: #3498db;
-    color: #ffffff;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 3px;
+
+/* OCC Abilities */
+.palladium-sheet .occ-abilities, .monster-sheet .occ-abilities {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: box-shadow 0.2s;
+}
+
+.palladium-sheet .occ-abilities:hover, .monster-sheet .occ-abilities:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.palladium-sheet .occ-abilities h3, .monster-sheet .occ-abilities h3 {
     cursor: pointer;
+    margin: 0;
+    color: #3498db;
+}
+
+.palladium-sheet .occ-abilities ul, .monster-sheet .occ-abilities ul {
+    margin: 5px 0;
+    padding-left: 20px;
+}
+
+.palladium-sheet .occ-abilities .ability-line, .monster-sheet .occ-abilities .ability-line {
+    list-style-type: disc;
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.palladium-sheet .occ-abilities .tenet, .monster-sheet .occ-abilities .tenet {
+    margin-left: 10px;
+    font-style: italic;
+    color: #7f8c8d;
+}
+
+/* Combat Tab - Horizontal Layout */
+.palladium-sheet .horizontal-group, .monster-sheet .horizontal-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
     margin-bottom: 10px;
 }
-.palladium-sheet .add-magic:hover,
-.palladium-sheet .add-psionic:hover {
-    background: #2980b9;
+
+.palladium-sheet .horizontal-group .resource,
+.palladium-sheet .horizontal-group .monster-field,
+.palladium-sheet .horizontal-group .attribute-row,
+.monster-sheet .horizontal-group .resource,
+.monster-sheet .horizontal-group .monster-field,
+.monster-sheet .horizontal-group .attribute-row {
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
-.palladium-sheet .remove-magic,
-.palladium-sheet .remove-psionic {
-    background: #e74c3c;
-    color: #ffffff;
+
+.palladium-sheet .horizontal-group .resource label,
+.palladium-sheet .horizontal-group .monster-field label,
+.palladium-sheet .horizontal-group .attribute-row label,
+.monster-sheet .horizontal-group .resource label,
+.monster-sheet .horizontal-group .monster-field label,
+.monster-sheet .horizontal-group .attribute-row label {
+    font-size: 1em;
+    font-weight: 600;
+    color: #555;
+    white-space: nowrap;
+}
+
+.palladium-sheet .horizontal-group .resource input[type="number"],
+.palladium-sheet .horizontal-group .resource input[type="text"],
+.palladium-sheet .horizontal-group .monster-field input[type="number"],
+.palladium-sheet .horizontal-group .monster-field input[type="text"],
+.palladium-sheet .horizontal-group .attribute-row input[type="number"],
+.monster-sheet .horizontal-group .resource input[type="number"],
+.monster-sheet .horizontal-group .resource input[type="text"],
+.monster-sheet .horizontal-group .monster-field input[type="number"],
+.monster-sheet .horizontal-group .monster-field input[type="text"],
+.monster-sheet .horizontal-group .attribute-row input[type="number"] {
+    width: 60px;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+    transition: border-color 0.2s;
+    maxlength: 5; /* General 5-digit limit for numerical fields */
+}
+
+.palladium-sheet .horizontal-group .resource input[type="text"],
+.palladium-sheet .horizontal-group .monster-field input[type="text"],
+.monster-sheet .horizontal-group .resource input[type="text"],
+.monster-sheet .horizontal-group .monster-field input[type="text"] {
+    width: 120px; /* Increased for text fields to accommodate longer values */
+}
+
+.palladium-sheet .horizontal-group .resource input[type="number"]:focus,
+.palladium-sheet .horizontal-group .monster-field input[type="number"]:focus,
+.palladium-sheet .horizontal-group .attribute-row input[type="number"]:focus,
+.monster-sheet .horizontal-group .resource input[type="number"]:focus,
+.monster-sheet .horizontal-group .monster-field input[type="number"]:focus,
+.monster-sheet .horizontal-group .attribute-row input[type="number"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Small Buttons */
+.palladium-sheet .small-button, .monster-sheet .small-button {
+    padding: 2px 6px;
+    height: 20px;
+    line-height: 16px;
+    font-size: 0.8em;
+    background: #3498db;
+    color: #fff;
     border: none;
-    padding: 2px 5px;
     border-radius: 3px;
     cursor: pointer;
+    transition: background 0.2s;
 }
-.palladium-sheet .remove-magic:hover,
-.palladium-sheet .remove-psionic:hover {
-    background: #c0392b;
+
+.palladium-sheet .small-button:hover, .monster-sheet .small-button:hover {
+    background: #2980b9;
 }
-.palladium-sheet table td, .palladium-sheet table th {
-    min-width: 80px; /* Adjust as needed */
-    padding: 5px;
+
+/* Monster Fields and Full-Width Attributes */
+.monster-sheet .monster-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.monster-sheet .monster-field.full-width input[type="text"] {
+    width: 100%; /* Full-width single-line textbox for Attributes */
+}
+
+.monster-sheet .monster-field label {
+    font-size: 1em;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Skills, Combat, Magic, Psionics, Equipment Tables */
+.palladium-sheet table, .monster-sheet table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.palladium-sheet th, .monster-sheet th,
+.palladium-sheet td, .monster-sheet td {
+    border: 1px solid #ddd;
+    padding: 6px;
     text-align: center;
-}
-.palladium-sheet table td, .palladium-sheet table th {
-    min-width: 80px;
-    padding: 5px;
-    text-align: center;
+    font-size: 1em;
     vertical-align: middle;
 }
 
-.palladium-sheet table th {
-    background: #34495e;
-    color: #ffffff;
-    font-weight: bold;
+.palladium-sheet th, .monster-sheet th {
+    background: #3498db;
+    color: #fff;
+    font-weight: 600;
 }
 
-.palladium-sheet table td {
-    background: #ffffff;
-    color: #000000;
+.palladium-sheet table th, .monster-sheet table th {
+    height: 30px;
 }
 
-.palladium-sheet table tbody tr:nth-child(odd) {
+.palladium-sheet table td, .monster-sheet table td {
+    height: 30px;
+    min-height: 30px;
+}
+
+.palladium-sheet td, .monster-sheet td {
+    background: #fff;
+}
+
+.palladium-sheet table td input[type="text"],
+.palladium-sheet table td input[type="number"],
+.monster-sheet table td input[type="text"],
+.monster-sheet table td input[type="number"] {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-size: 1em;
+    text-align: center;
+    font-weight: 600;
+    color: #333;
+}
+
+.palladium-sheet table td input[type="text"][name*="name"],
+.monster-sheet table td input[type="text"][name*="name"] {
+    width: 200px; /* Doubled from estimated 100px for longer skill names */
+}
+
+.palladium-sheet table td input[type="number"][name*="base"],
+.palladium-sheet table td input[type="number"][name*="per_level"],
+.palladium-sheet table td input[type="number"][name*="level"],
+.palladium-sheet table td input[type="number"][name*="misc_adjustment"],
+.monster-sheet table td input[type="number"][name*="base"],
+.monster-sheet table td input[type="number"][name*="per_level"],
+.monster-sheet table td input[type="number"][name*="level"],
+.monster-sheet table td input[type="number"][name*="misc_adjustment"] {
+    max-width: 50px; /* Adjusted to fit 3 digits comfortably */
+    maxlength: 3; /* Specific 3-digit limit for Skills tab */
+}
+
+.palladium-sheet table td input[type="number"][name*="armorRating"],
+.monster-sheet table td input[type="number"][name*="armorRating"] {
+    maxlength: 2; /* Specific 2-digit limit for Armor Rating */
+}
+
+.palladium-sheet table td span, .monster-sheet table td span {
+    font-weight: 600;
+    color: #333;
+}
+
+.palladium-sheet table tbody tr:nth-child(odd),
+.monster-sheet table tbody tr:nth-child(odd) {
     background: #f9f9f9;
 }
-.palladium-sheet .combat-attributes {
-    margin-bottom: 20px;
-    border-bottom: 1px solid #34495e;
-    padding-bottom: 10px;
-}
 
-.palladium-sheet .attribute-row {
-    display: flex;
-    align-items: center;
-    margin: 5px 0;
-}
-
-.palladium-sheet .attribute-row label {
-    width: 80px;
-    color: #2c3e50;
-    font-weight: bold;
-}
-
-.palladium-sheet .attribute-row input[type="number"] {
-    width: 60px;
-    margin-right: 10px;
-}
-
-.palladium-sheet .attribute-row button {
-    padding: 2px 4px;
-    width: 60px;
+/* Buttons in the Skills Table */
+.palladium-sheet table button, .monster-sheet table button {
+    padding: 4px 8px;
+    height: 24px;
+    line-height: 16px;
+    font-size: 0.9em;
     background: #3498db;
-    color: #ffffff;
+    color: #fff;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    transition: background 0.2s;
 }
 
-.palladium-sheet .attribute-row button:hover {
+.palladium-sheet table button:hover, .monster-sheet table button:hover {
     background: #2980b9;
+}
+
+.palladium-sheet table .remove-skill, .monster-sheet table .remove-skill {
+    background: #e74c3c;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.palladium-sheet table .remove-skill:hover, .monster-sheet table .remove-skill:hover {
+    background: #c0392b;
+}
+
+/* Drop Zones */
+.palladium-sheet .drop-zone, .monster-sheet .drop-zone {
+    border: 2px dashed #bbb;
+    padding: 10px;
+    text-align: center;
+    background: #f0f0f0;
+    color: #555;
+    border-radius: 5px;
+    margin: 10px 0;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.palladium-sheet .drop-zone:hover, .monster-sheet .drop-zone:hover {
+    background: #e0e0e0;
+    border-color: #3498db;
+}
+
+/* Inputs and Textareas */
+.palladium-sheet input[type="number"],
+.palladium-sheet input[type="text"],
+.monster-sheet input[type="number"],
+.monster-sheet input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 0.9em;
+    maxlength: 5; /* General 5-digit limit for numerical fields */
+}
+
+.palladium-sheet textarea, .monster-sheet textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 1.3em;
+    line-height: 1.5;
+    resize: vertical;
+    color: #222;
+    font-weight: 700;
+}
+
+.palladium-sheet textarea[name="system.combat"],
+.monster-sheet textarea[name="system.combat"] {
+    min-height: 40px; /* 2 lines */
+}
+
+.palladium-sheet textarea[name="system.bonuses"],
+.palladium-sheet textarea[name="system.damage"],
+.palladium-sheet textarea[name="system.psionics"],
+.palladium-sheet textarea[name="system.magic_abilities"],
+.monster-sheet textarea[name="system.bonuses"],
+.monster-sheet textarea[name="system.damage"],
+.monster-sheet textarea[name="system.psionics"],
+.monster-sheet textarea[name="system.magic_abilities"] {
+    min-height: 80px; /* 4 lines */
+}
+
+.monster-sheet .monster-field textarea[name="system.natural_abilities"],
+.monster-sheet .monster-field textarea[name="system.notes"] {
+    min-height: 240px; /* Retain original height for Natural Abilities and Notes */
 }

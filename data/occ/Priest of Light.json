@@ -1,0 +1,28 @@
+{
+    "name": "Priest of Light",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Priest, Armor & Combat",
+                "description": "With rare exception, priests are not trained as men of arms or in the use of weapons and armor. Hand to hand combat is not generally part of the priest's teachings, though most travelling priests learn at least basic hand to hand combat. They are not men of magic just because they can cast a few spells; rather, they are theologians, philosophers, healers, men of learning, and liaisons between mortals and the gods.\nWeapons can vary, but most priests prefer staves and blunt weapons.\nPriests tend to favor light armor like padded or leather for maneuverability and comfort. Heavy armor is cumbersome, and metal armor hampers magic energy channeling. If more than 50% of the body is covered in metal (e.g., chain mail, scale, plate), the priest must spend 20% more P.P.E. to cast spells, and roll once on the following table for additional penalties:\n01-20: Reduce spell damage or effects by 1D4x10%.\n21-40: Reduce spell duration by 1D4x10%.\n41-60: Reduce spell range by 1D4x10%.\n61-80: Reduce both range and duration by 20%.\n81-00: No additional problems.\nPriests may wear any armor, but encumbrance penalties apply: -15% to prowl and -20% to climb/scale walls or swim in full splint or plate armor; -10% to prowl, swim, or climb in chain or scale mail; -5% in studded leather."
+            },
+            {
+                "title": "Allegiance to a God",
+                "description": "A priest must choose a god, pantheon, or religion to devote their life to, though affiliation with a formal church isn’t required. The deity(s) must align with the character’s alignment (e.g., a good character won’t worship a dark god unless shifting alignment). A pantheon may include varied alignments, but a good priest won’t serve evil gods within it, using them as cautionary examples.\nPriests typically swear allegiance to one or two gods but know all deities in their pantheon, their allies, enemies, and codes. Adherence to dogma is strict in temples but more relaxed for travelling priests, who may bend rules to help others.\nDisobeying or rebuking a deity brings punishment, often severe but fair. Forsaking a god strips all clerical abilities, skills, and experience, forcing the character to start anew with a new O.C.C. Reinstatement by the forsaken deity is rare and, if granted, starts at level one or two."
+            },
+            {
+                "title": "Special Prayers",
+                "description": "Prayers allow priests to communicate with their deity, focus thoughts, and perform rituals. Special prayers include:\n- Blessings: Show favor on the faithful (1 melee round, 1 person/item unless 8th level+ for multiple). Lasts 2D4 weeks. Includes:\n  - Blessing of Water: Turns water into holy water (acid to vampires/undead, 3D6 damage, indefinite duration).\n  - Blessing of a Person: +1 to save vs disease and possession.\n  - Blessing of a Home: +1 to save vs possession, repels ghosts/faeries (save 14+).\n  - Blessing of Food: +1 to save vs spoiling/disease, +1 day freshness.\n- Prayer of Strength: +6 vs horror factor, +1 all saves, +10% turn dead, +20% exorcism, +1 spell strength, +1 parry/dodge. 2x/day, 2 min/level, 20%+7%/level success.\n- Prayer of Communion: Inspires via vision/dream, 60% chance of omen. 2x/day, 21%+7%/level success.\n- Prayer of Intervention: Grants one boon (1x/day):\n  - Any spell at +5 levels (21%+7%/level success).\n  - Magic scroll (6th level+, 9%/level success).\n  - Super Healing: 2D4x10 HP/SDC, 2 touches (21%+7%/level success)."
+            },
+            {
+                "title": "Miracles",
+                "description": "Direct appeals to gods for supernatural acts (e.g., weather control, superhuman abilities). Granted rarely (1-2 every 2D6 years unless deity-driven), based on devotion and need. Success: M.A. + 2%/level, or GM discretion. Types include:\n- Miracle of Luck: +4 initiative, +10 roll with impact, +10 vs horror factor, +8 dodge, +8 vs poison, +3 vs magic, immune to curses/charms (1 min/level, 40 P.P.E.).\n- Supernatural Strength: Triple HP/SDC, +2D4 supernatural P.S., +1 initiative/strike/parry/dodge/saves, horror factor 12 (1 min/level, 60 P.P.E.).\n- Purification: As wizard spell.\n- Great Miracles: Double spell/prayer power (1 min/level) or control nature (e.g., stop storms, create water, repel animals, 1 min/level)."
+            },
+            {
+                "title": "Knowledge & Abilities",
+                "description": "1. Healing Touch: Restores 2D4 HP/SDC (1D4 MDC), every other melee round, not self-usable. Fees: 5 to 1D6x100 gold, avg. 25-30.\n2. Exorcism: Banishes entities/demons (6 months+), destroys animated dead. 1D6 hours, 7%/level success.\n3. Remove Curse: Removes magic curses (not items/places), 1D4x10 min, 7%/level success, 1 try/curse.\n4. Resurrection: Revives dead (2-4 weeks, -3%/month after 4, 5% after 1 year), 5th level+, 10%+3%/level success, 1 try/priest.\n5. Turn Dead: Repels skeletons/corpses/mummies/ghouls (2 melee rounds), 20%+5%/level success.\n6. Penance & Sacrifice: Resist thirst (2 days/level), hunger (3 days/level).\n7. Spell Casting: Starts at 3rd level with Tongues + 1 spell (levels 1-3), +1 spell/level after. P.P.E.: 6D6 + P.E. + 1D6/level. Spell strength: 12, +1 at 6th and 12th."
+            }
+        ]
+    }
+}

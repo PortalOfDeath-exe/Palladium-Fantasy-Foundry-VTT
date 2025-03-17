@@ -1,0 +1,12 @@
+{
+    "name": "Summoner",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Knowledge & Abilities",
+                "description": "1. Understands, Creates, Uses Circles: Expert in protection and summoning circles; starts with no power circles (acquired via purchase, reward, or study). Deciphers from diagrams/text.\n2. Deciphering Circles: Draws diagrams, studies symbols to infer purpose/components. Activates with power words (guessed from clues); success 20%+4%/level. Failure rolls on Incorrect Circle Invocation Table:\n  - 01-10: Small explosion, 3D6 damage (circle).\n  - 11-20: Big explosion, 6D6 damage (20 ft radius).\n  - 21-25: Drained P.P.E., -10% skills, -1 initiative.\n  - 26-30: Teleport 50 miles.\n  - 31-35: Blind 3D6x10 min.\n  - 36-40: Hallucination 6D6 min.\n  - 45-50: Summons gargoyle/gurgoyle/lesser entity.\n  - 51-55: Summons angry lesser demon.\n  - 56-60: Summons angry lesser deevil.\n  - 61-65: Memory loss 1D4 days.\n  - 66-70: Paralysis 2D4x10 min.\n  - 71-75: Invisible/mist 1D4 hr.\n  - 76-80: Berserker 6D6 min.\n  - 81-00: No reaction (retry).\n  Note: Reactions vary per attempt; new circles rare.\n3. Power Words: Knows all power words; cannot use wards.\n4. Mystic Symbology: Studies symbols (mystic, swords, arrows, animals, stones, colors) for circles; 88%+1%/level. Recognizes wards/runes (15%+5%/level) but can’t read/energize.\n5. Recognize Enchantment: Identifies mind control, curses, magic effects (not illusions/shape-changing); 40%+5%/level.\n6. Recognize Magic: Spots magic items (20%+5%/level, +10% with symbols); doesn’t know powers/use.\n7. Magic Bonuses: +1 vs magic at 4, 8, 12; +2 vs horror factor at 2, 4, 7, 10; +3 vs possession/mind control. Circle strength: 16, +1 at 7, 14.\n8. P.P.E.: 3D6x10 + P.E. + 2D6/level; draws from ley lines, nexuses, blood sacrifices, others. Empowers circles with power words/P.P.E.; often uses high-P.P.E. sacrifices (e.g., catoblepa 1D4x10, chimera 3D4x10, unicorn 4D6x10).\n9. Read Scrolls: Can read most scrolls, cannot learn spell magic.\n10. Summoners & Armor: Same as wizard (-15% prowl, -20% climb/swim in splint/plate; -10% chain/scale; -5% studded leather; no penalties leather/padded).\n11. Religious Affiliations: Leans toward Gods of Darkness (Taut, demon/deevil lords, Old Ones); may join cults for knowledge/power/wealth/revenge, not as clergy."
+            }
+        ]
+    }
+}

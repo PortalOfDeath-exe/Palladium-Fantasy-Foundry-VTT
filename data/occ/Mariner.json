@@ -1,0 +1,12 @@
+{
+    "name": "Mariner",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Starting Rank",
+                "description": "Determined by chance, reflecting years at sea:\n- 01-15% Cabin Boy: Highest rank achieved; difficult to advance above Lieutenant, often offered common sailor roles.\n- 16-27% Cadet: Naval school graduate, limited opportunities, advised to start as a common sailor; may have rich/noble family connections.\n- 28-40% Ensign: 1+ year as junior officer, can sign on as Lieutenant; high demand for promising officers.\n- 41-55% Lieutenant: 3+ years as junior officer, easy to find another Lieutenant role, aims for mate positions.\n- 56-70% Third Mate: Fourth in command, works with Captain, good learning position, considered officer material.\n- 71-85% Second Mate: Third in command, manages during off-hours, can find similar roles.\n- 86-95% First Mate: Second-in-command, rare to secure another high rank or advance to Captain without dire circumstances.\n- 96-00% Captain: Briefly commanded (due to others’ absence), unlikely to secure another Captain role but valued for experience."
+            }
+        ]
+    }
+}

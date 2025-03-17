@@ -1,0 +1,24 @@
+{
+    "name": "Wizard",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Wizards & Armor",
+                "description": "Wizards prefer leather armor for maneuverability, stealth (no metal noise), and comfort, lacking training in heavy armor (chain, scale, plate), which hampers magic. If >50% of body is metal-covered, spells cost 20% more P.P.E., and roll for penalties:\n01-20: -1D4x10% damage/effects.\n21-40: -1D4x10% duration.\n41-60: -1D4x10% range.\n61-80: -20% range and duration.\n81-00: No penalty.\nEncumbrance penalties: -15% prowl, -20% climb/swim in splint/plate; -10% in chain/scale; -5% in studded leather. No penalties for hard/soft leather, padded, or magic armor (e.g., Armor of Ithan, Invulnerability)."
+            },
+            {
+                "title": "Wizards: Circles & Symbols",
+                "description": "Circle magic uses circles and symbols as focal points for mystic energy, directed by the wizard. Types: protection, summoning, power. Wizards know only 2 protection circles, lacking broader circle creation skills (see Summoner O.C.C.), but can recognize real circles (not fakes) and understand entering them risks death. Symbol knowledge includes 12 basic mystic symbols, 4 elemental symbols, and colors, but not wards or power words (see Diabolist/Summoner O.C.C.s)."
+            },
+            {
+                "title": "Conversion of Spell Scrolls",
+                "description": "Wizards can convert scrolls into spells (8% +2%/level success). Scrolls activate instantly when read, vanishing after use; only the title is safe to read. Conversion risks volatile energy:\n- Unsuccessful (roll %):\n  01-16: Explosion, 1D6 damage/spell level, 5 ft radius.\n  17-20: Paralyzed 1D4 hr.\n  21-30: Lightning, 6D6 damage.\n  31-40: Blind 2D4 days.\n  41-48: Goat/pig 2D6 days.\n  49-55: Summon lesser demon.\n  56-60: +300 lbs, 1D6 months.\n  61-68: Pale blue skin, 2D6 months.\n  69-72: 200 gal water.\n  73-80: Half size, 2D6 months.\n  81-91: Moose, 1D6 days.\n  92-96: Glowing aura.\n  97-00: Summon greater demon.\n- Successful (roll %):\n  01-20: Half strength spell.\n  21-60: Exact spell.\n  61-00: Unstable spell (random effect, 3rd level unless noted, roll %):\n    01-08: Full original.\n    09-24: Half original.\n    25-27: Weightless, -75% speed, half damage, 2D4 rounds.\n    28-35: Rain, 10 ft, 1D4 rounds.\n    36-42: Invisibility.\n    43-48: Multiple Image.\n    49-56: Fire Ball, 5D6.\n    57-65: Shrink 6 in.\n    66-72: Lightning, 6D6.\n    73-80: Mice, 2D4 rounds.\n    81-86: Magic Net.\n    87-92: Wind Rush.\n    93-00: Bread/milk."
+            },
+            {
+                "title": "Wizard O.C.C. Abilities & Bonuses",
+                "description": "1. Common Knowledge Spells: Decipher Magic, Sense Magic, Cloud of Slumber, Globe of Daylight, Tongues, Enchanted Cauldron (from apprenticeship).\n2. Additional Spells: At 1st level, pick 2 spells each from levels 1-2, 1 each from 3-4; +1 spell/level (up to current level).\n3. Learning Spells: Any spell/ritual can be learned anytime via instructors (role-playing).\n4. Enchanted Cauldron: Success 14%+6%/level. Ingredients: iron cauldron, 6 pints fresh human/elf/dwarf blood, dead butterfly, owl feather, simmered 2 hr, stirred with sword. Chant Rites of Invitation, drink 1 cup:\n  - Failure: Spill in graveyard or release 1D6 ghosts.\n  - Success: Coma 1D4 hr, gain 2D6 spells (roll 1D6/spell for level 1-6), risk insanity (roll %):\n    01-13: None.\n    14-20: Affective disorder.\n    21-40: 1 phobia.\n    41-60: 2 phobias.\n    61-80: Obsession.\n    81-90: Neurosis.\n    91-00: Psychosis.\n  - Spirit Cauldron: 31% chance spirit stays (crystal ball-like, 1 tbsp brew to use, maintain with 3+ pints blood, evaporates 1 pint/3 days; spill elsewhere releases 1D6 ghosts).\n5. See and Use Ley Lines: See ley lines/nexuses, draw P.P.E., enhance spells; detect energy from powerful beings/items.\n6. Ley Line Drifting: Float along ley lines, Spd 10, no P.P.E. cost (self only).\n7. Ley Line Rejuvenation: Double healing on ley lines; instant 2D6 HP/SDC 1x/24 hr (10 min, no P.P.E.).\n8. Special Skills:\n  - Recognize Enchantment: Identify mind control, curses, magic effects (not illusions/psionics). 35%+5%/level.\n  - Recognize Magic: Spot magic items (not powers). 20%+5%/level.\n9. Magic Bonuses: +1 vs magic at levels 3, 6, 9, 12, 15; +4 vs horror factor; spell strength +1 at 2, 4, 8, 12, 15 (starts 12).\n10. P.P.E.: 3D4x10+20 + P.E. + 3D6/level; draw from ley lines/nexuses/others."
+            }
+        ]
+    }
+}

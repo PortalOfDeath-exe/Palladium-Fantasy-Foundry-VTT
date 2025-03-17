@@ -1,0 +1,12 @@
+{
+    "name": "Jungle Fighter",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Jungle Fighter O.C.C. Special Abilities",
+                "description": "1. O.C.C. Bonuses: +30 S.D.C., +2 P.S./P.E., +1 Perception (danger), +1 strike, +1 pull punch, +2 roll with punch/fall/impact, +1 vs poisons/toxins, +1 vs Horror Factor.\n2. Emplace Traps to Catch Humanoids: Sets traps to lure/injure/kill humanoids, with 2nd/3rd order effects (e.g., traps for rescuers). Uses Jungle Traps/Land of the South Winds traps. Base Skill: 40%+5%/level.\n3. Close Combat Feint and Attack: Lures opponents to break primitive weapons (bone/wood/stone) with ‘Called Shot.’ Fighter assists break, uses momentum to knock opponent down (75% chance), losing initiative/1 attack. Counterattacks with jagged weapon end (1D6 damage, +2 strike, 2x on Natural 20), or kicks/punches/grapples. Defender parries/dodges. Fighter needs new weapon or continues unarmed."
+            }
+        ]
+    }
+}

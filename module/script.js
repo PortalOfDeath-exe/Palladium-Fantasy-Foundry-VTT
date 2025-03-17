@@ -190,6 +190,7 @@ class PalladiumActorSheet extends ActorSheet {
         html.find('.add-psionic').click(this._onAddPsionic.bind(this));
         html.find('.remove-psionic').click(this._onRemovePsionic.bind(this));
         html.find('.use-psionic').click(this._onUsePsionic.bind(this));
+        html.find('[data-edit="img"]').click(this._onEditImage.bind(this));
     }
 
     async _onNameChange(event) {
@@ -223,7 +224,16 @@ class PalladiumActorSheet extends ActorSheet {
         event.preventDefault();
         await this.submit({ preventClose: true });
     }
-
+    async _onEditImage(event) {
+        const fp = new FilePicker({
+            type: "image",
+            current: this.actor.img,
+            callback: async (path) => {
+                await this.actor.update({ img: path });
+            },
+        });
+        return fp.browse();
+    }
     async _onAddSkill(event) {
         event.preventDefault();
         const button = event.currentTarget;
@@ -1300,120 +1310,180 @@ class PalladiumMonsterSheet extends ActorSheet {
         data.actor = actorData;
         data.system = foundry.utils.deepClone(this.actor.system) || {};
         data.levelRange = Array.from({ length: 15 }, (_, i) => i + 1);
-
+      
+        // Migrate old hit_points and sdc to new health structure if they exist
+        if (data.system.hit_points || data.system.sdc) {
+          data.system.health = data.system.health || {};
+          data.system.health.hp = data.system.hit_points || { value: 0, max: 0 };
+          data.system.health.sdc = data.system.sdc || { value: 0, max: 0 };
+          // Clean up old fields
+          delete data.system.hit_points;
+          delete data.system.sdc;
+        }
+      
         data.system = foundry.utils.mergeObject(data.system, {
-            name: actorData.name || "New Monster",
-            alignment: data.system.alignment || "",
-            attributes: data.system.attributes || "",
-            size: data.system.size || "",
-            natural_ar: data.system.natural_ar || 0,
-            hit_points: data.system.hit_points || "",
-            sdc: data.system.sdc || "",
-            average_ppe: data.system.average_ppe || "",
-            horror_factor: data.system.horror_factor || 0,
-            equivalent_occ: data.system.equivalent_occ || "", // Fixed typo from equivalent_OCC
-            average_level: data.system.average_level || "",
-            combat: data.system.combat || "",
-            combat_attributes: foundry.utils.mergeObject(
-                { strike: 0, dodge: 0, parry: 0 },
-                data.system.combat_attributes || {}
-            ),
-            bonuses: data.system.bonuses || "",
-            damage: data.system.damage || "",
-            natural_abilities: data.system.natural_abilities || "",
-            psionics: data.system.psionics || "",
-            magic_abilities: data.system.magic_abilities || "",
-            notes: data.system.notes || ""
+          name: actorData.name || "New Monster",
+          alignment: data.system.alignment || "",
+          attributes: data.system.attributes || "",
+          size: data.system.size || "",
+          natural_ar: data.system.natural_ar || 0,
+          health: foundry.utils.mergeObject(
+            { hp: { value: 0, max: 0 }, sdc: { value: 0, max: 0 } },
+            data.system.health || {}
+          ),
+          average_ppe: data.system.average_ppe || "",
+          horror_factor: data.system.horror_factor || 0,
+          equivalent_occ: data.system.equivalent_occ || "",
+          average_level: data.system.average_level || "",
+          combat: data.system.combat || "",
+          combat_attributes: foundry.utils.mergeObject(
+            { strike: 0, dodge: 0, parry: 0, initiative: 0 },
+            data.system.combat_attributes || {}
+          ),
+          bonuses: data.system.bonuses || "",
+          damage: data.system.damage || "",
+          natural_abilities: data.system.natural_abilities || "",
+          psionics: data.system.psionics || "",
+          magic_abilities: data.system.magic_abilities || "",
+          notes: data.system.notes || ""
         }, { overwrite: true });
-
+      
         data.weaponProficiencies = this.actor.items.filter(item => item.type === "wp").map(item => {
-            const level = Number(item.system.level) || 1;
-            const bonuses = this._calculateWPBonuses(item.system.bonuses || {}, level);
-            const baseDescription = item.system.baseDescription || item.system.description?.split(" Bonuses:")[0] || `Training with ${item.name.toLowerCase()}`;
-            const description = this._generateWPDescription(baseDescription, bonuses);
-            return { _id: item.id, name: item.name, system: { ...item.system, level, description, baseDescription } };
+          const level = Number(item.system.level) || 1;
+          const bonuses = this._calculateWPBonuses(item.system.bonuses || {}, level);
+          const baseDescription = item.system.baseDescription || item.system.description?.split(" Bonuses:")[0] || `Training with ${item.name.toLowerCase()}`;
+          const description = this._generateWPDescription(baseDescription, bonuses);
+          return { _id: item.id, name: item.name, system: { ...item.system, level, description, baseDescription } };
         });
-
+      
         return data;
-    }
+      }
 
     activateListeners(html) {
         super.activateListeners(html);
-
         html.find('.roll-attribute').click(this._onRollButton.bind(this, "attributes"));
-        html.find('.roll-hp').click(this._onRollButton.bind(this, "hit_points"));
-        html.find('.roll-sdc').click(this._onRollButton.bind(this, "sdc"));
+        html.find('.roll-hp').click(this._onRollResource.bind(this, "hit_points"));
+        html.find('.roll-sdc').click(this._onRollResource.bind(this, "sdc"));
         html.find('.roll-ppe').click(this._onRollButton.bind(this, "average_ppe"));
         html.find('.roll-level').click(this._onRollButton.bind(this, "average_level"));
+        html.find('[data-edit="img"]').click(this._onEditImage.bind(this));
         html.find('.import-monster').click(this._onImportText.bind(this));
         html.find('input, textarea').change(this._onFormChange.bind(this));
-
         html.find('.roll-strike').click(this._onCombatRoll.bind(this, "strike"));
         html.find('.roll-dodge').click(this._onCombatRoll.bind(this, "dodge"));
         html.find('.roll-parry').click(this._onCombatRoll.bind(this, "parry"));
-
+        html.find('.roll-initiative').click(this._onCombatRoll.bind(this, "initiative"));
         html.find('.wp-level').change(this._onWPLevelChange.bind(this));
         html.find('.remove-wp').click(this._onRemoveWP.bind(this));
     }
-
-    async _onRollButton(field, event) {
+    async _onRollResource(field, event) {
         event.preventDefault();
-        const value = this.actor.system[field] || "";
-        if (!value) {
-            ui.notifications.warn(`${field.replace(/_/g, ' ')} is empty!`);
-            return;
+        const rollInput = prompt(`Enter the roll formula for ${field.replace(/_/g, ' ')} (e.g., 1d6+10):`, this.actor.system.health[field]?.max?.toString() || "1d6");
+        if (!rollInput) return;
+      
+        try {
+          const roll = await new Roll(rollInput).evaluate();
+          const chatData = {
+            content: `
+              <h3>${field.replace(/_/g, ' ').toUpperCase()} Roll</h3>
+              <p>Formula: ${rollInput}</p>
+              <p>Result: ${roll.total}</p>
+            `,
+            speaker: ChatMessage.getSpeaker({ actor: this.actor })
+          };
+          await ChatMessage.create(chatData);
+          await this.actor.update({ [`system.health.${field}`]: { value: roll.total, max: roll.total } });
+          this.render(true);
+        } catch (error) {
+          ui.notifications.error(`Invalid roll formula for ${field.replace(/_/g, ' ')}: ${rollInput}`);
+          console.error(error);
         }
-    
-        if (field === "attributes") {
-            await this._rollAttributes(value);
+      }
+      async _onRollButton(field, event) {
+        event.preventDefault();
+        let value;
+      
+        // Handle fields within health
+        if (field === "hp" || field === "sdc") {
+          value = this.actor.system.health[field]?.max?.toString() || "";
         } else {
-            let rollFormula = value.trim();
-            rollFormula = rollFormula.replace(/(\d+d\d+)x(\d+)/gi, (match, dice, multiplier) => `${dice}*${multiplier}`);
-            rollFormula = rollFormula.replace(/\b(\d+)D(\d+)\b/gi, (match, num, sides) => `${num}d${sides}`);
-    
-            const attributeRegex = /(^|\s|\+|-)(P\.E\.|Spd|I\.Q\.|M\.A\.|M\.E\.|P\.S\.|P\.P\.|P\.B\.)(?=\s|$|\+|-)/i;
-            const attributeMatch = rollFormula.match(attributeRegex);
-            if (attributeMatch) {
-                const attrKey = attributeMatch[2];
-                const attrValue = this._extractAttributeFormula(attrKey);
-                if (attrValue !== null) {
-                    let attrRollFormula = attrValue;
-                    let attrTotal;
-                    if (attrRollFormula.match(/\d+d\d+[+-]?\d*/i)) {
-                        attrRollFormula = attrRollFormula.replace(/\b(\d+)D(\d+)\b/gi, (match, num, sides) => `${num}d${sides}`);
-                        const attrRoll = await new Roll(attrRollFormula).evaluate();
-                        attrTotal = attrRoll.total;
-                    } else {
-                        attrTotal = parseInt(attrRollFormula) || 0;
-                    }
-                    const replaceRegex = new RegExp(`(^|\\s|\\+|-)(${attrKey})(?=\\s|$|\\+|-)`, 'gi');
-                    rollFormula = rollFormula.replace(replaceRegex, (match, prefix, key) => `${prefix}${attrTotal}`);
-                } else {
-                    ui.notifications.warn(`Attribute ${attrKey} not found or invalid in Attributes field. Using 0.`);
-                    rollFormula = rollFormula.replace(attributeRegex, "$10");
-                }
-            }
-    
-            try {
-                const roll = await new Roll(rollFormula).evaluate();
-                const chatData = {
-                    content: `
-                        <h3>${field.replace(/_/g, ' ').toUpperCase()} Roll</h3>
-                        <p>Formula: ${value}</p>
-                        <p>Result: ${roll.total}</p>
-                    `,
-                    speaker: ChatMessage.getSpeaker({ actor: this.actor })
-                };
-                await ChatMessage.create(chatData);
-                await this.actor.update({ [`system.${field}`]: roll.total.toString() });
-                this.render(true);
-            } catch (error) {
-                ui.notifications.error(`Invalid roll formula for ${field.replace(/_/g, ' ')}: ${value}`);
-                console.error(error);
-            }
+          value = this.actor.system[field] || "";
         }
+      
+        if (!value) {
+          ui.notifications.warn(`${field.replace(/_/g, ' ')} is empty!`);
+          return;
+        }
+      
+        if (field === "attributes") {
+          await this._rollAttributes(value);
+        } else {
+          let rollFormula = value.trim();
+          rollFormula = rollFormula.replace(/(\d+d\d+)x(\d+)/gi, (match, dice, multiplier) => `${dice}*${multiplier}`);
+          rollFormula = rollFormula.replace(/\b(\d+)D(\d+)\b/gi, (match, num, sides) => `${num}d${sides}`);
+      
+          const attributeRegex = /(^|\s|\+|-)(P\.E\.|Spd|I\.Q\.|M\.A\.|M\.E\.|P\.S\.|P\.P\.|P\.B\.)(?=\s|$|\+|-)/i;
+          const attributeMatch = rollFormula.match(attributeRegex);
+          if (attributeMatch) {
+            const attrKey = attributeMatch[2];
+            const attrValue = this._extractAttributeFormula(attrKey);
+            if (attrValue !== null) {
+              let attrRollFormula = attrValue;
+              let attrTotal;
+              if (attrRollFormula.match(/\d+d\d+[+-]?\d*/i)) {
+                attrRollFormula = attrRollFormula.replace(/\b(\d+)D(\d+)\b/gi, (match, num, sides) => `${num}d${sides}`);
+                const attrRoll = await new Roll(attrRollFormula).evaluate();
+                attrTotal = attrRoll.total;
+              } else {
+                attrTotal = parseInt(attrRollFormula) || 0;
+              }
+              const replaceRegex = new RegExp(`(^|\\s|\\+|-)(${attrKey})(?=\\s|$|\\+|-)`, 'gi');
+              rollFormula = rollFormula.replace(replaceRegex, (match, prefix, key) => `${prefix}${attrTotal}`);
+            } else {
+              ui.notifications.warn(`Attribute ${attrKey} not found or invalid in Attributes field. Using 0.`);
+              rollFormula = rollFormula.replace(attributeRegex, "$10");
+            }
+          }
+      
+          try {
+            const roll = await new Roll(rollFormula).evaluate();
+            const chatData = {
+              content: `
+                <h3>${field.replace(/_/g, ' ').toUpperCase()} Roll</h3>
+                <p>Formula: ${value}</p>
+                <p>Result: ${roll.total}</p>
+              `,
+              speaker: ChatMessage.getSpeaker({ actor: this.actor })
+            };
+            await ChatMessage.create(chatData);
+      
+            // Update actor based on field type
+            if (field === "hp" || field === "sdc") {
+              await this.actor.update({
+                [`system.health.${field}`]: { value: roll.total, max: roll.total }
+              });
+            } else {
+              await this.actor.update({
+                [`system.${field}`]: roll.total.toString()
+              });
+            }
+            this.render(true);
+          } catch (error) {
+            ui.notifications.error(`Invalid roll formula for ${field.replace(/_/g, ' ')}: ${value}`);
+            console.error(error);
+          }
+        }
+      }
+      async _onEditImage(event) {
+        const fp = new FilePicker({
+            type: "image",
+            current: this.actor.img,
+            callback: async (path) => {
+                await this.actor.update({ img: path });
+            },
+        });
+        return fp.browse();
     }
-
     async _rollAttributes(attributesString) {
         const attributes = attributesString.split(',').map(attr => attr.trim());
         const rolledAttributes = [];
@@ -1459,11 +1529,10 @@ class PalladiumMonsterSheet extends ActorSheet {
                     label: "Import",
                     callback: async (html) => {
                         const text = html.find("#monster-import").val();
-                        const parsedData = this._parseMonsterText(text);
+                        const parsedData = await this._parseMonsterText(text); // Now async
                         if (parsedData) {
                             console.log("Importing name:", parsedData.name);
                             console.log("Importing system:", parsedData.system);
-                            // Explicitly update name first, then system
                             await this.actor.update({ name: parsedData.name || this.actor.name });
                             await this.actor.update({ system: parsedData.system });
                             this.render(true);
@@ -1477,144 +1546,191 @@ class PalladiumMonsterSheet extends ActorSheet {
         }).render(true);
     }
 
-    _parseMonsterText(text) {
-        const system = {};
+    async _parseMonsterText(text) {
+        const system = {
+          health: { hp: { value: 0, max: 0 }, sdc: { value: 0, max: 0 } },
+          combat_attributes: { strike: 0, dodge: 0, parry: 0, initiative: 0 }
+        };
         let name = null;
         const lines = text.split(/\r?\n/).map(line => line.trim()).filter(line => line);
         console.log("Parsing lines:", lines);
-    
+      
         // Check if the first line is a standalone name (no colon)
         if (lines.length > 0 && !lines[0].includes(":")) {
-            name = lines[0];
-            console.log("Detected standalone name:", name);
-            lines.shift(); // Remove the name line from further processing
+          name = lines[0];
+          console.log("Detected standalone name:", name);
+          lines.shift(); // Remove the name line from further processing
         }
-    
+      
         let lastMajorField = null;
-    
+      
         for (let i = 0; i < lines.length; i++) {
-            let line = lines[i];
-    
-            // Handle sub-items (lines starting with "- ")
-            if (line.startsWith("- ") && lastMajorField) {
-                const subValue = line.replace("- ", "").trim();
-                if (lastMajorField === "damage" && !subValue.includes(":")) {
-                    system[lastMajorField] = (system[lastMajorField] || "") + (system[lastMajorField] ? ", " : "") + subValue;
-                } else if (["natural_abilities", "magic_abilities", "notes"].includes(lastMajorField)) {
-                    system[lastMajorField] = (system[lastMajorField] || "") + (system[lastMajorField] ? ", " : "") + subValue;
-                } else {
-                    system["natural_abilities"] = (system["natural_abilities"] || "") + (system["natural_abilities"] ? ", " : "") + subValue;
-                    lastMajorField = "natural_abilities";
+          let line = lines[i];
+      
+          // Handle sub-items (lines starting with "- ")
+          if (line.startsWith("- ") && lastMajorField) {
+            const subValue = line.replace("- ", "").trim();
+            if (lastMajorField === "damage" && !subValue.includes(":")) {
+              system[lastMajorField] = (system[lastMajorField] || "") + (system[lastMajorField] ? ", " : "") + subValue;
+            } else if (["natural_abilities", "magic_abilities", "notes"].includes(lastMajorField)) {
+              system[lastMajorField] = (system[lastMajorField] || "") + (system[lastMajorField] ? ", " : "") + subValue;
+            } else {
+              system["natural_abilities"] = (system["natural_abilities"] || "") + (system["natural_abilities"] ? ", " : "") + subValue;
+              lastMajorField = "natural_abilities";
+            }
+            console.log(`Appending to ${lastMajorField}: ${subValue}`);
+            continue;
+          }
+      
+          // Handle section headers
+          if (line.match(/^(Natural Abilities|Magic Abilities|Notes):$/i)) {
+            const normalizedKey = line.replace(":", "").toLowerCase().replace(/\s+/g, "_");
+            lastMajorField = normalizedKey;
+            system[normalizedKey] = system[normalizedKey] || "";
+            console.log(`Section header detected: ${normalizedKey}`);
+            continue;
+          }
+      
+          const [key, value] = line.split(/:\s*(.+)/) || ["", ""];
+          if (!key || !value) continue;
+      
+          // Normalize key with explicit mappings
+          let normalizedKey = key.toLowerCase()
+            .replace(/[\s.]+/g, "_")
+            .replace(/\([^)]*\)/g, "")
+            .replace(/of_experience/g, "")
+            .replace(/_+/g, "_")
+            .replace(/^_+|_+$/g, "")
+            .replace("natural_a_r", "natural_ar")
+            .replace("s_d_c", "sdc")
+            .replace("p_p_e", "average_ppe")
+            .replace("equivalent_o_c_c_skills", "equivalent_occ")
+            .replace("equivalent_o_c_c", "equivalent_occ");
+      
+          console.log(`Key: ${key}, Normalized: ${normalizedKey}, Value: ${value}`);
+      
+          switch (normalizedKey) {
+            case "name":
+              name = value;
+              lastMajorField = null;
+              break;
+            case "alignment":
+            case "attributes":
+            case "size":
+            case "combat":
+            case "damage":
+            case "natural_abilities":
+            case "psionics":
+            case "magic_abilities":
+              system[normalizedKey] = value;
+              lastMajorField = normalizedKey;
+              break;
+            case "notes":
+              system[normalizedKey] = (system[normalizedKey] || "") + (system[normalizedKey] ? ", " : "") + value;
+              lastMajorField = normalizedKey;
+              break;
+            case "hit_points": {
+              const hpMatch = value.match(/^(\d+d\d+(?:[+-]\d+)?)/i);
+              let formula = hpMatch ? hpMatch[1] : value.split('.')[0].trim();
+              formula = formula.replace(/\b(\d+)D(\d+)\b/gi, "$1d$2");
+              let hpValue = 0;
+      
+              if (formula) {
+                try {
+                  const roll = await new Roll(formula).evaluate();
+                  hpValue = roll.total;
+                } catch (error) {
+                  console.warn(`Invalid HP base formula: ${formula}, defaulting to 0`);
                 }
-                console.log(`Appending to ${lastMajorField}: ${subValue}`);
-                continue;
+              }
+      
+              if (value.toLowerCase().includes("plus p.e.")) {
+                system.notes = (system.notes || "") + (system.notes ? ", " : "") + "Hit Points include P.E. attribute (added after rolling attributes).";
+              }
+      
+              system.health.hp = { value: hpValue, max: hpValue };
+              lastMajorField = normalizedKey;
+              break;
             }
-    
-            // Handle section headers
-            if (line.match(/^(Natural Abilities|Magic Abilities|Notes):$/i)) {
-                const normalizedKey = line.replace(":", "").toLowerCase().replace(/\s+/g, "_");
-                lastMajorField = normalizedKey;
-                system[normalizedKey] = system[normalizedKey] || "";
-                console.log(`Section header detected: ${normalizedKey}`);
-                continue;
+            case "sdc": {
+              const sdcMatch = value.match(/^(\d+d\d+(?:[+-]\d+)?)/i);
+              let formula = sdcMatch ? sdcMatch[1] : value.replace("Average", "").trim();
+              formula = formula.replace(/\b(\d+)D(\d+)\b/gi, "$1d$2");
+              if (formula) {
+                try {
+                  const roll = await new Roll(formula).evaluate();
+                  system.health.sdc = { value: roll.total, max: roll.total };
+                } catch (error) {
+                  console.warn(`Invalid S.D.C. formula: ${formula}, defaulting to 0`);
+                  system.health.sdc = { value: 0, max: 0 };
+                }
+              } else {
+                system.health.sdc = { value: 0, max: 0 };
+              }
+              lastMajorField = normalizedKey;
+              break;
             }
-    
-            const [key, value] = line.split(/:\s*(.+)/) || ["", ""];
-            if (!key || !value) continue;
-    
-            // Normalize key with explicit mappings
-            let normalizedKey = key.toLowerCase()
-                .replace(/[\s.]+/g, "_")
-                .replace(/\([^)]*\)/g, "")
-                .replace(/of_experience/g, "")
-                .replace(/_+/g, "_")
-                .replace(/^_+|_+$/g, "")
-                .replace("natural_a_r", "natural_ar")
-                .replace("s_d_c", "sdc")
-                .replace("p_p_e", "average_ppe")
-                .replace("equivalent_o_c_c_skills", "equivalent_occ")
-                .replace("equivalent_o_c_c", "equivalent_occ");
-    
-            console.log(`Key: ${key}, Normalized: ${normalizedKey}, Value: ${value}`);
-    
-            switch (normalizedKey) {
-                case "name":
-                    name = value;
-                    lastMajorField = null;
-                    break;
-                case "alignment":
-                case "attributes":
-                case "size":
-                case "combat":
-                case "bonuses":
-                case "damage":
-                case "natural_abilities":
-                case "psionics":
-                case "magic_abilities":
-                    system[normalizedKey] = value;
-                    lastMajorField = normalizedKey;
-                    break;
-                case "notes":
-                    // Append to existing notes instead of overwriting
-                    system[normalizedKey] = (system[normalizedKey] || "") + (system[normalizedKey] ? ", " : "") + value;
-                    lastMajorField = normalizedKey;
-                    break;
-                case "hit_points":
-                    const hpMatch = value.match(/^(\d+d\d+(?:[+-]\d+)?)/i);
-                    system[normalizedKey] = hpMatch ? hpMatch[1] : value.split('.')[0].trim();
-                    if (value.includes("plus P.E.")) {
-                        system.notes = (system.notes || "") + (system.notes ? ", " : "") + "Hit Points include P.E. attribute.";
-                    }
-                    lastMajorField = normalizedKey;
-                    break;
-                case "sdc":
-                    system[normalizedKey] = value.replace("Average", "").trim();
-                    lastMajorField = normalizedKey;
-                    break;
-                case "average_ppe":
-                    const ppeMatch = value.match(/^(\d+d\d+(?:x\d+)?[+-]?\d*)/i);
-                    system[normalizedKey] = ppeMatch ? ppeMatch[1] : value.split('.')[0].trim();
-                    lastMajorField = normalizedKey;
-                    break;
-                case "equivalent_occ":
-                    system[normalizedKey] = value.split("Skills")[0].trim();
-                    lastMajorField = normalizedKey;
-                    break;
-                case "average_level":
-                    const levelMatch = value.match(/^(\d+d\d+)/i);
-                    system[normalizedKey] = levelMatch ? levelMatch[1] : value.split(';')[0].trim();
-                    lastMajorField = normalizedKey;
-                    break;
-                case "natural_ar":
-                case "horror_factor":
-                    system[normalizedKey] = parseInt(value, 10) || 0;
-                    lastMajorField = null;
-                    break;
-                case "magic":
-                    const [ppePart, spellPart] = value.split(". Spells are limited to ");
-                    if (ppePart) {
-                        const ppeMatch = ppePart.match(/^P\.P\.E\.\s*(\d+d\d+(?:x\d+)?[+-]?\d*)/i);
-                        system["average_ppe"] = ppeMatch ? ppeMatch[1] : ppePart.replace("P.P.E.", "").trim();
-                    }
-                    if (spellPart) system["magic_abilities"] = spellPart.trim();
-                    lastMajorField = "magic_abilities";
-                    break;
-                case "strike":
-                case "dodge":
-                case "parry":
-                    system.combat_attributes = system.combat_attributes || {};
-                    system.combat_attributes[normalizedKey] = parseInt(value, 10) || 0;
-                    lastMajorField = null;
-                    break;
-                default:
-                    lastMajorField = null;
-                    break;
-            }
+            case "average_ppe":
+              const ppeMatch = value.match(/^(\d+d\d+(?:x\d+)?[+-]?\d*)/i);
+              system[normalizedKey] = ppeMatch ? ppeMatch[1] : value.split('.')[0].trim();
+              lastMajorField = normalizedKey;
+              break;
+            case "equivalent_occ":
+              // Default to empty unless an explicit OCC is provided
+              system[normalizedKey] = "";
+              system.notes = (system.notes || "") + (system.notes ? ", " : "") + `Equivalent O.C.C. Skills: ${value.trim()}`;
+              lastMajorField = normalizedKey;
+              break;
+            case "average_level":
+              const levelMatch = value.match(/^(\d+d\d+)/i);
+              system[normalizedKey] = levelMatch ? levelMatch[1] : value.split(';')[0].trim();
+              // Check for implied OCC in the experience table reference
+              const occMatch = value.match(/use the experience table for the (\w+)/i);
+              if (occMatch && !system.equivalent_occ) {
+                system.equivalent_occ = occMatch[1];
+              }
+              lastMajorField = normalizedKey;
+              break;
+            case "natural_ar":
+            case "horror_factor":
+              system[normalizedKey] = parseInt(value, 10) || 0;
+              lastMajorField = null;
+              break;
+            case "bonuses":
+              system[normalizedKey] = value;
+              // Parse combat bonuses
+              const bonusMap = {
+                "initiative": /\+(\d+)\s*(?:on|to)\s*initiative/i,
+                "strike": /\+(\d+)\s*(?:to|on)\s*strike(?:\s*and\s*dodge)?/i,
+                "dodge": /\+(\d+)\s*(?:to|on)\s*(?:strike\s*and\s*)?dodge/i,
+                "parry": /\+(\d+)\s*(?:to|on)\s*parry/i
+              };
+              for (const [key, regex] of Object.entries(bonusMap)) {
+                const match = value.match(regex);
+                if (match) {
+                  system.combat_attributes[key] = parseInt(match[1], 10) || 0;
+                }
+              }
+              lastMajorField = normalizedKey;
+              break;
+            case "magic":
+              const [ppePart, spellPart] = value.split(". Spells are limited to ");
+              if (ppePart) {
+                const ppeMatch = ppePart.match(/^P\.P\.E\.\s*(\d+d\d+(?:x\d+)?[+-]?\d*)/i);
+                system["average_ppe"] = ppeMatch ? ppeMatch[1] : ppePart.replace("P.P.E.", "").trim();
+              }
+              if (spellPart) system["magic_abilities"] = spellPart.trim();
+              lastMajorField = "magic_abilities";
+              break;
+            default:
+              lastMajorField = null;
+              break;
+          }
         }
-    
+      
         console.log("Parsed system:", system);
         return Object.keys(system).length > 0 ? { name, system } : null;
-    }
+      }
 
     async _onCombatRoll(type, event) {
         event.preventDefault();
@@ -1629,6 +1745,18 @@ class PalladiumMonsterSheet extends ActorSheet {
             speaker: ChatMessage.getSpeaker({ actor: this.actor })
         };
         await ChatMessage.create(chatData);
+        // If rolling initiative, add to combat tracker (optional)
+        if (type === "initiative" && game.combat) {
+            const combatant = game.combat.combatants.find(c => c.actor?.id === this.actor.id);
+            if (combatant) {
+                await combatant.update({ initiative: roll.total });
+            } else {
+                await game.combat.createEmbeddedDocuments("Combatant", [{
+                    actorId: this.actor.id,
+                    initiative: roll.total
+                }]);
+            }
+        }
     }
 
     async _onWPLevelChange(event) {
@@ -1749,26 +1877,46 @@ class PalladiumMonsterSheet extends ActorSheet {
 
     async _updateObject(event, formData) {
         const formDataObject = foundry.utils.expandObject(formData);
-        const updateData = { system: formDataObject.system || {} };
+        const updateData = { system: foundry.utils.deepClone(this.actor.system) || {} };
         if (formDataObject.name) updateData.name = formDataObject.name;
-
-        if (formDataObject.system && formDataObject.system.combat_attributes) {
+      
+        if (formDataObject.system) {
+          updateData.system = foundry.utils.mergeObject(updateData.system, formDataObject.system, { overwrite: true });
+          if (formDataObject.system.health) {
+            updateData.system.health = updateData.system.health || {};
+            if (formDataObject.system.health.hp) {
+              updateData.system.health.hp = {
+                value: parseInt(formDataObject.system.health.hp.value, 10) || 0,
+                max: parseInt(formDataObject.system.health.hp.max, 10) || 0
+              };
+            }
+            if (formDataObject.system.health.sdc) {
+              updateData.system.health.sdc = {
+                value: parseInt(formDataObject.system.health.sdc.value, 10) || 0,
+                max: parseInt(formDataObject.system.health.sdc.max, 10) || 0
+              };
+            }
+          }
+          if (formDataObject.system.combat_attributes) {
             updateData.system.combat_attributes = {
-                strike: parseInt(formDataObject.system.combat_attributes.strike, 10) || 0,
-                dodge: parseInt(formDataObject.system.combat_attributes.dodge, 10) || 0,
-                parry: parseInt(formDataObject.system.combat_attributes.parry, 10) || 0
+              strike: parseInt(formDataObject.system.combat_attributes.strike, 10) || 0,
+              dodge: parseInt(formDataObject.system.combat_attributes.dodge, 10) || 0,
+              parry: parseInt(formDataObject.system.combat_attributes.parry, 10) || 0,
+              initiative: parseInt(formDataObject.system.combat_attributes.initiative, 10) || 0
             };
+          }
         }
-
+      
         await this.actor.update(updateData);
-    }
+      }
+
 
     async _onFormChange(event) {
         event.preventDefault();
         const formData = new FormData(this.element[0].form);
         await this._updateObject(event, Object.fromEntries(formData));
     }
-}
+};
 class PalladiumItemSheet extends ItemSheet {
     static get defaultOptions() {
         return foundry.utils.mergeObject(super.defaultOptions, {
@@ -1789,6 +1937,7 @@ class PalladiumItemSheet extends ItemSheet {
         super.activateListeners(html);
         html.find('.add-ability').click(this._onAddAbility.bind(this));
         html.find('.remove-ability').click(this._onRemoveAbility.bind(this));
+        html.find('[data-edit="img"]').click(this._onEditImage.bind(this));
     }
 
     async _onAddAbility(event) {
@@ -1863,69 +2012,67 @@ Hooks.once("init", async () => {
 Hooks.on("createActor", async (actor) => {
     console.log("createActor hook triggered for actor:", actor.name, "type:", actor.type);
     if (actor.type === "character") {
-        console.log("Initializing character actor:", actor.name);
-        const initialData = {
-            "system": {
-                "name": actor.name || "New Character",
-                "alignment": "",
-                "homeland": "",
-                "religion": "",
-                "race": "",
-                "occ": "",
-                "level": 1,
-                "xp": 0,
-                "attributes": { "iq": 10, "me": 10, "ma": 10, "ps": 10, "pp": 10, "pe": 10, "pb": 10, "spd": 10 },
-                "health": { "hp": { "value": 10, "max": 10 }, "sdc": { "value": 20, "max": 20 }, "armor_sdc": { "value": 0, "max": 0 }, "ar": 0 },
-                "combat": { "attacks_per_melee": 2, "initiative": 0, "strike": 0, "parry": 0, "dodge": 0, "damage_bonus": 0, "weapon_proficiencies": [] },
-                "skills_occ": [],
-                "skills_related": [],
-                "skills_secondary": [],
-                "equipment": { "weapons": [], "armor": [], "gear": [], "money": 0 },
-                "saves": { "magic": 0, "poison": 0, "psionics": 0, "horror": 0 },
-                "perception": 0,
-                "weight_carried": 0,
-                "background": "",
-                "notes": ""
-            }
-        };
-        await actor.update(initialData);
-        if (actor.sheet) {
-            console.log("Rendering character sheet for:", actor.name);
-            await actor.sheet.render(true);
+      console.log("Initializing character actor:", actor.name);
+      const initialData = {
+        "system": {
+          "name": actor.name || "New Character",
+          "alignment": "",
+          "homeland": "",
+          "religion": "",
+          "race": "",
+          "occ": "",
+          "level": 1,
+          "xp": 0,
+          "attributes": { "iq": 10, "me": 10, "ma": 10, "ps": 10, "pp": 10, "pe": 10, "pb": 10, "spd": 10 },
+          "health": { "hp": { "value": 10, "max": 10 }, "sdc": { "value": 20, "max": 20 }, "armor_sdc": { "value": 0, "max": 0 }, "ar": 0 },
+          "combat": { "attacks_per_melee": 2, "initiative": 0, "strike": 0, "parry": 0, "dodge": 0, "damage_bonus": 0, "weapon_proficiencies": [] },
+          "skills_occ": [],
+          "skills_related": [],
+          "skills_secondary": [],
+          "equipment": { "weapons": [], "armor": [], "gear": [], "money": 0 },
+          "saves": { "magic": 0, "poison": 0, "psionics": 0, "horror": 0 },
+          "perception": 0,
+          "weight_carried": 0,
+          "background": "",
+          "notes": ""
         }
+      };
+      await actor.update(initialData);
+      if (actor.sheet) {
+        console.log("Rendering character sheet for:", actor.name);
+        await actor.sheet.render(true);
+      }
     } else if (actor.type === "monster") {
-        console.log("Initializing monster actor:", actor.name);
-        const initialData = {
-            "system": {
-                "name": actor.name || "New Monster",
-                "alignment": "",
-                "attributes": "",
-                "size": "",
-                "natural_ar": 0,
-                "hit_points": "",
-                "sdc": "",
-                "average_ppe": "",
-                "horror_factor": 0,
-                "equivalent_occ": "",
-                "average_level": "",
-                "combat": "",
-                "bonuses": "",
-                "damage": "",
-                "natural_abilities": "",
-                "psionics": "",
-                "magic_abilities": "",
-                "notes": ""
-            }
-        };
-        await actor.update(initialData);
-        if (actor.sheet) {
-            console.log("Rendering monster sheet for:", actor.name);
-            await actor.sheet.render(true);
+      console.log("Initializing monster actor:", actor.name);
+      const initialData = {
+        "system": {
+          "name": actor.name || "New Monster",
+          "alignment": "",
+          "attributes": "",
+          "size": "",
+          "natural_ar": 0,
+          "health": { "hp": { "value": 0, "max": 0 }, "sdc": { "value": 0, "max": 0 } },
+          "average_ppe": "",
+          "horror_factor": 0,
+          "equivalent_occ": "",
+          "average_level": "",
+          "combat": "",
+          "combat_attributes": { "strike": 0, "dodge": 0, "parry": 0, "initiative": 0 },
+          "bonuses": "",
+          "damage": "",
+          "natural_abilities": "",
+          "psionics": "",
+          "magic_abilities": "",
+          "notes": ""
         }
-    } else {
-        console.log("Actor type not handled:", actor.type);
+      };
+      await actor.update(initialData);
+      if (actor.sheet) {
+        console.log("Rendering monster sheet for:", actor.name);
+        await actor.sheet.render(true);
+      }
     }
-});
+  });
 
 // Actor Update Hook
 Hooks.on("updateActor", (actor, updateData, options, userId) => {
@@ -1936,8 +2083,54 @@ Hooks.on("updateActor", (actor, updateData, options, userId) => {
         updatedSystem: actor.system
     });
 });
+Hooks.on("createCombatant", async (combatant, data, options, userId) => {
+    console.log("createCombatant hook triggered for combatant:", combatant);
 
+    const actor = combatant.actor;
+    if (!actor) return;
+
+    // Skip if initiative is already set
+    if (combatant.initiative != null) return;
+
+    let initiative = 0;
+    if (actor.type === "character") {
+        const initiativeBonus = parseInt(actor.system.combat.initiative, 10) || 0;
+        const roll = await new Roll(`1d20 + ${initiativeBonus}`).evaluate();
+        initiative = roll.total;
+    } else if (actor.type === "monster") {
+        const initiativeBonus = parseInt(actor.system.combat_attributes.initiative, 10) || 0;
+        const roll = await new Roll(`1d20 + ${initiativeBonus}`).evaluate();
+        initiative = roll.total;
+    }
+
+    // Update the combatant with the rolled initiative
+    await combatant.update({ initiative });
+    console.log(`Initiative rolled for ${actor.name}: ${initiative}`);
+});
 // Item Update Hook
 Hooks.on("updateItem", (item, updateData, options, userId) => {
     console.log("Item updated:", item, "Update data:", updateData);
 });
+// Token Creation Hook
+Hooks.on("preCreateToken", (tokenDocument, data, options, userId) => {
+    console.log("preCreateToken hook triggered for token:", tokenDocument);
+  
+    // Ensure the token has an associated actor
+    const actor = tokenDocument.actor;
+    if (!actor) return;
+  
+    // Only apply to character and monster actors
+    if (actor.type !== "character" && actor.type !== "monster") return;
+  
+    // Set default token bar attributes
+    const updateData = {
+      "bar1": { "attribute": "health.hp" }, // Simplified to just the attribute name
+      "bar2": { "attribute": "health.sdc" }, // Simplified to just the attribute name
+      "displayBars": CONST.TOKEN_DISPLAY_MODES.ALWAYS // Display bars to everyone
+    };
+  
+    // Apply the update to the token document
+    tokenDocument.updateSource(updateData);
+  
+    console.log("Token bar configuration applied:", updateData);
+  });

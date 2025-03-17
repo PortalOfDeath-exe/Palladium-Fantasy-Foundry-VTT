@@ -1,0 +1,12 @@
+{
+    "name": "Mind Mage",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "The Powers of the Mind Mage",
+                "description": "1. Psionic Powers: Starts with mind block, see aura, alter aura (self), meditation, 3 each from healing, sensitive, physical, super (12 total); mind wipe, psi-sword, possess others at 3rd+. +2 lesser (healing/sensitive/physical) + 3 super powers/level (2nd+).\n2. I.S.P.: M.E. base + 3D6x10 + 12/level. Master psionic.\n3. Enhanced I.S.P. Recovery: 2 I.S.P./hr active, 12/hr meditating/sleeping.\n4. P.P.E.: 1D6 base.\n5. Bonuses: Save vs psionic 10+ (M.E. bonus), +6 vs mind control (drugs/potions/charms), +5 vs possession, +3 vs horror factor."
+            }
+        ]
+    }
+}

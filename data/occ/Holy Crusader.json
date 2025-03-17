@@ -1,0 +1,12 @@
+{
+    "name": "Holy Crusader",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Holy Crusader Special O.C.C. Abilities",
+                "description": "1. O.C.C. Bonuses: +1 M.E./M.A., +20 S.D.C., +2 Perception (suspicious behavior), +2 initiative, +1 strike, +2 damage, +1 vs possession/mind control (vampires/undead), +2 vs Horror Factor.\n2. Penance and Sacrifice: Identical to Priest of Light O.C.C. (Palladium Fantasy RPG®, 2nd Ed., p. 67).\n3. The Heavy Touch: At 2nd level, channels deity power to inflict damage via touch (not healing). Damage: 1D6 (touch), 2D6 (punch/head butt), 3D6 (kick/tail), direct to HP; 2x vs animated dead, undead, Necromancers, Witches, evil supernatural (not deities/Demon Lords). Ignores armor (6+ to strike), parry with shield/weapon/object blocks. 2x/melee round, each counts as attack, 2D6 P.P.E./use (unpredictable). Requires physical contact (touch, punch, kick, etc.), announced pre-strike. P.P.E. Base: 1D4x10 + P.E. +1D4/level (2nd+).\n4. Spell Casting: Gains 1 Wizard spell (Levels 1-3) per level from 5th+, via dream/vision. No ley line/nexus/ritual P.P.E., can use scrolls/potions/items. Spell Strength: 12, fixed. P.P.E. Base: See #3.\n5. Rank and Station: 5th level promoted to ‘Knight’ (wage increase, respect). 8th+ level commanders as ‘Palladins/Crusaders of Renown/Living Saints’ (raise, war horse, gear, magic items, squad/platoon).\n6. WARNING - Loyalty & Devotion Required or Else: Betrayal/excommunication removes all O.C.C. abilities, bonuses, spells, and church support; skills/martial training remain."
+            }
+        ]
+    }
+}

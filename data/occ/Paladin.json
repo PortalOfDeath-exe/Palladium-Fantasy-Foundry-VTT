@@ -1,0 +1,36 @@
+{
+    "name": "Paladin",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Paladins & Armor",
+                "description": "Paladins prefer heavy armor (chain through plate) for maximum physical protection, similar to knights. However, some favor lighter types depending on personal preference."
+            },
+            {
+                "title": "The Way of the Horse",
+                "description": "Horsemanship: Paladin, see that skill description for full details regarding the paladin's riding prowess, combat bonuses while on horseback, and knowledge about horses. Paladins are excellent horsemen, able to make jumps, perform tricks, and execute special maneuvers on horseback even in full plate armor!"
+            },
+            {
+                "title": "The Way of the Lance",
+                "description": "The paladin is skilled in the use of the lance as a weapon in combat and for tournaments. The character gets the equivalent of W.P. Lance with the following abilities and bonuses:\n- A 'natural' 19 or 20 (unmodified die roll) inflicts triple damage (instead of double; normal strikes do standard damage plus horseback bonuses) or unseats the opponent. The player must announce intent to damage or unseat.\n- Unseated opponents (horseback) take 1D6 lance damage, 1D6 fall damage (unless rolling with impact), and lose initiative and 1 melee action. Grounded opponents are knocked down with same penalties, no fall damage.\n- Disarm: Announce a called shot to knock away a weapon, shield, hat, or helmet (not bolted to armor). Failed parry/dodge drops the item. Modified strike roll of 19+ (with bonuses) also unseats or disarms.\nThis attack is often used for fun, warnings, or to discourage foes without lethal intent."
+            },
+            {
+                "title": "The Paladin's Demon Death Blow",
+                "description": "A focused attack drawing on inner spirit against demons, dragons, elementals, supernatural beings, and creatures of magic:\n- Penetrates natural A.R., inflicts full damage (mega-damage in Rifts settings) with punch, kick, or melee weapon (sword, axe, spear, club, etc.), plus P.S. bonus.\n- Half damage to creatures immune to normal weapons (full with magic/holy weapons); half to vampires (full with silver weapons).\n- Prevents bio-regeneration for 1D4 hours.\n- Costs 3D6 P.P.E., counts as 2 melee actions.\nLimitations:\n1. Requires pure intent (no anger, fear, revenge).\n2. Only against supernatural/magic beings, not armor, structures, or mortals.\n3. Not usable with bows/projectiles."
+            },
+            {
+                "title": "Other O.C.C. Bonuses",
+                "description": "+2 on initiative, +1 to pull punch, +2D6 P.P.E., and +1 to save vs horror factor at levels 1, 3, 4, 5, 6, 8, 10, 12, and 14."
+            },
+            {
+                "title": "Family Background",
+                "description": "Same as the Knight O.C.C.; make random rolls or selections from the tables found under the Knight O.C.C. for family background details."
+            },
+            {
+                "title": "The Code of Chivalry",
+                "description": "I. To live one's life so that it is worthy of respect and honor by all.\nII. Fair Play: Never attack an unarmed foe. Never charge an unhorsed opponent. Never attack from behind. Avoid cheating. Avoid torture.\nIII. Nobility: Exhibit self discipline. Show respect to authority. Obey the law. Administer justice. Administer mercy. Protect the innocent. Respect women.\nIV. Valor: Exhibit courage in word and deed. Avenge the wronged. Defend the weak and innocent. Fight with honor. Never abandon a friend, ally, or noble cause.\nV. Honor: Always keep one's word of honor. Always maintain one's principles. Never betray a confidence or comrade. Avoid deception. Respect life.\nVI. Courtesy: Exhibit manners. Be polite and attentive. Respectful of host, authority and women.\nVII. Loyalty: To god, sovereign, country, and the Codes of Chivalry."
+            }
+        ]
+    }
+}

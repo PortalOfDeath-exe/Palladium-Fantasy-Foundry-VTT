@@ -1,0 +1,12 @@
+{
+    "name": "Psi-Healer",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "The Powers of a Psi-Healer",
+                "description": "1. Psionic Powers: Starts with deaden pain, exorcism, healing touch, increased healing, psychic diagnosis, psychic purification, psychic surgery, see aura, empathy. +1 healing/physical power/level (2nd+).\n2. I.S.P.: M.E. base + 2D6x10 + 10/level. Master psionic.\n3. P.P.E.: 2D6 base.\n4. Bonuses: Save vs psionic 10+ (M.E. bonus), +4 vs mind control (drugs/potions/charms), +4 vs poisons/disease, +7 vs possession, +12% vs coma, +2 vs horror factor."
+            }
+        ]
+    }
+}

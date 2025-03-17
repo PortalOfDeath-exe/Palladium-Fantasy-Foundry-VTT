@@ -1,0 +1,20 @@
+{
+    "name": "Warlock",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Warlocks & Armor",
+                "description": "Warlocks prefer leather armor for maneuverability, stealth (no metal noise), and comfort, as heavy armor (chain, scale, plate) hampers magic. If >50% of body is metal-covered, spells cost 20% more P.P.E., with -20% range and duration. Encumbrance penalties: -15% prowl, -20% climb/swim in splint/plate; -10% in chain/scale; -5% in studded leather. No penalties for leather, padded, or magic armor (e.g., charms, talismans)."
+            },
+            {
+                "title": "Warlock Powers & Information",
+                "description": "1. Choosing an Elemental Force: Select 1-2 elemental forces (air, earth, fire, water) as life signs; unchangeable. Two forces require I.Q. 12+, M.E. 14+.\n2. Magic and Spell Casting: Spells from elemental lord via chants, not learned; requires P.P.E.\n3. Initial Spell Knowledge: 1 force = 3 spells/level (from that element, up to level); 2 forces = 1 spell/level from each (I.Q./M.E. req.).\n4. Choosing Spells: Select from elemental spells up to current level; no non-elemental magic.\n5. P.P.E.: 1 force: 2D4x10+20 + P.E. + 2D6/level; 2 forces: 2D4x10+40 + P.E. + 2D6/level. Draw from elementals, ley lines, nexuses, talismans (not living creatures).\n6. Magic Bonuses: +2 vs horror factor (+6 vs elementals), +1 vs magic, +1 vs possession; +1 spell strength at 3, 6, 10, 14.\n7. Speak Elemental: 92% proficiency in elemental telepathy/spoken language.\n8. Sense Elementals: Auto-sense within 120 ft (25%+5%/level); +20% and 240 ft when deliberate; 75% see invisible elementals; recognize fellow warlocks’ elements.\n9. Sense Nature of Life Sign:\n  - Water: Sense water 100 miles (62%+2%/level), predict weather (30%+5%/level), assess water safety.\n  - Earth: Identify minerals (62%+2%/level), sense seismic danger (32%+4%/level), direction underground (80%+2%/level).\n  - Air: Tell time/wind (62%+4%/level), sense weather/pollution (30%+5%/level).\n  - Fire: Sense fire 40-100 miles (62%+2%/level), measure temperature (30%+5%/level).\n10. Special Abilities:\n  - Water: Swim 65% or +20%.\n  - Earth: Holistic Medicine 50%, Identify Plants 65% (or +12%).\n  - Air: Astronomy 65% or +20%.\n  - Fire: Normal fire immunity, half magic fire damage.\n11. Brotherhood Etiquette: Elementals avoid harming warlocks unless provoked; warn before attacking.\n12. Summon Elementals: 1x/day, 2 hr chant, symbol req.; lesser elementals (5%+level, +10% ley line, +20% nexus); greater at 9th+ (half success). Obey warlock, hostility grows 12%/week if not released.\n13. Weapons: No limits, prefer wood/metal/projectiles; minimal combat training.\n14. Colors/Clothing: Robes/jewelry reflect element (Air: white/pastels, diamond/sapphire; Earth: brown/black/grey/green, onyx; Fire: red/orange/gold/yellow, ruby/topaz; Water: blue, emerald/pearl)."
+            },
+            {
+                "title": "Notes about Elementals",
+                "description": "Elementals disregard mortal life, lacking morality or law comprehension; only warlocks freely converse with them. 98% stay in their dimension unless summoned. They’re loyal to warlocks, sharing info freely, but hostile if enslaved cruelly. Warlocks strive to free or protect elementals, avoiding their death."
+            }
+        ]
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "name": "Barbarian",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Barbarian Stigmas",
+                "description": "Barbarians are simple folk, often experiencing culture shock in cities, clinging to their beliefs despite seeming alien. They respect nature/gods, avoid demons, and believe in omens/luck/fate. Each has a stigma (positive: intense attraction; negative: intense fear/revulsion). Positive stigmas are sought for good luck; negative stigmas are avoided as bad omens.\n- Stigmatic Distraction: Losing a positive stigma (e.g., breaking a charm) or encountering a negative stigma halves combat bonuses and applies -15% to skills until resolved (escape/kill/forget after 1D4 days). Not a true insanity (positive not obsession, negative not phobia).\n- Role-Playing: Stigmas add suspense; e.g., a negative red stigma may lead a Barbarian to distrust red-wearing strangers, see red objects as omens of trouble, or link red locations to evil. Positive stigmas signal good luck.\n- Gaining Stigmas: Start with 1 stigma (level 1), gain 1 at levels 3, 6, 9, 12; traumatic events may add more. All stigmas are interconnected in the Barbarian’s mind. Three+ negative stigmas at once act as a phobia, potentially causing a hysterical frenzy."
+            },
+            {
+                "title": "Special O.C.C. Abilities of the Barbarian Warrior",
+                "description": "Select 3 abilities:\n1. Berserker Fury: In combat, enters a rage: +1 attack/melee, +3 strike, +8 damage, +6 vs horror factor, +5 vs possession/mind control, immune to fatigue/pain. Penalties: -3 parry, refuses to dodge, favors simultaneous attacks. Lasts until no threats remain; post-rage, half speed/combat for 20 min, usable 2x/day.\n2. Physical Strength Bonus: +1D6+2 to P.S.\n3. Physical Attribute Bonus: +1D4+1 to P.P. or P.E.\n4. Toughness: +6D6+12 to S.D.C.\n5. Temperature Endurance: Half damage from heat/cold, lasts 2x longer in extreme temperatures.\n6. Equestrian Skill: Horsemanship: Knight at +10%.\n7. Master of Paired Weapons: Has W.P. Paired Weapons, wields two-handed weapons one-handed (e.g., Claymore), +3 to disarm.\n8. Battle Cry: 1st combat round, emits a war cry (H.F. 8+1/level, 50 ft +10 ft/level radius); 1st/2nd-level enemies failing save flee, higher levels lose 1 attack/initiative for 1 round."
+            }
+        ]
+    }
+}

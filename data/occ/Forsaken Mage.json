@@ -1,0 +1,12 @@
+{
+    "name": "Forsaken Mage",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Abilities & Features",
+                "description": "1. Common Knowledge Spells: Lacks formal training; no Common Knowledge Spells. Starts with 1D4+3 Level 1, 3 Level 2, 2 Level 3 spells from Wizard or lost/rare magics (e.g., Necromancy, Shadow Magic). Limitations: No Warlock spells (unless equivalent Wizard spell exists), max Level 8, max 5 spells/category for non-Wizard magics.\n2. Additional Spells: +1 spell/level (2nd+, up to current level) from any permitted category.\nSpell Casting Shortcomings: 20% more P.P.E. to cast (round down), 20% less range/duration, max Level 8; focuses on low P.P.E. spells (≤10 P.P.E.) for versatility.\n3. Learning New Spells: Can learn/purchase spells (not rituals) up to Level 8 anytime via instructors (role-playing); often from outcasts (e.g., Half Wizards, Lizard Mages, dragons).\n4. Enchanted Cauldron: Cannot create/use or learn.\n5. See and Use Ley Lines: Sees ley lines/nexuses, draws P.P.E., enhances spells; detects energy from powerful beings/items (e.g., dragons, gods, Greater Rune Weapons).\n6. Ley Line Drifting: Not applicable.\n7. Ley Line Rejuvenation: Not applicable.\n8. Special O.C.C. Skills & Abilities:\n  - Forsaken Mages & Armor: Prefers leather, studded leather, magic armor; metal armor penalties as Wizard (-15% prowl, -20% climb/swim in splint/plate; -10% chain/scale; -5% studded leather; no penalties leather/padded; +20% P.P.E. cost if >50% metal, roll penalties).\n  - Circles & Symbols: Cannot use circle/ritual magic; 01-33% to recognize genuine circles. Knows 4 Simple Power Words (Acba, Keron, Pein, Yin), 12 Basic Mystic Symbols; cannot read runes or assess wards/circles.\n  - Conversion of Spell Scrolls: Can read scrolls in known languages (usually Elven/human), cannot convert to spells.\n  - Magic Guilds: Cannot join formal guilds; may join cults/secret societies practicing rare/forbidden magic.\n  - Recognize Enchantment: Identifies mind control, curses, magic effects (not illusions/psionics); 25%+5%/level.\n  - Recognize Magic: Spots magic items (10%+3%/level); doesn’t know powers/use.\n9. Magic Bonuses: +1 vs magic at 2, 4, 8, 12; +4 vs horror factor; +1 vs possession. Spell Strength: +1 at 3, 6, 9, 12.\n10. P.P.E.: 1D4x10+30 + P.E. + 2D4+2/level; draws from ley lines, nexuses, amulets, others, blood sacrifices."
+            }
+        ]
+    }
+}

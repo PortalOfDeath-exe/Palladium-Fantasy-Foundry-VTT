@@ -1,0 +1,44 @@
+{
+  "name": "Hand to Hand: Gladiator",
+  "type": "hand_to_hand",
+  "img": "icons/svg/item-bag.svg",
+  "system": {
+    "description": "Combat training focused on arena fighting, disarming, and enduring harsh battles.",
+    "level": 1,
+    "levelDescriptions": {
+      "1": "2 attacks per melee round, disarm on a roll of 19 or 20, +2 to roll with punch/fall/impact.",
+      "2": "+3 to pull punch, +1 to strike and parry.",
+      "3": "+2 to damage, paired weapons skill.",
+      "4": "+1 attack per melee round, +2 to save vs Horror Factor.",
+      "5": "+1 to strike, disarm on a roll of 18-20.",
+      "6": "+1 to parry and dodge, entangle, body flip (1D6 damage).",
+      "7": "+1 attack per melee round, +2 to damage.",
+      "8": "Stun on an unmodified roll of 18, 19, or 20.",
+      "9": "+2 to pull punch, +2 to roll with punch/impact.",
+      "10": "+1 attack per melee round.",
+      "11": "+1 to parry, +2 to dodge, +2 to save vs Horror Factor.",
+      "12": "Death Blow on a natural 18-20.",
+      "13": "+1 attack per melee round.",
+      "14": "+2 to pull punch, disarm on a roll of 17-20.",
+      "15": "Critical strike (triple damage) or knockout from behind."
+    }
+  },
+  "effects": [],
+  "folder": null,
+  "flags": {
+    "exportSource": {
+      "world": "palladium-fantasy",
+      "system": "Palladium-Fantasy-Foundry-VTT",
+      "coreVersion": "12.331",
+      "systemVersion": "0.1"
+    }
+  },
+  "_stats": {
+    "coreVersion": "12.331",
+    "systemId": "Palladium-Fantasy-Foundry-VTT",
+    "systemVersion": "0.1",
+    "createdTime": null,
+    "modifiedTime": null,
+    "lastModifiedBy": null
+  }
+}

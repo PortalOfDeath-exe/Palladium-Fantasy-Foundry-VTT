@@ -1,0 +1,24 @@
+{
+  "name": "Gnome",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Tunneling Proficiency",
+        "description": "Gnomes can dig and build solid tunnels with great speed and dexterity, excavating ruins and cave-ins efficiently. They can identify natural vs. constructed tunnels (by gnomes, dwarves, kobolds, etc.) and their age. Base Skill: 30% +5% per level of experience. Nightvision 90 ft (27.4 m)."
+      },
+      {
+        "title": "Underground Builder",
+        "description": "Though less elaborate than dwarves, Gnomes are competent underground architects. They recognize construction styles and can locate/deactivate traps when cautious. Base Skill: 20% +5% per level of experience; trap detection/deactivation at half skill level."
+      },
+      {
+        "title": "Subterranean Sense",
+        "description": "Gnomes have an innate sense of direction underground (not on the surface), determining direction, depth, and slope. They can judge proximity to surface structures in familiar areas. Base Direction Skill: 30% +5% per level; Surface Structure Skill: 20% +5% per level (-20% in unfamiliar areas)."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+1 to save vs poison and disease, +1 to save vs horror factor."
+      }
+    ]
+  }
+}

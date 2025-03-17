@@ -1,0 +1,24 @@
+{
+  "name": "Hob-Goblin",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Reluctant Digger",
+        "description": "Hob-Goblins can dig crude, shallow tunnels but hate doing so. Base Skill: 20% +5% per level of experience. Nightvision 40 ft (12.2 m), excellent day vision (human norm)."
+      },
+      {
+        "title": "Crude Builder",
+        "description": "Hob-Goblins construct simple, crude underground structures and can locate/deactivate traps when cautious. Base Skill: 5% +5% per level of experience; trap detection/deactivation at half skill level."
+      },
+      {
+        "title": "Keen Hearing",
+        "description": "Hob-Goblins have hearing as keen as a dog’s, reducing penalties when blinded by half (e.g., dodge, attack by sound). Base Direction Skill underground: 10% +5% per level (no surface structure judgment)."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+1 to initiative, +1 to dodge, +1 to save vs faerie magic, +1 to save vs psionic attack, +2 to save vs possession, +2 to save vs horror factor."
+      }
+    ]
+  }
+}

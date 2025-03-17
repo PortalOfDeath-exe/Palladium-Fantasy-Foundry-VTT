@@ -1,0 +1,24 @@
+{
+    "name": "Thief",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Thieves & Armor",
+                "description": "Thieves are men of arms trained to fight and can wear any armor. Most prefer light leather (hard/soft/padded) for maneuverability, stealth (no metal noise), and dark colors (brown, grey, black) ideal for night work. Studded leather is a favorite, though some use heavier armor for combat. Penalties: -15% to prowl, -20% to climb/scale walls in full splint/plate; -10% to prowl/climb in chain/scale; -5% to prowl/climb in studded leather. No penalties for hard/soft leather or padded armor."
+            },
+            {
+                "title": "Thieves' Guild Fencing",
+                "description": "Fencing involves buying and selling stolen goods. Trading goods/credit yields 10% more than cash.\n- Guild Purchase Rates (Stolen Goods):\n  - 25% market value: Common items (weapons, leather/chain armor, silver/bronze, semiprecious stones, books, tapestries, clothes, tools).\n  - 35% market value: Uncommon items (liquor, spices, drugs, dwarven/kobold weapons, scale/splint/plate armor, quality jewelry/silver/gold, precious stones).\n  - 50% market value: Rare items (holy weapons, minor magic armor, rare herbs, potions, artifacts, religious relics, superior jewelry).\n  - Note: -10-25% if 'hot' or hard to sell (varies by location).\n- Guild Purchase Rates (Magic Items):\n  - 20% lowest market value: Unidentified magic (scrolls, potions, etc.).\n  - 35% market value: Common, identifiable magic (healing potions, scrolls, etc.).\n  - 50% market value: Rare/powerful magic (10th+ level, flaming swords, rune weapons, etc.).\n  - Note: -10-25% if 'hot' or hard to sell.\n- Guild Selling Rates (Fenced Goods):\n  - Common: Market price.\n  - Uncommon: 10-40% above market.\n  - Rare: 60-200% above market.\n- Guild Selling Rates (Magic):\n  - Unidentified: 25% below market (e.g., 375 gold for potion).\n  - Common: Market to 40% above.\n  - Simple weapons/items: 20-60% above.\n  - Rare/powerful: 70-300% above."
+            },
+            {
+                "title": "Thieves' Guild Services",
+                "description": "Guild fees for client-requested theft/services (cumulative if multiple apply, ±40% variation):\n- Theft Fees:\n  - Simple (minimal danger): 50-100 gold.\n  - Moderate (complex/dangerous): 200-600 gold.\n  - Dangerous/complex: 1,000-5,000 gold.\n  - Extremely dangerous: 5,000-10,000 gold.\n  - Merchant: 80-150 gold.\n  - Clergy: 200-600 gold.\n  - Royalty/High Official: 1,000-10,000 gold.\n  - Low-level Wizard: 500 gold/level.\n  - High-level Wizard (9th+): 5,000-10,000 gold.\n- Other Services:\n  - Extortion/Blackmail (important): 1,000-4,000 gold.\n  - Extortion (royalty/famous): 2,000-12,000 gold.\n  - Kidnapping (common): 100-600 gold.\n  - Kidnapping (important): 1,000-4,000 gold.\n  - Kidnapping (royalty/famous): 2,000-12,000 gold.\n  - Spying/Recon: 100-1,000 gold (+extra if dangerous; key info 500-1,000 gold/bit)."
+            },
+            {
+                "title": "Guild Assault & Assassination Fees",
+                "description": "Guild fees for assault/murder (varies by circumstance):\n- Assault:\n  - Ordinary/low-level (1-3rd): 30-100 gold.\n  - Man of arms (3rd+): 150-400 gold.\n  - Political/important: 500-1,000 gold.\n  - High-level clergy (5th+): 1,000-3,000 gold.\n  - High-level wizard (5th+): 1,000-4,000 gold.\n  - Nobility/Royalty: 1,000-4,000 gold.\n  - King/Pontiff/Ruler: 4,000-24,000 gold.\n- Assassination:\n  - Ordinary: 100-400 gold.\n  - Man of arms (<4th): 500-1,000 gold.\n  - Man of arms (4th+): 600-3,000 gold.\n  - Clergy/Wizard (<5th): 1,000-4,000 gold.\n  - Clergy/Wizard (5th+): 4,000-8,000 gold.\n  - Noble/Lesser Royalty: 4,000-8,000 gold.\n  - Clergy/Wizard (9th+): 5,000-10,000 gold.\n  - King/Pontiff/Leader: 30,000-100,000 gold (varies by fame/power/difficulty)."
+            }
+        ]
+    }
+}

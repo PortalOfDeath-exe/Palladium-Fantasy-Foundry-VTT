@@ -1,0 +1,16 @@
+{
+    "name": "Squire",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Squires & Armor",
+                "description": "Like knights, squires are trained in all armor types, preferring heavy armor such as double chain mail, scale mail, and full splint or plate suits. Specialized training minimizes movement restrictions. Penalties: -10% to prowl, -15% to climb/scale walls in full splint/plate; -5% to prowl/climb in chain/scale; no penalties in light armor (e.g., hard/soft leather, padded, studded leather)."
+            },
+            {
+                "title": "Family Background & Family Skills",
+                "description": "Same as the Knight O.C.C.; see that description for details on family background and skills. Make random rolls or selections from the tables found under the Knight O.C.C."
+            }
+        ]
+    }
+}

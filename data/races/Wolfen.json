@@ -1,0 +1,24 @@
+{
+  "name": "Wolfen",
+  "type": "occ",
+  "system": {
+    "abilities": [
+      {
+        "title": "Blood Tracker",
+        "description": "Wolfen track blood scent up to 500 ft (152 m). Base Skill: 20% +4% per level of experience. Nightvision 40 ft (12.2 m), excellent day vision (human norm)."
+      },
+      {
+        "title": "Scent Familiarity",
+        "description": "Wolfen recognize and follow familiar scents up to 50 ft (15 m). Base Skill: 16% +4% per level; +10% for mate/offspring. Roll every 100 ft (30.5 m); failure loses the trail."
+      },
+      {
+        "title": "Keen Hearing",
+        "description": "Wolfen hearing is as keen as a dog’s, with the same range, enhancing their awareness in combat and tracking."
+      },
+      {
+        "title": "O.C.C. Bonuses",
+        "description": "+1 on initiative, +2 to save vs horror factor. Punch/claw 2D4 +P.S. bonus, kick 2D6 +P.S. bonus, bite 2D4 (no P.S. bonus)."
+      }
+    ]
+  }
+}

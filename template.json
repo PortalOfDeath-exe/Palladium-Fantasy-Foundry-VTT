@@ -124,34 +124,52 @@
       }
     },
     "monster": {
-    "system": {
-        "name": {"type": "String", "default": "New Monster"},
-        "alignment": {"type": "String", "default": ""},
-        "attributes": {"type": "String", "default": ""},
-        "size": {"type": "String", "default": ""},
-        "natural_ar": {"type": "Number", "default": 0},
-        "hit_points": {"type": "String", "default": ""},
-        "sdc": {"type": "String", "default": ""},
-        "average_ppe": {"type": "String", "default": ""},
-        "horror_factor": {"type": "Number", "default": 0},
-        "equivalent_occ": {"type": "String", "default": ""},
-        "average_level": {"type": "String", "default": ""},
-        "combat": {"type": "String", "default": ""},
-        "combat_attributes": {
-            "type": "Object",
-            "default": {
-                "strike": {"type": "Number", "default": 0},
-                "dodge": {"type": "Number", "default": 0},
-                "parry": {"type": "Number", "default": 0}
-            }
+  "system": {
+    "name": {"type": "String", "default": "New Monster"},
+    "alignment": {"type": "String", "default": ""},
+    "attributes": {"type": "String", "default": ""},
+    "size": {"type": "String", "default": ""},
+    "natural_ar": {"type": "Number", "default": 0},
+    "health": {
+      "type": "Object",
+      "default": {
+        "hp": {
+          "type": "Object",
+          "default": {
+            "value": {"type": "Number", "default": 0},
+            "max": {"type": "Number", "default": 0}
+          }
         },
-        "bonuses": {"type": "String", "default": ""},
-        "damage": {"type": "String", "default": ""},
-        "natural_abilities": {"type": "String", "default": ""},
-        "psionics": {"type": "String", "default": ""},
-        "magic_abilities": {"type": "String", "default": ""},
-        "notes": {"type": "String", "default": ""}
-    }
+        "sdc": {
+          "type": "Object",
+          "default": {
+            "value": {"type": "Number", "default": 0},
+            "max": {"type": "Number", "default": 0}
+          }
+        }
+      }
+    },
+    "average_ppe": {"type": "String", "default": ""},
+    "horror_factor": {"type": "Number", "default": 0},
+    "equivalent_occ": {"type": "String", "default": ""},
+    "average_level": {"type": "String", "default": ""},
+    "combat": {"type": "String", "default": ""},
+    "combat_attributes": {
+      "type": "Object",
+      "default": {
+        "strike": {"type": "Number", "default": 0},
+        "dodge": {"type": "Number", "default": 0},
+        "parry": {"type": "Number", "default": 0},
+        "initiative": {"type": "Number", "default": 0}
+      }
+    },
+    "bonuses": {"type": "String", "default": ""},
+    "damage": {"type": "String", "default": ""},
+    "natural_abilities": {"type": "String", "default": ""},
+    "psionics": {"type": "String", "default": ""},
+    "magic_abilities": {"type": "String", "default": ""},
+    "notes": {"type": "String", "default": ""}
+  }
 }
   },
   "Item": {

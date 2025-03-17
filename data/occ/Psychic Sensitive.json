@@ -1,0 +1,12 @@
+{
+    "name": "Psychic Sensitive",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "The Powers of a Psychic Sensitive",
+                "description": "1. Sense Psychic and Magic Energy: Detects psionic/magic use within 200 ft +50 ft/level; senses distance, direction, energy size (not exact location). Pinpoints within 20 ft if continuous (e.g., attacks). Base Skill: 30%+5%/level (roll/melee round); -10% with other P.P.E. sources, halved near ley lines (2 miles), nullified near nexuses (4 miles). Senses ley lines/nexuses 2 miles away. I.S.P.: None.\n2. Sense Supernatural Beings: Detects powerful beings (gods, greater elementals, demons, dragons 10th+ level) at 50 ft/level (unpowered) or 1000 ft +100 ft/level (powered). Base Skill: 30%+5%/level (+10% face-to-face); identifies nature/scent-tracks at half skill. I.S.P.: None; affected by ley lines/nexuses as above.\n3. Psionic Powers: Starts with see aura, sense evil, presence sense, meditation, and 6 sensitive powers. +1 sensitive power/level (2nd+); +1 super/physical at 3, 6, 9, 12, 15 (super options: empathic transmission, group mind block, hypnotic suggestion, mind block auto-defense, mind bolt, mind bond, telemechanics).\n4. I.S.P.: M.E. base + 2D4x10 + 10/level. Master psionic.\n5. P.P.E.: 2D6 base.\n6. Bonuses: Save vs psionic 10+ (M.E. bonus), +3 vs mind control (drugs/potions/charms), +5 vs possession, +2 vs horror factor."
+            }
+        ]
+    }
+}

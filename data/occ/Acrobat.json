@@ -1,0 +1,12 @@
+{
+    "name": "Acrobat",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Acrobats & Armor",
+                "description": "Acrobats and tumblers can wear any armor, but chain/heavy metal types impair movement during acrobatic/tumbling/gymnastic feats: -35% penalty to physical skills, -50% to balance/performance speed. Heavy armors (chain mail, full metal armor with leg plating/knee guards) restrict flexibility due to weight. Half metal armor reduces skills by -25%, balance/performance speed by -30%, and leap distance by 20% (half suits) or 50% (full suits). Most acrobats wear no armor or restrictive clothing when performing. Some modify full soft armor suits or have custom suits (padded high-necked short-sleeved shirt, thick vest, arm braces/bands) for performances/adventuring, offering optimum maneuverability with low protection; custom suits add +1 to A.R."
+            }
+        ]
+    }
+}

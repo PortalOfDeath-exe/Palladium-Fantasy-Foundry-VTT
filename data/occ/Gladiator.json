@@ -1,0 +1,24 @@
+{
+    "name": "Gladiator",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "Gladiators & Armor",
+                "description": "Gladiators view armor as costume rather than protection, using type and color to distinguish fighters. Most prefer minimal armor: arm shield and light chain vest are common. Half-suits of scale mail, splint, or plate and chain/plate are also used, protecting limbs and head while allowing maneuverability. Rarely wear full suits unless leather."
+            },
+            {
+                "title": "Gladiatorial Equipment",
+                "description": "Provided by the gladiator’s promoter, manager, or arena, varying by match rules. Personal equipment can include all types of arms, armor, and miscellaneous items."
+            },
+            {
+                "title": "Employment for Gladiators",
+                "description": "Gladiators travel, earning money in arenas, strongman/warrior competitions, or sideshows. A day’s work (e.g., herding animals, melee combat, general help) pays 10-30 gold, plus meals. Featured performers (solo acts, one-on-one combat) earn double. Tournament prizes start at 50 gold, increasing with competition difficulty (multiple or monstrous opponents). Famous gladiators command 5-10x higher fees. Outside arenas, they work as mercenaries (see Mercenary O.C.C. for pay), or some turn to banditry, thievery, or darker deeds."
+            },
+            {
+                "title": "A Comment on Skills",
+                "description": "Professional gladiators are trained in combat exhibitions for entertainment, prolonging fights by toying with opponents, dodging, parrying, and inflicting superficial wounds until disabling or defeating them. Training focuses on weapons, combat techniques, and showmanship. Skills reflect combat orientation: no prowl (stealth not needed), no W.P. Bows/Missile Weapons (not viable in arenas), no bonus to scale walls. Scholastic pursuits are limited to secondary skills. Gladiators prioritize weapon and combat skills."
+            }
+        ]
+    }
+}

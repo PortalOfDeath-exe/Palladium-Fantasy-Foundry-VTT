@@ -1,0 +1,12 @@
+{
+    "name": "Psi-Mystic",
+    "type": "occ",
+    "system": {
+        "abilities": [
+            {
+                "title": "The Abilities of the Psi-Mystic",
+                "description": "1. Psionic Powers: Starts with exorcism, sense evil, sixth sense, meditation, mind block, 3 sensitive, 2 physical/healing powers. +1 sensitive/physical power at 3, 5, 7, 9, 11, 13, 15.\n2. I.S.P.: M.E. base + 2D4x10 + 10/level. Master psionic.\n3. Magic Powers: After 6-day trance, gains 6 spells (levels 1-2) reflecting alignment/view; fixed. +2 spells/level (up to current level) via meditation.\n4. P.P.E.: 1D6x10 + P.E. + 2D6/level; draws from ley lines, blood sacrifices.\n5. Bonuses: Save vs psionic 10+ (M.E. bonus), +2 vs mind control (drugs/potions/charms), +4 vs possession, +2 vs horror factor."
+            }
+        ]
+    }
+}
